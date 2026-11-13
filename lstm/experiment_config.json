@@ -1,9 +1,0 @@
-{
-  "data": {"start": "2006-01-01", "end_exclusive": "2026-11-02", "csv": null, "train_ratios": [0.9, 0.925, 0.95], "validation_fraction": 0.1},
-  "features": {"candidates": ["Dow_Jones", "Nasdaq", "Dollar_Index", "TBill_10Y", "Gold", "Silver", "WTI", "Copper_Volume"], "paper": ["WTI", "Gold", "Silver"], "spearman_cutoff": 0.8, "fallback": "top3_positive_rank"},
-  "model": {"batch_size": 64, "epochs": 100, "trial_epochs": 15, "dense_units": 32, "dropout": 0.2, "activation": "tanh", "lookback": 30, "baseline": {"units1": 32, "units2": 32, "lr": 0.001}, "paper": {"units1": 39, "units2": 111, "lr": 0.00005}},
-  "search": {"initial": {"units1": 15, "units2": 30, "lr": 0.0005}, "units_min": 8, "units_max": 128, "lr_min": 0.000001, "lr_max": 0.005, "temperature": 1.0, "cooling": 0.95, "sa_iterations": [30, 100, 300], "optuna_trials": 30},
-  "protocol": {"primary_ratio": 0.9, "seeds": [42, 123, 2024, 3407, 777], "lookbacks": [7, 14, 30, 60], "activations": ["linear", "sigmoid", "tanh"], "walk_forward_folds": 3},
-  "modes": {"QUICK_TEST": {"max_rows": 800, "epochs": 2, "trial_epochs": 1, "sa_iterations": 2, "optuna_trials": 2}, "FULL_RESEARCH": {}},
-  "output_dir": "/kaggle/working"
-}
