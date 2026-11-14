@@ -1,0 +1,3 @@
+model,evaluations,sa_search_seconds,sa_search_minutes
+reoptimized_sa_lstm,100,811.0660748150004,13.51776791358334
+sa_gru,100,745.6631363979977,12.42771893996663
