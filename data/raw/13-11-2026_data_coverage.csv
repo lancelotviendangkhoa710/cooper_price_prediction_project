@@ -1,0 +1,10 @@
+﻿asset,file,first_date,last_date,valid_rows,duplicate_dates_after_cleaning
+Copper,01_copper.csv,2016-01-04,2026-11-13,2801,0
+Aluminium,02_aluminium.csv,2016-01-04,2026-11-13,2748,0
+Nickel,03_nickel.csv,2016-01-04,2026-11-13,2654,0
+Tin,04_tin.csv,2016-01-04,2026-11-12,2736,0
+Iron_Ore_62,05_iron_ore_62.csv,2016-01-04,2026-11-12,2734,0
+Silver,06_silver.csv,2016-01-13,2026-11-13,2379,0
+Gold,07_gold.csv,2016-01-04,2026-11-13,2412,0
+WTI,08_wti.csv,2016-01-04,2026-11-13,2814,0
+Brent,09_brent.csv,2016-01-13,2026-11-13,2800,0
