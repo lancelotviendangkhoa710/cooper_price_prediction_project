@@ -1,0 +1,7 @@
+regime,Regime 1 (2024-09-27 -> 2025-06-09),Regime 2 (2025-06-10 -> 2026-02-19),Regime 3 (2026-02-20 -> 2026-10-29)
+strategy,,,
+expanding_window,0.142990,0.206106,0.127494
+naive_persistence,0.080377,0.142325,0.095022
+rolling_window,0.205199,0.389963,0.248796
+static_train_only,0.174863,0.904615,1.455240
+static_train_val,0.165628,0.615512,1.063422
