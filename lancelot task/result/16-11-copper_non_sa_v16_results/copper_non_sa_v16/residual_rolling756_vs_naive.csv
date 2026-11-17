@@ -1,0 +1,2 @@
+feature_mode,ratio,seed,n_test,test_start,test_end,naive_MSE_raw,residual_gru_MSE_raw,naive_RMSE_raw,residual_gru_RMSE_raw,naive_MAE_raw,residual_gru_MAE_raw,MAE_improvement_pct,relative_MAE,percent_days_residual_better,wins_by_MAE,wins_by_RMSE
+paper3,0.9,42,271,2025-10-29,2026-11-13,0.010207641869783401,0.01086862850934267,0.10103287547826767,0.10425271093845367,0.07707672566175461,0.08046601712703705,-4.3972954750061035,1.0439729690551758,41.32841328413284,False,False
