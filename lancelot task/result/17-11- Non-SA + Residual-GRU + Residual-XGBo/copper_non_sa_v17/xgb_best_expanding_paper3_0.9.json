@@ -1,0 +1,15 @@
+{
+  "params": {
+    "n_estimators": 350,
+    "max_depth": 2,
+    "learning_rate": 0.015
+  },
+  "val_mse_scaled": 0.0014243203913792968,
+  "feature_count": 75,
+  "horizon": 1,
+  "features": [
+    "WTI",
+    "Gold",
+    "Silver"
+  ]
+}
