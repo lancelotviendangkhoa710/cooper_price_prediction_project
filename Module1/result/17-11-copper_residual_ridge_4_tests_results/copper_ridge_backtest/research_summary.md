@@ -1,0 +1,12 @@
+# Copper Residual Ridge — Walk-forward Backtesting
+- Data source: `/kaggle/input/datasets/lancelot71000/dataset-9-commodities-daily/dataset_9_commodities_daily.csv`
+- Data range: 2016-01-13 – 2026-11-13
+- Test range: 2018-01-02 – 2026-11-13
+- Training strategy: expanding; refit each 21 sessions.
+- Information available at t−1 only; one-step forecast Copper(t).
+- Best model by backtest MAE (descriptive, NOT test-based selection for future deployment): naive_persistence
+- Best MAE: 0.045127, RMSE: 0.069805
+- Model hyperparameters were tuned only on historical validation blocks.
+- Caveat: model ranking over the same backtest period introduces selection bias for claims about a deployed champion.
+- DM-style HAC p-values are exploratory and corrected with Holm across 4 comparisons.
+- No evidence of economic profitability is claimed from MAE/DA alone.

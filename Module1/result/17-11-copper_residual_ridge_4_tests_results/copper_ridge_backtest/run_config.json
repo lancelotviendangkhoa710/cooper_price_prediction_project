@@ -1,0 +1,24 @@
+{
+  "lookback": 22,
+  "first_test_date": "2018-01-01",
+  "minimum_train_samples": 350,
+  "retrain_every_sessions": 21,
+  "validation_fraction": 0.15,
+  "ridge_alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "training_policy": "expanding",
+  "rolling_train_rows": 756,
+  "dm_hac_lags": 5,
+  "seed": 42,
+  "source_file": "/kaggle/input/datasets/lancelot71000/dataset-9-commodities-daily/dataset_9_commodities_daily.csv",
+  "start_data": "2016-01-13",
+  "end_data": "2026-11-13",
+  "n_fold": 106,
+  "n_test_days": 2214,
+  "sklearn": "1.6.1",
+  "scipy": "1.16.3"
+}
