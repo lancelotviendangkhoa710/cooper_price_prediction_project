@@ -1,0 +1,10 @@
+feature,rho_lag1,abs_rho,selected,selection_rule
+Price_Copper,0.9968605180119554,0.9968605180119554,True,mandatory_copper_history
+Aluminium,0.9122104144644712,0.9122104144644712,True,spearman_external_candidate
+Tin,0.8362074579241956,0.8362074579241956,True,spearman_external_candidate
+Nickel,0.8291709277541287,0.8291709277541287,True,spearman_external_candidate
+Iron_Ore_62,0.7472005240524285,0.7472005240524285,False,spearman_external_candidate
+Price_WTI,0.7430065492502347,0.7430065492502347,False,spearman_external_candidate
+Brent,0.7182540069160537,0.7182540069160537,False,spearman_external_candidate
+Price_Gold,0.6734332637651256,0.6734332637651256,False,spearman_external_candidate
+Price_Silver,0.6610595063317171,0.6610595063317171,False,spearman_external_candidate
