@@ -1,0 +1,6 @@
+﻿"output","source","filter","kind"
+"generated/spearman_levels_heatmap.svg","docs/assets/v26/05_spearman_levels_train.csv","all 6x6 cells","quantitative-derived"
+"generated/direct_vs_residual_v20_90_expanding.svg","results/17-11-Copper-NonSA-Fair-Full-Protocol-V20/grid_results.csv","ratio=.9; scheme=expanding; feature_set=copper_paper3","quantitative-derived"
+"generated/leak_safe_pipeline.svg","V20 cells 2,8,10,14,18; V21 cells 6,8,10","code-faithful protocol","method-diagram"
+"generated/cnn_lstm_gru_architecture.svg","V20 cell 10; V22 Non-SA cell 10","build_net cnn_lstm/cnn_gru","architecture-diagram"
+"generated/sa_search_protocol.svg","V22 Fresh-SA cell 12; fresh_sa_best_hp.json","SA space, schedule, objective and best HP","method-diagram"
