@@ -1,0 +1,142 @@
+{
+  "source": "saved Jupyter outputs embedded in the six FS notebooks; no training rerun",
+  "extraction": "final rendered HTML DataFrame, cell index 14; metrics remain rounded to the precision shown by the notebook",
+  "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+  "feature_sets": [
+    {
+      "feature_set": "FS01_CU",
+      "source_notebook": "itransformer-fs01-cu-kaggle-final.ipynb",
+      "copied_notebook": "Vi Task/notebooks/itransformer-fs01-cu-kaggle-final.ipynb",
+      "notebook_sha256": "d4ab30796d42e9e1f5abefee3e6c1187259b8be92fe0f0500d7b2f406c25ab1c",
+      "input_features": [
+        "Copper"
+      ],
+      "K": 1,
+      "metric_rows_extracted": 36,
+      "reported_prediction_records": 10377,
+      "training_log_done_entries": 36,
+      "training_log_skip_entries": 0,
+      "reported_final_table": true,
+      "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "representative_figures": [
+        "delta_r0900_expanding.png",
+        "prices_r0900_expanding.png"
+      ]
+    },
+    {
+      "feature_set": "FS02_PAPER_CU",
+      "source_notebook": "itransformer-fs02-paper-cu-kaggle-final.ipynb",
+      "copied_notebook": "Vi Task/notebooks/itransformer-fs02-paper-cu-kaggle-final.ipynb",
+      "notebook_sha256": "755124d12028c581bc83bade6510f1242ce9650c052b8b9320a38d49e8c16e26",
+      "input_features": [
+        "Copper",
+        "WTI",
+        "Gold",
+        "Silver"
+      ],
+      "K": 4,
+      "metric_rows_extracted": 36,
+      "reported_prediction_records": 10377,
+      "training_log_done_entries": 0,
+      "training_log_skip_entries": 36,
+      "reported_final_table": true,
+      "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "representative_figures": [
+        "delta_r0900_expanding.png",
+        "prices_r0900_expanding.png"
+      ]
+    },
+    {
+      "feature_set": "FS03_PAPER_EXO",
+      "source_notebook": "itransformer-fs03-paper-exo-kaggle-final.ipynb",
+      "copied_notebook": "Vi Task/notebooks/itransformer-fs03-paper-exo-kaggle-final.ipynb",
+      "notebook_sha256": "2cb72671529755f78242e1c3f2fa9c764eea758e715c82a08b5e4b7a5a889500",
+      "input_features": [
+        "WTI",
+        "Gold",
+        "Silver"
+      ],
+      "K": 3,
+      "metric_rows_extracted": 36,
+      "reported_prediction_records": 10377,
+      "training_log_done_entries": 36,
+      "training_log_skip_entries": 0,
+      "reported_final_table": true,
+      "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "representative_figures": [
+        "delta_r0900_expanding.png",
+        "prices_r0900_expanding.png"
+      ]
+    },
+    {
+      "feature_set": "FS04_METALS_CU",
+      "source_notebook": "itransformer-fs04-metals-cu-kaggle-final.ipynb",
+      "copied_notebook": "Vi Task/notebooks/itransformer-fs04-metals-cu-kaggle-final.ipynb",
+      "notebook_sha256": "e514c6734ec9b8bcceeddd0116a29aea75615ba4df5f71e13b4564c8acfe9c96",
+      "input_features": [
+        "Copper",
+        "Aluminium",
+        "Tin",
+        "Silver",
+        "Gold"
+      ],
+      "K": 5,
+      "metric_rows_extracted": 36,
+      "reported_prediction_records": 10377,
+      "training_log_done_entries": 36,
+      "training_log_skip_entries": 0,
+      "reported_final_table": true,
+      "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "representative_figures": [
+        "delta_r0900_expanding.png",
+        "prices_r0900_expanding.png"
+      ]
+    },
+    {
+      "feature_set": "FS05_METALS_EXO",
+      "source_notebook": "itransformer-fs05-metals-exo-kaggle-final.ipynb",
+      "copied_notebook": "Vi Task/notebooks/itransformer-fs05-metals-exo-kaggle-final.ipynb",
+      "notebook_sha256": "a1864a92643a0f909dc7060275e6bbc34eb18681cff1b1744609ceda62778755",
+      "input_features": [
+        "Aluminium",
+        "Tin",
+        "Silver",
+        "Gold"
+      ],
+      "K": 4,
+      "metric_rows_extracted": 36,
+      "reported_prediction_records": 10377,
+      "training_log_done_entries": 36,
+      "training_log_skip_entries": 0,
+      "reported_final_table": true,
+      "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "representative_figures": [
+        "delta_r0900_expanding.png",
+        "prices_r0900_expanding.png"
+      ]
+    },
+    {
+      "feature_set": "FS06_WTI_CU",
+      "source_notebook": "itransformer-fs06-wti-cu-kaggle-final.ipynb",
+      "copied_notebook": "Vi Task/notebooks/itransformer-fs06-wti-cu-kaggle-final.ipynb",
+      "notebook_sha256": "8eefa68da77baf7c913dc4d67693f0e7c302eb4e3d021a10a9edf5a23b316bad",
+      "input_features": [
+        "Copper",
+        "Aluminium",
+        "Tin",
+        "WTI"
+      ],
+      "K": 4,
+      "metric_rows_extracted": 36,
+      "reported_prediction_records": 10377,
+      "training_log_done_entries": 35,
+      "training_log_skip_entries": 1,
+      "reported_final_table": true,
+      "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "representative_figures": [
+        "delta_r0900_expanding.png",
+        "prices_r0900_expanding.png"
+      ]
+    }
+  ]
+}
