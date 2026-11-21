@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 NOTEBOOK_PATH = ROOT / "quan task" / "copper_rolling_expanding_quan.ipynb"
-CSV_PATH = ROOT / "copper_8_indicators_2006_2026.csv"
+CSV_PATH = ROOT / "data" / "raw" / "dataset_9_commodities_daily.csv"
 
 
 def compute_boundaries(n: int, ratio: float = 0.90, val_fraction: float = 0.10) -> tuple[int, int]:
@@ -91,9 +91,9 @@ class RollingExpandingNotebookTests(unittest.TestCase):
             self.assertIn(required_symbol, full_code, f"Missing symbol: {required_symbol}")
 
     def test_walk_forward_no_leakage_invariants(self):
-        n = 5231
+        n = 2710
         val_start, test_start = compute_boundaries(n, ratio=0.90, val_fraction=0.10)
-        self.assertEqual((val_start, test_start), (4236, 4707))
+        self.assertEqual((val_start, test_start), (2195, 2439))
 
         # Test Rolling Window invariants
         rolling_slices = walk_forward_slices(
@@ -126,14 +126,14 @@ class RollingExpandingNotebookTests(unittest.TestCase):
         expected_cols = {
             "Date",
             "Copper",
-            "Copper_Volume",
-            "Dow_Jones",
-            "Nasdaq",
-            "Dollar_Index",
-            "TBill_10Y",
-            "Gold",
+            "Aluminium",
+            "Nickel",
+            "Tin",
+            "Iron_Ore_62",
             "Silver",
+            "Gold",
             "WTI",
+            "Brent",
         }
         with CSV_PATH.open("r", encoding="utf-8-sig", newline="") as f:
             reader = csv.DictReader(f)
@@ -149,7 +149,7 @@ class RollingExpandingNotebookTests(unittest.TestCase):
                     val = float(row[col])
                     self.assertEqual(val, val, f"NaN in {col} at {row['Date']}")
                 row_count += 1
-        self.assertEqual(row_count, 5231)
+        self.assertEqual(row_count, 2710)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,0 @@
-ratio,0.900,0.925,0.950
-strategy,,,
-expanding_window,0.171228,0.179112,0.174895
-naive_persistence,0.109205,0.117754,0.101435
-rolling_window,0.292304,0.308379,0.334228
-static_train_only,0.995342,1.563340,2.094787
-static_train_val,0.716457,0.700620,0.428859
