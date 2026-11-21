@@ -1,0 +1,10 @@
+{
+  "name": "Copper V21 Add-on 80/20 + Walk-forward",
+  "horizon": 1,
+  "lookback": 22,
+  "holdout_80_rows": 60,
+  "holdout_80_missing_combinations": 0,
+  "walkforward_metrics_available": false,
+  "walkforward_predictions_available": false,
+  "note": "Plots generated from saved results. No model retraining."
+}
