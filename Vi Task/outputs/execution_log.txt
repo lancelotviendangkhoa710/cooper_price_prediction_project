@@ -1,0 +1,185 @@
+--- cell 2, output 0 ---
+Mounted at /content/drive
+Platform: Colab
+TensorFlow 2.21.0 | GPUs [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+Input: ['Aluminium', 'Tin', 'Silver', 'Gold', 'Copper'] | Past-only Copper history; no WTI
+Mode: FULL_MODE | Deep model fits: 72 | Naive: 12 | SA search trials: 32
+Root: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair
+
+--- cell 4, output 0 ---
+Chưa tìm thấy CSV. Vui lòng upload: dataset_9_commodities_daily.csv
+
+--- cell 4, output 2 ---
+Saving dataset_9_commodities_daily.csv to dataset_9_commodities_daily.csv
+Dataset: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/data/dataset_9_commodities_daily.csv | SHA256: a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83
+N rows: 2710 | date range: 2016-01-13 2026-11-13
+Dropped: 0 | Output: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/itransformer_vs_sa_lstm/FULL_MODE_K5_lb22_s42_dataa761a908_cfgd1b751120e44
+
+--- cell 6, output 0 ---
+train X (1929, 22, 5) Y (1929,) t= 2016-02-16 ... 2023-12-06
+val X (217, 22, 5) Y (217,) t= 2023-12-07 ... 2024-10-04
+test X (542, 22, 5) Y (542,) t= 2024-10-07 ... 2026-11-13
+PASS: same 5 RAW input channels, history only, train-fitted scalers.
+
+--- cell 8, output 0 ---
+iTransformer | input: (None, 22, 5) | params: 46769
+SA-LSTM Fixed | input: (None, 22, 5) | params: 77681
+PASS: 5-feature input, scalar output, architecture checks
+
+--- cell 12, output 0 ---
+[SA direct 01/16] valMSE=0.0044350 best=0.0044350 accepted=True hp={'units_1': 39, 'units_2': 111, 'learning_rate': 5e-05}
+[SA direct 02/16] valMSE=0.0068273 best=0.0044350 accepted=True hp={'units_1': 39, 'units_2': 111, 'learning_rate': 5.8463015447194094e-05}
+
+--- cell 12, output 1 ---
+WARNING:tensorflow:5 out of the last 15 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x78c8909a7a60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+--- cell 12, output 2 ---
+[SA direct 03/16] valMSE=0.0062497 best=0.0044350 accepted=True hp={'units_1': 23, 'units_2': 111, 'learning_rate': 5.8463015447194094e-05}
+
+--- cell 12, output 3 ---
+WARNING:tensorflow:5 out of the last 15 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x78c8909a6020> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+--- cell 12, output 4 ---
+[SA direct 04/16] valMSE=0.0037214 best=0.0037214 accepted=True hp={'units_1': 23, 'units_2': 87, 'learning_rate': 5.8463015447194094e-05}
+[SA direct 05/16] valMSE=0.0045853 best=0.0037214 accepted=True hp={'units_1': 23, 'units_2': 87, 'learning_rate': 4.77332049569005e-05}
+[SA direct 06/16] valMSE=0.0055499 best=0.0037214 accepted=False hp={'units_1': 23, 'units_2': 87, 'learning_rate': 4.1214350822830884e-05}
+[SA direct 07/16] valMSE=0.0060425 best=0.0037214 accepted=False hp={'units_1': 23, 'units_2': 111, 'learning_rate': 4.77332049569005e-05}
+[SA direct 08/16] valMSE=0.0059325 best=0.0037214 accepted=False hp={'units_1': 23, 'units_2': 95, 'learning_rate': 4.77332049569005e-05}
+[SA direct 09/16] valMSE=0.0129070 best=0.0037214 accepted=False hp={'units_1': 23, 'units_2': 103, 'learning_rate': 4.77332049569005e-05}
+[SA direct 10/16] valMSE=0.0039032 best=0.0037214 accepted=True hp={'units_1': 16, 'units_2': 87, 'learning_rate': 4.77332049569005e-05}
+[SA direct 11/16] valMSE=0.0039002 best=0.0037214 accepted=True hp={'units_1': 32, 'units_2': 87, 'learning_rate': 4.77332049569005e-05}
+[SA direct 12/16] valMSE=0.0032552 best=0.0032552 accepted=True hp={'units_1': 24, 'units_2': 87, 'learning_rate': 4.77332049569005e-05}
+[SA direct 13/16] valMSE=0.0046813 best=0.0032552 accepted=False hp={'units_1': 24, 'units_2': 95, 'learning_rate': 4.77332049569005e-05}
+[SA direct 14/16] valMSE=0.0032040 best=0.0032040 accepted=True hp={'units_1': 24, 'units_2': 87, 'learning_rate': 3.0025728767356572e-05}
+[SA direct 15/16] valMSE=0.0081194 best=0.0032040 accepted=False hp={'units_1': 24, 'units_2': 71, 'learning_rate': 3.0025728767356572e-05}
+[SA direct 16/16] valMSE=0.0157208 best=0.0032040 accepted=False hp={'units_1': 24, 'units_2': 63, 'learning_rate': 3.0025728767356572e-05}
+SA COMPLETE direct best HP {'units_1': 24, 'units_2': 87, 'learning_rate': 3.0025728767356572e-05} best validation loss 0.0032040274903272067
+[SA residual 01/16] valMSE=0.0003853 best=0.0003853 accepted=True hp={'units_1': 39, 'units_2': 111, 'learning_rate': 5e-05}
+[SA residual 02/16] valMSE=0.0003829 best=0.0003829 accepted=True hp={'units_1': 47, 'units_2': 111, 'learning_rate': 5e-05}
+[SA residual 03/16] valMSE=0.0004164 best=0.0003829 accepted=True hp={'units_1': 23, 'units_2': 111, 'learning_rate': 5e-05}
+[SA residual 04/16] valMSE=0.0003840 best=0.0003829 accepted=True hp={'units_1': 31, 'units_2': 111, 'learning_rate': 5e-05}
+[SA residual 05/16] valMSE=0.0003851 best=0.0003829 accepted=True hp={'units_1': 47, 'units_2': 111, 'learning_rate': 5e-05}
+[SA residual 06/16] valMSE=0.0003856 best=0.0003829 accepted=True hp={'units_1': 55, 'units_2': 111, 'learning_rate': 5e-05}
+[SA residual 07/16] valMSE=0.0003846 best=0.0003829 accepted=True hp={'units_1': 55, 'units_2': 111, 'learning_rate': 9.414842529359061e-05}
+[SA residual 08/16] valMSE=0.0003844 best=0.0003829 accepted=True hp={'units_1': 55, 'units_2': 87, 'learning_rate': 9.414842529359061e-05}
+[SA residual 09/16] valMSE=0.0003774 best=0.0003774 accepted=True hp={'units_1': 55, 'units_2': 71, 'learning_rate': 9.414842529359061e-05}
+[SA residual 10/16] valMSE=0.0003855 best=0.0003774 accepted=True hp={'units_1': 79, 'units_2': 71, 'learning_rate': 9.414842529359061e-05}
+[SA residual 11/16] valMSE=0.0004741 best=0.0003774 accepted=False hp={'units_1': 79, 'units_2': 71, 'learning_rate': 2.9076695614090774e-05}
+[SA residual 12/16] valMSE=0.0003775 best=0.0003774 accepted=True hp={'units_1': 63, 'units_2': 71, 'learning_rate': 9.414842529359061e-05}
+[SA residual 13/16] valMSE=0.0003789 best=0.0003774 accepted=True hp={'units_1': 87, 'units_2': 71, 'learning_rate': 9.414842529359061e-05}
+[SA residual 14/16] valMSE=0.0003840 best=0.0003774 accepted=True hp={'units_1': 87, 'units_2': 79, 'learning_rate': 9.414842529359061e-05}
+[SA residual 15/16] valMSE=0.0003836 best=0.0003774 accepted=True hp={'units_1': 87, 'units_2': 79, 'learning_rate': 0.00017645861382230833}
+[SA residual 16/16] valMSE=0.0003810 best=0.0003774 accepted=True hp={'units_1': 87, 'units_2': 79, 'learning_rate': 9.28671896590173e-05}
+SA COMPLETE residual best HP {'units_1': 55, 'units_2': 71, 'learning_rate': 9.414842529359061e-05} best validation loss 0.00037736550126399977
+
+--- cell 14, output 0 ---
+
+===========================================================================
+[1/4] Train/Test split: 80/20
+[DONE] naive                    ratio=0.800 expanding          MAE=0.069001 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.800 expanding          MAE=1.264259 | Naive skill=-1732.220% | epochs=12
+[DONE] itransformer_residual    ratio=0.800 expanding          MAE=0.068855 | Naive skill=+0.213% | epochs=61
+[DONE] sa_fixed_direct          ratio=0.800 expanding          MAE=0.775273 | Naive skill=-1023.560% | epochs=19
+[DONE] sa_fixed_residual        ratio=0.800 expanding          MAE=0.101586 | Naive skill=-47.223% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.800 expanding          MAE=0.777634 | Naive skill=-1026.982% | epochs=100
+[DONE] sa_tuned_residual        ratio=0.800 expanding          MAE=0.070461 | Naive skill=-2.115% | epochs=12
+[DONE] naive                    ratio=0.800 rolling_756        MAE=0.069001 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.800 rolling_756        MAE=1.395136 | Naive skill=-1921.894% | epochs=11
+[DONE] itransformer_residual    ratio=0.800 rolling_756        MAE=0.069346 | Naive skill=-0.500% | epochs=51
+[DONE] sa_fixed_direct          ratio=0.800 rolling_756        MAE=1.154500 | Naive skill=-1573.152% | epochs=29
+[DONE] sa_fixed_residual        ratio=0.800 rolling_756        MAE=0.117236 | Naive skill=-69.903% | epochs=24
+[DONE] sa_tuned_direct          ratio=0.800 rolling_756        MAE=1.545358 | Naive skill=-2139.602% | epochs=34
+[DONE] sa_tuned_residual        ratio=0.800 rolling_756        MAE=0.090753 | Naive skill=-31.523% | epochs=19
+[DONE] naive                    ratio=0.800 recency_weighted   MAE=0.069001 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.800 recency_weighted   MAE=1.277163 | Naive skill=-1750.922% | epochs=15
+[DONE] itransformer_residual    ratio=0.800 recency_weighted   MAE=0.069000 | Naive skill=+0.002% | epochs=28
+[DONE] sa_fixed_direct          ratio=0.800 recency_weighted   MAE=0.711935 | Naive skill=-931.768% | epochs=21
+[DONE] sa_fixed_residual        ratio=0.800 recency_weighted   MAE=0.102047 | Naive skill=-47.891% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.800 recency_weighted   MAE=0.718494 | Naive skill=-941.273% | epochs=21
+[DONE] sa_tuned_residual        ratio=0.800 recency_weighted   MAE=0.077382 | Naive skill=-12.145% | epochs=10
+
+===========================================================================
+[2/4] Train/Test split: 90/10
+[DONE] naive                    ratio=0.900 expanding          MAE=0.077077 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.900 expanding          MAE=1.768602 | Naive skill=-2194.598% | epochs=14
+[DONE] itransformer_residual    ratio=0.900 expanding          MAE=0.078119 | Naive skill=-1.352% | epochs=20
+[DONE] sa_fixed_direct          ratio=0.900 expanding          MAE=0.798291 | Naive skill=-935.709% | epochs=16
+[DONE] sa_fixed_residual        ratio=0.900 expanding          MAE=0.082928 | Naive skill=-7.591% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.900 expanding          MAE=0.562087 | Naive skill=-629.257% | epochs=56
+[DONE] sa_tuned_residual        ratio=0.900 expanding          MAE=0.085346 | Naive skill=-10.728% | epochs=11
+[DONE] naive                    ratio=0.900 rolling_756        MAE=0.077077 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.900 rolling_756        MAE=1.198720 | Naive skill=-1455.229% | epochs=53
+[DONE] itransformer_residual    ratio=0.900 rolling_756        MAE=0.077859 | Naive skill=-1.015% | epochs=24
+[DONE] sa_fixed_direct          ratio=0.900 rolling_756        MAE=0.999288 | Naive skill=-1196.485% | epochs=22
+[DONE] sa_fixed_residual        ratio=0.900 rolling_756        MAE=0.080745 | Naive skill=-4.759% | epochs=12
+[DONE] sa_tuned_direct          ratio=0.900 rolling_756        MAE=0.950112 | Naive skill=-1132.683% | epochs=100
+[DONE] sa_tuned_residual        ratio=0.900 rolling_756        MAE=0.094720 | Naive skill=-22.890% | epochs=15
+[DONE] naive                    ratio=0.900 recency_weighted   MAE=0.077077 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.900 recency_weighted   MAE=1.823129 | Naive skill=-2265.342% | epochs=12
+[DONE] itransformer_residual    ratio=0.900 recency_weighted   MAE=0.077198 | Naive skill=-0.157% | epochs=19
+[DONE] sa_fixed_direct          ratio=0.900 recency_weighted   MAE=0.715643 | Naive skill=-828.481% | epochs=15
+[DONE] sa_fixed_residual        ratio=0.900 recency_weighted   MAE=0.084190 | Naive skill=-9.229% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.900 recency_weighted   MAE=0.813393 | Naive skill=-955.303% | epochs=32
+[DONE] sa_tuned_residual        ratio=0.900 recency_weighted   MAE=0.081356 | Naive skill=-5.552% | epochs=13
+
+===========================================================================
+[3/4] Train/Test split: 92.5/7.5
+[DONE] naive                    ratio=0.925 expanding          MAE=0.075116 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.925 expanding          MAE=1.877288 | Naive skill=-2399.179% | epochs=23
+[DONE] itransformer_residual    ratio=0.925 expanding          MAE=0.075127 | Naive skill=-0.015% | epochs=72
+[DONE] sa_fixed_direct          ratio=0.925 expanding          MAE=0.803243 | Naive skill=-969.334% | epochs=14
+[DONE] sa_fixed_residual        ratio=0.925 expanding          MAE=0.085332 | Naive skill=-13.600% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.925 expanding          MAE=0.778423 | Naive skill=-936.292% | epochs=46
+[DONE] sa_tuned_residual        ratio=0.925 expanding          MAE=0.075359 | Naive skill=-0.323% | epochs=18
+[DONE] naive                    ratio=0.925 rolling_756        MAE=0.075116 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.925 rolling_756        MAE=1.677452 | Naive skill=-2133.144% | epochs=10
+[DONE] itransformer_residual    ratio=0.925 rolling_756        MAE=0.075492 | Naive skill=-0.500% | epochs=36
+[DONE] sa_fixed_direct          ratio=0.925 rolling_756        MAE=1.131303 | Naive skill=-1406.071% | epochs=22
+[DONE] sa_fixed_residual        ratio=0.925 rolling_756        MAE=0.084011 | Naive skill=-11.842% | epochs=11
+[DONE] sa_tuned_direct          ratio=0.925 rolling_756        MAE=1.147128 | Naive skill=-1427.139% | epochs=83
+[DONE] sa_tuned_residual        ratio=0.925 rolling_756        MAE=0.077167 | Naive skill=-2.730% | epochs=33
+[DONE] naive                    ratio=0.925 recency_weighted   MAE=0.075116 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.925 recency_weighted   MAE=1.639274 | Naive skill=-2082.318% | epochs=31
+[DONE] itransformer_residual    ratio=0.925 recency_weighted   MAE=0.075680 | Naive skill=-0.750% | epochs=14
+[DONE] sa_fixed_direct          ratio=0.925 recency_weighted   MAE=0.683179 | Naive skill=-809.496% | epochs=14
+[DONE] sa_fixed_residual        ratio=0.925 recency_weighted   MAE=0.087864 | Naive skill=-16.971% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.925 recency_weighted   MAE=0.992546 | Naive skill=-1221.348% | epochs=25
+[DONE] sa_tuned_residual        ratio=0.925 recency_weighted   MAE=0.075464 | Naive skill=-0.463% | epochs=15
+
+===========================================================================
+[4/4] Train/Test split: 95/5
+[DONE] naive                    ratio=0.950 expanding          MAE=0.072799 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.950 expanding          MAE=1.926325 | Naive skill=-2546.078% | epochs=12
+[DONE] itransformer_residual    ratio=0.950 expanding          MAE=0.072626 | Naive skill=+0.238% | epochs=84
+[DONE] sa_fixed_direct          ratio=0.950 expanding          MAE=0.869241 | Naive skill=-1094.025% | epochs=14
+[DONE] sa_fixed_residual        ratio=0.950 expanding          MAE=0.097411 | Naive skill=-33.808% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.950 expanding          MAE=0.766455 | Naive skill=-952.833% | epochs=51
+[DONE] sa_tuned_residual        ratio=0.950 expanding          MAE=0.072993 | Naive skill=-0.266% | epochs=19
+[DONE] naive                    ratio=0.950 rolling_756        MAE=0.072799 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.950 rolling_756        MAE=1.660730 | Naive skill=-2181.245% | epochs=10
+[DONE] itransformer_residual    ratio=0.950 rolling_756        MAE=0.073378 | Naive skill=-0.794% | epochs=24
+[DONE] sa_fixed_direct          ratio=0.950 rolling_756        MAE=1.097936 | Naive skill=-1408.169% | epochs=22
+[DONE] sa_fixed_residual        ratio=0.950 rolling_756        MAE=0.082562 | Naive skill=-13.410% | epochs=13
+[DONE] sa_tuned_direct          ratio=0.950 rolling_756        MAE=0.862095 | Naive skill=-1084.208% | epochs=100
+[DONE] sa_tuned_residual        ratio=0.950 rolling_756        MAE=0.080267 | Naive skill=-10.258% | epochs=30
+[DONE] naive                    ratio=0.950 recency_weighted   MAE=0.072799 | Naive skill=+0.000% | epochs=0
+[DONE] itransformer_direct      ratio=0.950 recency_weighted   MAE=1.969447 | Naive skill=-2605.312% | epochs=11
+[DONE] itransformer_residual    ratio=0.950 recency_weighted   MAE=0.075362 | Naive skill=-3.520% | epochs=15
+[DONE] sa_fixed_direct          ratio=0.950 recency_weighted   MAE=0.729674 | Naive skill=-902.310% | epochs=14
+[DONE] sa_fixed_residual        ratio=0.950 recency_weighted   MAE=0.099170 | Naive skill=-36.223% | epochs=10
+[DONE] sa_tuned_direct          ratio=0.950 recency_weighted   MAE=0.845762 | Naive skill=-1061.774% | epochs=51
+[DONE] sa_tuned_residual        ratio=0.950 recency_weighted   MAE=0.072504 | Naive skill=+0.406% | epochs=19
+FINISHED training loop, aggregating outputs...
+GRID: 84/84 rows | missing: 0
+
+--- cell 17, output 2 ---
+CHỌN THEO VALIDATION, TEST CHỈ ĐÁNH GIÁ:
+
+--- cell 23, output 0 ---
+ALL JOBS: 84 / 84 | COMPLETE: True
+Run folder: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/itransformer_vs_sa_lstm/FULL_MODE_K5_lb22_s42_dataa761a908_cfgd1b751120e44
+Final results ZIP: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/itransformer_vs_sa_lstm/FULL_MODE_K5_lb22_s42_dataa761a908_cfgd1b751120e44/iTransformer_vs_SA_LSTM_K5_FINAL_Results.zip
+CSV main: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/itransformer_vs_sa_lstm/FULL_MODE_K5_lb22_s42_dataa761a908_cfgd1b751120e44/grid_results.csv
+Pairwise comparisons: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/itransformer_vs_sa_lstm/FULL_MODE_K5_lb22_s42_dataa761a908_cfgd1b751120e44/paired_comparison.csv
+SA best HP: /content/drive/MyDrive/Copper_iTransformer_vs_SA_LSTM_K5_Fair/itransformer_vs_sa_lstm/FULL_MODE_K5_lb22_s42_dataa761a908_cfgd1b751120e44/sa_best_hp.json
+Dataset SHA256: a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83
