@@ -1,61 +1,61 @@
-ratio,member,method,feature_set,objective,MAE,Skill_vs_Naive_pct,RMSE,DA_pct
-0.8,Baseline,Naive Persistence,FS01,Baseline,0.069,0.0,,
-0.8,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.06878,0.32001,0.10785,53.50554
-0.8,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.0692,-0.28663,0.10797,50.369
-0.8,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.06883,0.24616,0.10787,52.95203
-0.8,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.06955,-0.79167,0.10813,47.23247
-0.8,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.08193,-18.7409,0.1231,49.44649
-0.8,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.06946,-0.66234,0.10888,53.50554
-0.8,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.06885,0.21869,0.10789,53.13653
-0.8,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.06945,-0.65086,0.1083,50.55351
-0.8,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07108,-3.01858,0.11082,51.2963
-0.8,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.07344,-6.43684,0.11246,51.48148
-0.8,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07505,-8.7605,0.11466,49.81481
-0.8,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.06922,-0.32478,0.10827,
-0.8,Huy (PP5),ARIMA (FS01),FS01,Residual,0.069,-0.00014,0.108,
-0.8,Huy (PP5),GRU (FS01),FS01,Direct,0.22562,-226.98849,0.3072,
-0.9,Baseline,Naive Persistence,FS01,Baseline,0.07708,0.0,,
-0.9,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.07714,-0.08487,0.10091,49.44649
-0.9,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.07701,0.08994,0.10081,52.76753
-0.9,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.07695,0.16268,0.10084,52.76753
-0.9,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.07727,-0.24381,0.10094,48.70849
-0.9,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.08453,-9.67172,0.10959,46.49446
-0.9,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.07798,-1.17301,0.10134,47.97048
-0.9,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.07681,0.34705,0.10097,53.13653
-0.9,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.07701,0.08757,0.10232,53.87454
-0.9,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07852,-1.86827,0.10224,47.2119
-0.9,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.08026,-4.12429,0.10382,47.58364
-0.9,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07812,-1.35096,0.10255,48.32714
-0.9,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07676,0.41452,0.10075,
-0.9,Huy (PP5),ARIMA (FS01),FS01,Residual,0.07708,0.00065,0.10103,
-0.9,Huy (PP5),GRU (FS01),FS01,Direct,0.29946,-288.52194,0.33718,
-0.925,Baseline,Naive Persistence,FS01,Baseline,0.07512,0.0,,
-0.925,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.07521,-0.11947,0.0986,52.45098
-0.925,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.07536,-0.32957,0.09837,49.01961
-0.925,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.07506,0.0803,0.09841,52.45098
-0.925,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.07517,-0.07053,0.09826,47.54902
-0.925,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.07567,-0.73794,0.09963,52.45098
-0.925,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.07564,-0.69087,0.09847,48.03922
-0.925,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.07595,-1.11001,0.09977,52.94118
-0.925,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.07568,-0.75057,0.09976,51.96078
-0.925,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07714,-2.69682,0.10136,45.54455
-0.925,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.08032,-6.9285,0.10357,45.0495
-0.925,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07684,-2.29676,0.10068,52.9703
-0.925,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07441,0.93881,0.09791,
-0.925,Huy (PP5),ARIMA (FS01),FS01,Residual,0.07456,0.74578,0.09813,
-0.925,Huy (PP5),GRU (FS01),FS01,Direct,0.33985,-352.42704,0.36676,
-0.95,Baseline,Naive Persistence,FS01,Baseline,0.0728,0.0,,
-0.95,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.07277,0.03996,0.09645,47.79412
-0.95,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.07273,0.09154,0.09657,54.41176
-0.95,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.07252,0.38088,0.09664,54.41176
-0.95,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.07314,-0.46699,0.09655,44.85294
-0.95,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.07809,-7.2638,0.10258,55.14706
-0.95,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.07337,-0.79159,0.09643,46.32353
-0.95,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.07289,-0.12569,0.09669,55.88235
-0.95,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.07253,0.36883,0.09735,51.47059
-0.95,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07573,-4.02298,0.09904,51.85185
-0.95,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.07865,-8.03181,0.10021,47.40741
-0.95,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07213,0.91384,0.09645,54.81481
-0.95,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07248,0.44026,0.09662,
-0.95,Huy (PP5),ARIMA (FS01),FS01,Residual,0.07258,0.30564,0.09706,
-0.95,Huy (PP5),GRU (FS01),FS01,Direct,0.34739,-377.18978,0.3619,
+ratio,member,method,feature_set,objective,MAE,RMSE,DA_pct,Skill_vs_Naive_pct
+0.8,Baseline,Naive Persistence,FS01,Baseline,0.069,0.108,,0.0
+0.8,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.06878,0.10785,53.50554,0.32085
+0.8,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.0692,0.10797,50.369,-0.28579
+0.8,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.06883,0.10787,52.95203,0.24699
+0.8,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.06955,0.10813,47.23247,-0.79083
+0.8,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.08193,0.1231,49.44649,-18.73991
+0.8,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.06946,0.10888,53.50554,-0.6615
+0.8,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.06885,0.10789,53.13653,0.21953
+0.8,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.06945,0.1083,50.55351,-0.65002
+0.8,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07108,0.11082,51.2963,-3.01772
+0.8,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.07344,0.11246,51.48148,-6.43595
+0.8,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07505,0.11466,49.81481,-8.75959
+0.8,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07275,0.11105,44.68635,-5.43264
+0.8,Huy (PP5),ARIMA (FS01),FS01,Residual,0.069,0.108,,0.0
+0.8,Huy (PP5),GRU Direct (FS01),FS01,Direct,0.17332,0.22788,50.0738,-151.18478
+0.9,Baseline,Naive Persistence,FS01,Baseline,0.07708,0.10103,,0.0
+0.9,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.07714,0.10091,49.44649,-0.08584
+0.9,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.07701,0.10081,52.76753,0.08897
+0.9,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.07695,0.10084,52.76753,0.16171
+0.9,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.07727,0.10094,48.70849,-0.24478
+0.9,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.08453,0.10959,46.49446,-9.67279
+0.9,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.07798,0.10134,47.97048,-1.17399
+0.9,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.07681,0.10097,53.13653,0.34609
+0.9,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.07701,0.10232,53.87454,0.08661
+0.9,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07852,0.10224,47.2119,-1.86926
+0.9,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.08026,0.10382,47.58364,-4.1253
+0.9,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07812,0.10255,48.32714,-1.35194
+0.9,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07745,0.10142,48.70849,-0.48001
+0.9,Huy (PP5),ARIMA (FS01),FS01,Residual,0.07708,0.10103,,0.0
+0.9,Huy (PP5),GRU Direct (FS01),FS01,Direct,0.33809,0.37233,46.49446,-338.64002
+0.925,Baseline,Naive Persistence,FS01,Baseline,0.07512,0.0984,,0.0
+0.925,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.07521,0.0986,52.45098,-0.11951
+0.925,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.07536,0.09837,49.01961,-0.3296
+0.925,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.07506,0.09841,52.45098,0.08027
+0.925,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.07517,0.09826,47.54902,-0.07056
+0.925,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.07567,0.09963,52.45098,-0.73797
+0.925,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.07564,0.09847,48.03922,-0.6909
+0.925,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.07595,0.09977,52.94118,-1.11005
+0.925,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.07568,0.09976,51.96078,-0.7506
+0.925,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07714,0.10136,45.54455,-2.69685
+0.925,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.08032,0.10357,45.0495,-6.92854
+0.925,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07684,0.10068,52.9703,-2.29679
+0.925,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07475,0.09841,52.64706,0.48332
+0.925,Huy (PP5),ARIMA (FS01),FS01,Residual,0.07456,0.09813,52.45098,0.74576
+0.925,Huy (PP5),GRU Direct (FS01),FS01,Direct,0.29358,0.32175,46.66667,-290.83545
+0.95,Baseline,Naive Persistence,FS01,Baseline,0.0728,0.09661,,0.0
+0.95,Khoa (Module 1),GRU Residual (Expanding),FS02,Residual,0.07277,0.09645,47.79412,0.04101
+0.95,Khoa (Module 1),LSTM Residual (Expanding),FS01,Residual,0.07273,0.09657,54.41176,0.09259
+0.95,Công (PP2),SA-LSTM (FS01 Expanding),FS01,Residual,0.07252,0.09664,54.41176,0.38193
+0.95,Công (PP2),TPE-LSTM (FS01 Expanding),FS01,Residual,0.07314,0.09655,44.85294,-0.46594
+0.95,Công (PP2),SA-LSTM (FS02 Expanding),FS02,Residual,0.07809,0.10258,55.14706,-7.26268
+0.95,Công (PP2),TPE-LSTM (FS02 Expanding),FS02,Residual,0.07337,0.09643,46.32353,-0.79053
+0.95,Vĩ (PP3),iTransformer Residual (FS01 Expanding),FS01,Residual,0.07289,0.09669,55.88235,-0.12464
+0.95,Vĩ (PP3),iTransformer Residual (FS02 Expanding),FS02,Residual,0.07253,0.09735,51.47059,0.36987
+0.95,Quân (PP4),WF Expanding Residual (FS02),FS02,Residual,0.07573,0.09904,51.85185,-4.02189
+0.95,Quân (PP4),WF Rolling Residual (FS02),FS02,Residual,0.07865,0.10021,47.40741,-8.03067
+0.95,Quân (PP4),Static (T+V) Residual (FS02),FS02,Residual,0.07213,0.09645,54.81481,0.91488
+0.95,Huy (PP5),Hybrid ARIMA-GRU (FS01),FS01,Residual,0.07284,0.09752,53.97059,-0.06152
+0.95,Huy (PP5),ARIMA (FS01),FS01,Residual,0.07258,0.09706,50.73529,0.30679
+0.95,Huy (PP5),GRU Direct (FS01),FS01,Direct,0.2202,0.24819,45.44118,-202.47859
