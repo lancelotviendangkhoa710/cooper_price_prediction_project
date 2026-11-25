@@ -1,6 +1,6 @@
 # Tổng hợp Pipeline Toàn Nhóm (8 Kiến trúc Chính)
 
-Thư mục này tổng hợp đầy đủ **8 sơ đồ pipeline** cho toàn bộ các mô hình Deep Learning / Hybrid chính của 5 thành viên trong dự án **Copper Futures Price Forecasting** (định dạng PNG độ phân giải cao ~5.5K–6.1K, đã đối chiếu trực tiếp từng notebook, đồng bộ chuẩn in đậm/gạch đầu dòng theo mẫu LSTM và kiểm tra khối `(9) Metrics` khớp 100% từng hàm đánh giá trong code).
+Thư mục này tổng hợp đầy đủ **8 sơ đồ pipeline** cho toàn bộ các mô hình Deep Learning / Hybrid chính của 5 thành viên trong dự án **Copper Futures Price Forecasting** (định dạng PNG độ phân giải cao ~5.5K–6.1K, đã đối chiếu trực tiếp từng notebook, chuẩn hóa ký hiệu scaled `zₜ / Δzₜ`, bổ sung `return_sequences=True` cho toàn bộ tầng RNN đầu tiên, đồng bộ chuẩn in đậm/gạch đầu dòng, kiểm tra khối `Metrics` khớp 100% code và gắn thanh footer 1 dòng ghi rõ giao thức chạy ở chân mỗi sơ đồ).
 
 | # | Tệp sơ đồ | Mô hình / Phương pháp | Phạm vi bộ biến, mục tiêu & giao thức chính xác theo code | `(9) Metrics` khớp đúng notebook | Nguồn mã nguồn |
 |---:|---|---|---|---|---|
