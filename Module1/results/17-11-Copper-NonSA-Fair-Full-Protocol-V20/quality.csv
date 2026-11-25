@@ -1,0 +1,11 @@
+column,dtype,missing,unique
+Date,datetime64[ns],0,2710
+Copper,float64,0,2177
+Aluminium,float64,0,2057
+Nickel,float64,0,2403
+Tin,float64,0,2287
+Iron_Ore_62,float64,0,2231
+Silver,float64,0,2141
+Gold,float64,0,2079
+WTI,float64,0,2197
+Brent,float64,0,2204
