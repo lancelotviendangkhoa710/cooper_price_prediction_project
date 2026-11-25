@@ -1,0 +1,54 @@
+{
+  "experiment": "V25 missing-model walk-forward and fairness audit",
+  "source": "V20/V21/V22/V23/V24 notebooks",
+  "dataset_sha256": "9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600",
+  "dataset_rows": 2710,
+  "dataset_start": "2016-01-13",
+  "dataset_end": "2026-11-13",
+  "feature_set": "FS06_WTI_CU",
+  "features": [
+    "Copper",
+    "Aluminium",
+    "Tin",
+    "WTI"
+  ],
+  "lookback": 22,
+  "horizon": 1,
+  "walk_forward_start": "2024-10-07",
+  "walk_forward_end": "2026-11-13",
+  "common_test_rows": 542,
+  "retrain_every_sessions": 63,
+  "fold_count": 9,
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "missing_models_fitted": [
+    "lstm_direct",
+    "gru_direct",
+    "cnn_lstm_direct",
+    "cnn_gru_direct",
+    "baseline_rnn",
+    "cnn_lstm_residual",
+    "cnn_gru_residual",
+    "ridge_residual",
+    "paper_sa_lstm"
+  ],
+  "v23_models_to_merge": [
+    "lstm_residual",
+    "gru_residual",
+    "reopt_sa_lstm"
+  ],
+  "ridge_fit_once_per_fold": true,
+  "run_strategy_audit": false,
+  "v23_source": null,
+  "training_epochs_max": 45,
+  "earlystop_patience": 7,
+  "tensorflow_version": "2.21.0",
+  "sklearn_version": "1.6.1",
+  "run_hash": "98e9017c4da6b3cc",
+  "note": "No all-model equal-HP-budget claim. Split/strategy/feature-grid remains partly incomplete."
+}
