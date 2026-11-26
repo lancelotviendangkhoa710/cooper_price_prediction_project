@@ -1,0 +1,7 @@
+﻿feature_set,notebook,run_state,completed_neural_fits_checkpoint,expected_neural_fits,completed_naive_checkpoint,expected_naive_baselines,direct_mae_rows_in_saved_log,residual_mae_rows_in_saved_log,naive_mae_rows_in_saved_log,data_sha256,status_source
+FS01_CU,itransformer-fs01-cu-kaggle-final.ipynb,complete,120,120,12,12,60,60,12,a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83,final notebook status output
+FS02_PAPER_CU,itransformer-fs02-paper-cu-kaggle-final.ipynb,complete,120,120,12,12,60,60,12,a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83,final notebook status output
+FS03_PAPER_EXO,itransformer-fs03-paper-exo-kaggle-final.ipynb,complete,120,120,12,12,60,60,12,a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83,final notebook status output
+FS04_METALS_CU,itransformer-fs04-metals-cu-kaggle-final.ipynb,complete,120,120,12,12,60,60,12,a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83,final notebook status output
+FS05_METALS_EXO,itransformer-fs05-metals-exo-kaggle-final.ipynb,complete,120,120,12,12,60,60,12,a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83,final notebook status output
+FS06_WTI_CU,itransformer-fs06-wti-cu-kaggle-final.ipynb,running,80,120,8,12,40,37,7,9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600,last saved run_status JSON in notebook output

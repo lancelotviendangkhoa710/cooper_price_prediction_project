@@ -1,0 +1,6 @@
+﻿feature_set,figure,source_notebook,description
+FS01_CU,outputs/figures/five_seed/FS01_CU_5seed_r0900_expanding.png,itransformer-fs01-cu-kaggle-final.ipynb,Saved notebook plot: actual Copper and 5-seed mean prediction; 90/10 expanding
+FS02_PAPER_CU,outputs/figures/five_seed/FS02_PAPER_CU_5seed_r0900_expanding.png,itransformer-fs02-paper-cu-kaggle-final.ipynb,Saved notebook plot: actual Copper and 5-seed mean prediction; 90/10 expanding
+FS03_PAPER_EXO,outputs/figures/five_seed/FS03_PAPER_EXO_5seed_r0900_expanding.png,itransformer-fs03-paper-exo-kaggle-final.ipynb,Saved notebook plot: actual Copper and 5-seed mean prediction; 90/10 expanding
+FS04_METALS_CU,outputs/figures/five_seed/FS04_METALS_CU_5seed_r0900_expanding.png,itransformer-fs04-metals-cu-kaggle-final.ipynb,Saved notebook plot: actual Copper and 5-seed mean prediction; 90/10 expanding
+FS05_METALS_EXO,outputs/figures/five_seed/FS05_METALS_EXO_5seed_r0900_expanding.png,itransformer-fs05-metals-exo-kaggle-final.ipynb,Saved notebook plot: actual Copper and 5-seed mean prediction; 90/10 expanding

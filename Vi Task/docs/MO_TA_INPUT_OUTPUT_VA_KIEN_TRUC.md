@@ -1,4 +1,4 @@
-# Mô tả Input, Output và kiến trúc iTransformer
+﻿# Mô tả Input, Output và kiến trúc iTransformer
 
 ## 1. Bài toán dự báo
 
@@ -13,8 +13,6 @@ Các chuỗi được sắp theo thời gian. Tại thời điểm t, code dùng
 
 ## 2. Input trong từng notebook
 
-Thứ tự cột chính xác như code:
-
 | Notebook | Input X | Shape mỗi mẫu | Target |
 |---|---|---:|---|
 | FS01_CU | Copper | 22 × 1 | Copper(t) |
@@ -24,39 +22,21 @@ Thứ tự cột chính xác như code:
 | FS05_METALS_EXO | Aluminium, Tin, Silver, Gold | 22 × 4 | Copper(t) |
 | FS06_WTI_CU | Copper, Aluminium, Tin, WTI | 22 × 4 | Copper(t) |
 
-FS01 là trường hợp chỉ dựa vào Copper quá khứ. FS03 tái hiện nhóm ba biến ngoại sinh WTI, Gold và Silver; FS02 thêm lịch sử Copper. FS04/FS05 kiểm tra nhóm kim loại có hoặc không có Copper. FS06 thử một tổ hợp có WTI, Aluminium, Tin và Copper.
+FS03/FS05 không có Copper trong X; Residual vẫn dùng Copper(t−1) để cộng phần thay đổi dự báo vào mức giá.
 
-Trong FS03 và FS05, Copper không có mặt trong X. Tuy nhiên, mô hình Residual cần Copper(t−1) để cộng phần thay đổi dự báo vào mức giá trước đó. Điều này là một phép khôi phục đầu ra, không phải một variable-token của iTransformer.
+## 3. Inverted Embedding
 
-## 3. Inverted Embedding hoạt động ra sao?
+Input ban đầu có dạng (batch, 22, K): trục thứ hai là thời gian, trục cuối là biến. Code hoán đổi hai trục để nhận (batch, K, 22). Khi đó mỗi biến trở thành một token, và 22 giá trị lịch sử của biến đó là vector token. Dense dùng chung chiếu vector 22 chiều thành 48 chiều. Attention trộn thông tin giữa các biến trong cửa sổ lịch sử.
 
-Input ban đầu có dạng (batch, 22, K): trục thứ hai là thời gian, trục cuối là biến. Code hoán đổi hai trục để nhận (batch, K, 22). Khi đó mỗi biến trở thành một token, và 22 giá trị lịch sử của biến đó là vector token.
-
-Một lớp Dense dùng chung chiếu vector 22 chiều của mỗi token thành 48 chiều:
-
-**(batch, K, 22) → Dense(48) → (batch, K, 48)**
-
-Khác cách Transformer thông thường vốn thường xem mỗi thời điểm là token, inverted embedding xem mỗi biến là token. Attention do đó trộn thông tin giữa các biến trong cùng cửa sổ lịch sử. Thời gian vẫn có thứ tự cố định trong vector 22 phần tử được chiếu; code này không thêm một positional embedding riêng.
-
-Khi K = 1 như FS01, chỉ có một token nên không tồn tại quan hệ liên biến để attention học. Đây là giới hạn cấu trúc của ablation Copper-only, không phải lỗi chạy.
+Khi K=1 như FS01, chỉ có một token nên không có quan hệ liên biến để attention học.
 
 ## 4. Hai khối Encoder
 
-Mỗi block nhận tensor (batch, K, 48) và thực hiện lần lượt:
+Mỗi block dùng Multi-Head Attention 4 head, dropout 0,1, residual connection và LayerNormalization; tiếp theo là Feed-Forward Dense(96, GELU) → Dropout(0,1) → Dense(48), rồi residual và LayerNormalization. Output giữ dạng (batch, K, 48).
 
-1. **Multi-Head Attention:** 4 head, key dimension 12 mỗi head; query/key/value đều xuất phát từ các variable-token hiện tại.
-2. **Dropout attention:** dropout 0,1 bên trong MultiHeadAttention và một lớp Dropout 0,1 riêng sau đầu ra attention.
-3. **Residual + LayerNormalization:** cộng đầu vào block với attention output, sau đó LayerNormalization với epsilon 1e−6.
-4. **Feed-Forward:** Dense(96, GELU) → Dropout(0,1) → Dense(48).
-5. **Residual + LayerNormalization:** cộng nhánh feed-forward với đầu vào của nhánh này, rồi chuẩn hóa.
+## 5. Prediction head
 
-Output mỗi encoder vẫn có dạng (batch, K, 48). Output encoder thứ nhất được đưa trực tiếp sang encoder thứ hai.
-
-## 5. Prediction head và số tham số
-
-Sau encoder thứ hai, code Flatten K token, mỗi token 48 chiều; Dense head biến vector này thành dự báo:
-
-**Flatten(K × 48) → Dense(32, GELU) → Dropout(0,1) → Dense(1, linear)**
+Sau encoder thứ hai, Flatten K token rồi qua Dense(32, GELU) → Dropout(0,1) → Dense(1, linear).
 
 | Feature set | K | Encoder output | Flatten | Tổng tham số |
 |---|---:|---:|---:|---:|
@@ -67,51 +47,23 @@ Sau encoder thứ hai, code Flatten K token, mỗi token 48 chiều; Dense head 
 | FS05_METALS_EXO | 4 | 4 × 48 | 192 | 45.233 |
 | FS06_WTI_CU | 4 | 4 × 48 | 192 | 45.233 |
 
-Các block encoder dùng chung cấu trúc; phần số tham số thay đổi theo K chủ yếu vì embedding và prediction head nhận số token khác nhau. Không nên so số tham số giữa các feature set như thể chúng là kiến trúc hoàn toàn khác.
-
 ## 6. Direct, Residual và Naive
 
-### Direct
-
-Mạng học ánh xạ từ X sang giá Copper(t) sau chuẩn hóa. Dự báo được inverse-transform về đơn vị giá gốc.
-
-### Residual
-
-Mạng học chênh lệch ở thang đã chuẩn hóa:
-
-**Δzₜ = zₜ − zₜ₋₁**
-
-Trong đó z là giá sau MinMaxScaler. Khi dự báo, code cộng Δz dự báo vào zₜ₋₁, sau đó inverse-transform để thu được giá gốc. Vì vậy, biểu thức trực quan là:
-
-**ŷₜ = yₜ₋₁ + Δŷₜ**
-
-Direct và Residual là hai model được train riêng, mỗi model có loss và trọng số riêng.
-
-### Naive
-
-Naive không có mạng học: dự báo giá phiên tiếp theo bằng giá Copper phiên gần nhất, ŷₜ = yₜ₋₁. Đây là baseline quan trọng vì chuỗi giá có tính liên tục cao.
+- **Direct:** mạng dự báo trực tiếp giá Copper(t) sau chuẩn hóa; output được inverse-transform về thang giá gốc.
+- **Residual:** mạng dự báo thay đổi đã chuẩn hóa Δzₜ = zₜ − zₜ₋₁. Code cộng dự báo thay đổi vào giá phiên trước để khôi phục mức giá. Direct và Residual là hai model train riêng.
+- **Naive:** không train mạng; dự báo giá phiên tiếp theo bằng giá gần nhất, ŷₜ = yₜ₋₁.
 
 ## 7. Cấu hình train và đánh giá
 
-Sáu notebook FS dùng seed 42, Adam với learning rate 0,0003 và clipnorm 1,0, loss MSE, batch size 64, tối đa 65 epochs, EarlyStopping patience 9 trên val_loss và khôi phục trọng số tốt nhất. Shuffle bị tắt để giữ thứ tự thời gian.
+FS01–FS06 dùng seeds 41–45. Mỗi FS có 4 tỷ lệ chia thời gian (80%, 90%, 92,5%, 95%), 3 chiến lược train (`expanding`, `rolling_756`, `recency_weighted`), 2 mục tiêu và 5 seed: 120 neural fits cùng 12 baseline Naive. Cấu hình train là Adam, learning rate 0,0003, clipnorm 1,0, MSE, batch size 64, tối đa 65 epochs, EarlyStopping patience 9; shuffle tắt.
 
-Bốn vị trí bắt đầu test là 80%, 90%, 92,5% và 95% chuỗi; mỗi vị trí chạy Expanding, Rolling-756 và Recency Weighted. Từng test là đoạn cuối theo thời gian. Validation được giữ trước test để early stopping quan sát dữ liệu chưa dùng cập nhật gradient.
+Các metric được tính sau khi inverse-transform: MAE, RMSE, MAPE, R², Directional Accuracy và skill so với Naive. Với MAE/RMSE/MAPE thấp hơn là tốt hơn; skill dương nghĩa là MAE thấp hơn baseline.
 
-Các metric được tính trên giá đã inverse-transform:
-
-- MAE: trung bình trị tuyệt đối sai số.
-- RMSE: căn bậc hai của MSE; nhạy hơn với sai số lớn.
-- MAPE: sai số tuyệt đối tương đối theo phần trăm.
-- R²: mức độ giải thích biến thiên của giá; có thể âm khi dự báo kém hơn dự báo bằng trung bình.
-- Directional Accuracy: tỷ lệ phiên mà dấu thay đổi dự báo khớp dấu thay đổi thực tế.
-- Skill so với Naive: 100 × (MAE_Naive − MAE_Model) / MAE_Naive; dương nghĩa là MAE thấp hơn Naive.
-
-Directional Accuracy của Naive có thể rất thấp vì Naive dự báo thay đổi bằng 0; chỉ số này không phản ánh đầy đủ chất lượng dự báo mức giá. Nên xem cùng MAE/RMSE và biểu đồ giá.
+FS01–FS05 đã hoàn tất. FS06 đang dở và dùng fingerprint CSV khác; xem [báo cáo thực nghiệm](BAO_CAO_THUC_NGHIEM_ITRANSFORMER.md) trước khi so sánh kết quả. Bảng MAE, trạng thái và hình được lưu trong `../outputs/tables/five_seed/` và `../outputs/figures/five_seed/`.
 
 ## 8. Giới hạn khi diễn giải
 
-- Test được đánh giá rolling one-step-ahead: lịch sử thực tế mới nhất có thể đi vào cửa sổ của phiên kế tiếp. Kết quả không phải dự báo nhiều bước mà không nhận thêm dữ liệu.
-- FS03/FS05 không dùng Copper trong X, nhưng nhánh Residual vẫn cần Copper(t−1) để tái tạo mức giá.
-- FS01 không thể học attention giữa nhiều biến vì K = 1.
+- Đánh giá là rolling one-step-ahead: lịch sử thực tế mới nhất có thể vào cửa sổ dự báo kế tiếp; không phải forecast nhiều bước không nhận thêm dữ liệu.
+- FS03/FS05 không dùng Copper làm input của mạng, nhưng Residual cần Copper(t−1) để khôi phục mức giá.
 - Dữ liệu ngoại sinh được căn theo ngày trong CSV; thời điểm công bố thực tế của từng biến chưa được kiểm tra.
-- Một seed và một giai đoạn cuối không đủ để kết luận model hoặc feature set ưu việt tổng quát.
+- Các MAE đã trích từ log làm tròn; raw predictions và bảng kiểm định thống kê chưa có trong thư mục kết quả này.

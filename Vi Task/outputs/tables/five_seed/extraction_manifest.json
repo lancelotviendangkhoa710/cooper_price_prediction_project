@@ -1,0 +1,113 @@
+{
+  "purpose": "Extract saved MAE logs and notebook figures only; no model training or new prediction was run.",
+  "complete_feature_sets": [
+    "FS01_CU",
+    "FS02_PAPER_CU",
+    "FS03_PAPER_EXO",
+    "FS04_METALS_CU",
+    "FS05_METALS_EXO"
+  ],
+  "feature_sets": [
+    {
+      "feature_set": "FS01_CU",
+      "notebook": "itransformer-fs01-cu-kaggle-final.ipynb",
+      "run_state": "complete",
+      "completed_neural_fits_checkpoint": "120",
+      "expected_neural_fits": "120",
+      "completed_naive_checkpoint": "12",
+      "expected_naive_baselines": "12",
+      "direct_mae_rows_in_saved_log": 60,
+      "residual_mae_rows_in_saved_log": 60,
+      "naive_mae_rows_in_saved_log": 12,
+      "data_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "status_source": "final notebook status output"
+    },
+    {
+      "feature_set": "FS02_PAPER_CU",
+      "notebook": "itransformer-fs02-paper-cu-kaggle-final.ipynb",
+      "run_state": "complete",
+      "completed_neural_fits_checkpoint": "120",
+      "expected_neural_fits": "120",
+      "completed_naive_checkpoint": "12",
+      "expected_naive_baselines": "12",
+      "direct_mae_rows_in_saved_log": 60,
+      "residual_mae_rows_in_saved_log": 60,
+      "naive_mae_rows_in_saved_log": 12,
+      "data_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "status_source": "final notebook status output"
+    },
+    {
+      "feature_set": "FS03_PAPER_EXO",
+      "notebook": "itransformer-fs03-paper-exo-kaggle-final.ipynb",
+      "run_state": "complete",
+      "completed_neural_fits_checkpoint": "120",
+      "expected_neural_fits": "120",
+      "completed_naive_checkpoint": "12",
+      "expected_naive_baselines": "12",
+      "direct_mae_rows_in_saved_log": 60,
+      "residual_mae_rows_in_saved_log": 60,
+      "naive_mae_rows_in_saved_log": 12,
+      "data_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "status_source": "final notebook status output"
+    },
+    {
+      "feature_set": "FS04_METALS_CU",
+      "notebook": "itransformer-fs04-metals-cu-kaggle-final.ipynb",
+      "run_state": "complete",
+      "completed_neural_fits_checkpoint": "120",
+      "expected_neural_fits": "120",
+      "completed_naive_checkpoint": "12",
+      "expected_naive_baselines": "12",
+      "direct_mae_rows_in_saved_log": 60,
+      "residual_mae_rows_in_saved_log": 60,
+      "naive_mae_rows_in_saved_log": 12,
+      "data_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "status_source": "final notebook status output"
+    },
+    {
+      "feature_set": "FS05_METALS_EXO",
+      "notebook": "itransformer-fs05-metals-exo-kaggle-final.ipynb",
+      "run_state": "complete",
+      "completed_neural_fits_checkpoint": "120",
+      "expected_neural_fits": "120",
+      "completed_naive_checkpoint": "12",
+      "expected_naive_baselines": "12",
+      "direct_mae_rows_in_saved_log": 60,
+      "residual_mae_rows_in_saved_log": 60,
+      "naive_mae_rows_in_saved_log": 12,
+      "data_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+      "status_source": "final notebook status output"
+    },
+    {
+      "feature_set": "FS06_WTI_CU",
+      "notebook": "itransformer-fs06-wti-cu-kaggle-final.ipynb",
+      "run_state": "running",
+      "completed_neural_fits_checkpoint": "80",
+      "expected_neural_fits": "120",
+      "completed_naive_checkpoint": "8",
+      "expected_naive_baselines": "12",
+      "direct_mae_rows_in_saved_log": 40,
+      "residual_mae_rows_in_saved_log": 37,
+      "naive_mae_rows_in_saved_log": 7,
+      "data_sha256": "9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600",
+      "status_source": "last saved run_status JSON in notebook output"
+    }
+  ],
+  "job_mae_rows": 744,
+  "notebook_sha256": {
+    "itransformer-fs01-cu-kaggle-final.ipynb": "4d7e3e4d8778a478194f2824d91b0a62e5be495f810b0bc9fa4a9e2513fc3114",
+    "itransformer-fs02-paper-cu-kaggle-final.ipynb": "d55b8ef0b6458ce4ebc4cd7ba529ab90733a8157062d9dbb7eea8ebe656713de",
+    "itransformer-fs03-paper-exo-kaggle-final.ipynb": "1181fa9ec754ce2d113834c68f4e4577bb2035393fa28d1b96712a65c74ef34e",
+    "itransformer-fs04-metals-cu-kaggle-final.ipynb": "4f44d8733f4fad4aadbf256fa68cdb1f14bc3c5bc58694842caa1d03620b6859",
+    "itransformer-fs05-metals-exo-kaggle-final.ipynb": "c59ffd48f7a29676a548f61745797d26caf3c70153a48e52cd3b078a4de6a792",
+    "itransformer-fs06-wti-cu-kaggle-final.ipynb": "702da4aec6a9fb7ecc471a358a8ca3aca572dc502c167ed0d3f5ed10b84043d7"
+  },
+  "outputs": [
+    "outputs/tables/five_seed/job_mae_seed41_45.csv",
+    "outputs/tables/five_seed/run_status.csv",
+    "outputs/tables/five_seed/condition_summary_fs01_fs05.csv",
+    "outputs/tables/five_seed/feature_set_summary_fs01_fs05.csv",
+    "outputs/tables/five_seed/figure_manifest.csv",
+    "outputs/figures/five_seed/"
+  ]
+}
