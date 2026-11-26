@@ -1,0 +1,2 @@
+﻿feature_set,status,direct_runs,mean_direct_mae,mean_within_config_seed_std_direct,residual_runs,mean_residual_mae,mean_within_config_seed_std_residual,naive_configs,mean_naive_mae,residual_wins_vs_naive,mean_residual_skill_vs_naive_pct,data_sha256
+FS06_WTI_CU,complete; separate dataset fingerprint,60,1.225048167,0.160475931,60,0.079050344,0.006964117,12,0.073498386,16/60,-7.399740,9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600

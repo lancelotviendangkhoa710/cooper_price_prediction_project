@@ -659,87 +659,135 @@ FS05_METALS_EXO,0.950,rolling_756,itransformer_residual,residual,43,0.07493,save
 FS05_METALS_EXO,0.950,rolling_756,itransformer_residual,residual,44,0.07398,saved notebook cell output log,itransformer-fs05-metals-exo-kaggle-final.ipynb
 FS05_METALS_EXO,0.950,rolling_756,itransformer_residual,residual,45,0.07294,saved notebook cell output log,itransformer-fs05-metals-exo-kaggle-final.ipynb
 FS05_METALS_EXO,0.950,rolling_756,naive,baseline,shared,0.07280,saved notebook cell output log,itransformer-fs05-metals-exo-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,41,1.03959,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,42,0.89099,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,43,0.88927,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,44,1.11348,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,45,1.09724,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,41,0.08612,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,42,0.06896,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,43,0.06961,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,44,0.06889,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,45,0.06912,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,expanding,naive,baseline,shared,0.06900,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,41,0.51386,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,42,1.24187,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,45,0.68841,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,41,0.06864,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,44,0.06904,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,45,0.06905,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,recency_weighted,naive,baseline,shared,0.06900,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,41,0.68835,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,42,0.64092,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,43,0.60689,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,44,0.61913,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,45,0.76473,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,42,0.06876,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,43,0.06960,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,44,0.06925,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,45,0.06894,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.800,rolling_756,naive,baseline,shared,0.06900,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,41,0.68887,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,42,1.38264,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,43,1.05613,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,44,0.90479,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,45,1.36531,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,41,0.07754,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,42,0.07794,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,43,0.07736,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,44,0.07681,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,45,0.07725,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,expanding,naive,baseline,shared,0.07708,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,41,1.76244,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,42,1.49947,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,43,1.47179,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,44,1.32615,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,45,1.71380,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,41,0.14683,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,42,0.07929,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,43,0.08106,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,44,0.16324,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.900,rolling_756,naive,baseline,shared,0.07708,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,41,1.37692,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,42,1.34372,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,43,1.23690,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,44,1.28504,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,45,1.35517,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,41,0.07509,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,42,0.07499,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,43,0.07576,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,44,0.07484,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,recency_weighted,naive,baseline,shared,0.07512,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,43,1.73480,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,44,1.76083,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,45,1.84894,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,43,0.08655,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,44,0.10709,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,45,0.09577,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,41,1.38097,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,42,1.56288,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,43,1.39290,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,44,1.36653,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,41,0.07322,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,42,0.07269,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,43,0.07361,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,44,0.07263,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,recency_weighted,naive,baseline,shared,0.07280,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,41,1.77595,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,42,1.28664,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,43,1.86115,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,44,1.43221,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,45,1.35369,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,41,0.07700,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,42,0.07187,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,43,0.07492,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,44,0.07768,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
-FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,45,0.07959,saved notebook cell output log,itransformer-fs06-wti-cu-kaggle-final.ipynb
+FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,41,1.039592985624097,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,42,0.8909914412441288,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,43,0.8892709277617536,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,44,1.113480083660446,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_direct,direct,45,1.0972418570852809,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,41,0.0861172278862484,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,42,0.0689554574139626,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,43,0.069608381487027,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,44,0.0688887523397901,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,itransformer_residual,residual,45,0.0691221826546481,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,expanding,naive,baseline,shared,0.0690014660358429,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,41,0.5138591175699586,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,42,1.2418710130890795,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,43,0.5223039659164928,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,44,0.7530324672412169,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_direct,direct,45,0.6884079733649302,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,41,0.0686364185603548,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,42,0.0687877315302461,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,43,0.0708859792968732,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,44,0.0690355924064795,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,itransformer_residual,residual,45,0.0690532878930439,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,recency_weighted,naive,baseline,shared,0.0690014660358429,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,41,0.6883523588937152,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,42,0.640919017948348,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,43,0.6068895033743112,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,44,0.6191262451150763,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_direct,direct,45,0.7647321209872345,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,41,0.0941071662220375,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,42,0.0687593123007813,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,43,0.0695976277533317,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,44,0.0692544428428564,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,itransformer_residual,residual,45,0.0689353883827613,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.800,rolling_756,naive,baseline,shared,0.0690014734864234,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,41,0.688872488122365,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,42,1.382637056677324,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,43,1.056131992102329,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,44,0.9047859467701282,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_direct,direct,45,1.3653055835301364,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,41,0.0775358712715259,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,42,0.077941817457054,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,43,0.0773610626248285,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,44,0.0768124973498949,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,itransformer_residual,residual,45,0.0772498030955774,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,expanding,naive,baseline,shared,0.0770767256617546,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_direct,direct,41,0.9837705916918515,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_direct,direct,42,1.0943397775222017,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_direct,direct,43,0.9216661899450524,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_direct,direct,44,1.049060692915068,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_direct,direct,45,1.099914672543862,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_residual,residual,41,0.0785816323271104,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_residual,residual,42,0.0772823404467946,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_residual,residual,43,0.0769202897940689,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_residual,residual,44,0.0769523101171807,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,itransformer_residual,residual,45,0.0778130647435177,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,recency_weighted,naive,baseline,shared,0.0770767256617546,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,41,1.7624423615307276,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,42,1.4994706400741729,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,43,1.4717861132155483,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,44,1.3261473449508203,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_direct,direct,45,1.7138032527129916,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,41,0.1468282996921347,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,42,0.079292705961589,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,43,0.0810622065517863,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,44,0.1632407359140478,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,itransformer_residual,residual,45,0.0926856653691964,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.900,rolling_756,naive,baseline,shared,0.077076718211174,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_direct,direct,41,0.8570142674212365,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_direct,direct,42,1.2958879542748136,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_direct,direct,43,1.0605904711712812,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_direct,direct,44,1.226094686796122,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_direct,direct,45,1.0451991555419042,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_residual,residual,41,0.0757411618938659,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_residual,residual,42,0.0756732867871303,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_residual,residual,43,0.0764964897474378,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_residual,residual,44,0.0763813092142808,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,itransformer_residual,residual,45,0.0757254939865738,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,expanding,naive,baseline,shared,0.0751161500811576,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,41,1.376916225500259,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,42,1.3437220955423863,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,43,1.236900153344461,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,44,1.285040058664101,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_direct,direct,45,1.3551678825983526,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,41,0.0750890034768688,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,42,0.0749853122387436,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,43,0.0757628680109445,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,44,0.0748443583217146,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,itransformer_residual,residual,45,0.0760931076285539,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,recency_weighted,naive,baseline,shared,0.0751161500811576,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,41,1.9088827981708536,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,42,1.889241191646705,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,43,1.7347990096827932,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,44,1.7608323693409853,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_direct,direct,45,1.8489387661112,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,41,0.079670084781148,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,42,0.0752379084576478,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,43,0.0865530516866882,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,44,0.1070939565195677,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,itransformer_residual,residual,45,0.0957732256894096,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.925,rolling_756,naive,baseline,shared,0.0751161277294159,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_direct,direct,41,1.7114526147653957,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_direct,direct,42,1.3976900230738172,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_direct,direct,43,1.1872321766391398,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_direct,direct,44,1.5595841141172195,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_direct,direct,45,1.1219090376132552,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_residual,residual,41,0.0728001646734961,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_residual,residual,42,0.0721432260312003,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_residual,residual,43,0.0734828409195145,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_residual,residual,44,0.0728111370167513,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,itransformer_residual,residual,45,0.0863612528922142,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,expanding,naive,baseline,shared,0.0727991983294487,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,41,1.3809736979770315,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,42,1.562881500457578,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,43,1.3928970432978345,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,44,1.366525631603511,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_direct,direct,45,1.4966741162709454,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,41,0.0732248752102502,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,42,0.0726936291478581,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,43,0.0736090175112956,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,44,0.0726310940108515,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,itransformer_residual,residual,45,0.0737812312158262,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,recency_weighted,naive,baseline,shared,0.0727991983294487,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,41,1.7759477774877768,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,42,1.2866403317184143,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,43,1.8611520422653247,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,44,1.4322054532104564,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_direct,direct,45,1.353691588431159,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,41,0.0769961650984665,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,42,0.0718702107150302,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,43,0.0749202487977234,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,44,0.0776837262765865,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,itransformer_residual,residual,45,0.0795859505709065,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip
+FS06_WTI_CU,0.950,rolling_756,naive,baseline,shared,0.0727992355823516,final FS06 ZIP: metrics_by_seed.csv,outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip

@@ -1,0 +1,59 @@
+{
+  "script": "itransformer_fs06_5seeds_v1",
+  "sha256": "9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600",
+  "rows": 2710,
+  "date_start": "2016-01-13",
+  "date_end": "2026-11-13",
+  "active_feature_sets": [
+    "FS06_WTI_CU"
+  ],
+  "feature_sets": {
+    "FS06_WTI_CU": [
+      "Copper",
+      "Aluminium",
+      "Tin",
+      "WTI"
+    ]
+  },
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "lookback": 22,
+  "horizon": 1,
+  "ratios": [
+    0.8,
+    0.9,
+    0.925,
+    0.95
+  ],
+  "schemes": [
+    "expanding",
+    "rolling_756",
+    "recency_weighted"
+  ],
+  "half_life": 252,
+  "batch": 64,
+  "epochs": 65,
+  "patience": 9,
+  "embed": 48,
+  "encoders": 2,
+  "heads": 4,
+  "key_dim": 12,
+  "ff": 96,
+  "dropout": 0.1,
+  "head": 32,
+  "lr": 0.0003,
+  "clipnorm": 1.0,
+  "union_columns": [
+    "Copper",
+    "WTI",
+    "Gold",
+    "Silver",
+    "Aluminium",
+    "Tin"
+  ]
+}

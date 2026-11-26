@@ -1,0 +1,19 @@
+{
+  "run_key": "itransformer_fs06_5seed_0bdcbf893b7a_sha9580ede1",
+  "state": "complete",
+  "expected_neural_fits": 120,
+  "completed_neural_fits": 120,
+  "remaining_neural_fits": 0,
+  "expected_naive_baselines": 12,
+  "completed_naive_baselines": 12,
+  "remaining_naive_baselines": 0,
+  "new_fits_this_run": 120,
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "error": null
+}

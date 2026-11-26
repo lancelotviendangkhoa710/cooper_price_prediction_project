@@ -2,15 +2,15 @@
 
 ## 1. Tóm tắt
 
-Sáu notebook FS được thay bằng phiên bản thực nghiệm 5 seed (41–45). FS01–FS05 có đủ 120/120 lượt neural và 12/12 baseline mỗi notebook. FS06 mới có checkpoint chạy dở và không có bảng tổng hợp cuối.
+Sáu notebook FS dùng thực nghiệm 5 seed (41–45). Mỗi bộ có đủ 120/120 lượt neural và 12/12 baseline. FS01–FS05 cùng fingerprint dữ liệu; FS06 hoàn tất nhưng dùng fingerprint khác nên được phân tích riêng.
 
-Trên năm FS hoàn tất, MAE trung bình của iTransformer Direct là **1,478248**, Residual là **0,075400**, còn Naive là **0,073500**. Residual thắng baseline ở 68/300 so sánh seed–cấu hình; hiện chưa có bằng chứng rằng mô hình cải thiện ổn định so với Naive.
+Trên FS01–FS05, MAE trung bình của Direct là **1,478248**, Residual **0,075400**, Naive **0,073500**. Residual thắng baseline ở 68/300 lượt seed–cấu hình. Trên FS06 riêng, MAE là Direct **1,225048167**, Residual **0,079050344**, Naive **0,073498386**; Residual thắng ở 16/60 lượt.
 
 ## 2. Dữ liệu và phạm vi
 
-FS01–FS05 dùng `dataset_9_commodities_daily.csv`, 2.710 phiên từ 13/01/2016 đến 13/11/2026, fingerprint SHA-256 `a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83`. CSV không nằm trong repository. FS06 có cùng số dòng và ngày đầu/cuối nhưng fingerprint `9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600`, nên không gộp khi so sánh.
+Các notebook ghi dataset `dataset_9_commodities_daily.csv`, 2.710 phiên từ 13/01/2016 đến 13/11/2026. FS01–FS05 dùng SHA-256 `a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83`; ZIP FS06 dùng `9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600`. Cùng số dòng và ngày đầu/cuối không chứng minh dữ liệu từng ngày giống nhau, nên không gộp FS06 với FS01–FS05. CSV không có trong repository.
 
-Mỗi mẫu dùng 22 phiên quá khứ để dự báo Copper tại phiên tiếp theo. Chia theo thời gian, không shuffle; scaler được fit trên phần train. Notebook chạy bốn mốc test (80%, 90%, 92,5%, 95%), ba chiến lược (`expanding`, `rolling_756`, `recency_weighted`), Direct và Residual. Mỗi cấu hình neural được huấn luyện với năm seed 41–45; mỗi FS dự kiến 120 lượt neural và 12 Naive baseline.
+Mỗi mẫu dùng 22 phiên quá khứ để dự báo Copper phiên kế tiếp. Chia theo thời gian, không shuffle; scaler fit trên train. Grid gồm bốn tỷ lệ test (80%, 90%, 92,5%, 95%), ba chiến lược (`expanding`, `rolling_756`, `recency_weighted`), hai mục tiêu (Direct, Residual), năm seed. Mỗi FS có 120 lượt neural và 12 Naive.
 
 ## 3. Feature set
 
@@ -27,11 +27,11 @@ FS03/FS05 không đưa Copper vào X; Residual vẫn dùng Copper(t−1) khi chu
 
 ## 4. Cấu hình mô hình
 
-Các notebook dùng lookback 22, horizon 1, inverted embedding 48, hai encoder với 4 attention head và FFN 96→48. Prediction head Flatten → Dense(32, GELU) → Dropout(0,1) → Dense(1). Adam learning rate 0,0003, clipnorm 1,0, loss MSE, batch size 64, tối đa 65 epochs, EarlyStopping patience 9.
+Lookback 22, horizon 1, inverted embedding 48, hai encoder với 4 attention head và FFN 96→48. Head: Flatten → Dense(32, GELU) → Dropout(0,1) → Dense(1). Adam learning rate 0,0003, clipnorm 1,0, MSE, batch size 64, tối đa 65 epochs, EarlyStopping patience 9.
 
-## 5. Kết quả từ 5 seed
+## 5. FS01–FS05: cùng fingerprint
 
-Bảng dưới tổng hợp 60 MAE cho mỗi mục tiêu (12 cấu hình × 5 seed), và 12 baseline cho mỗi feature set. Số MAE được lấy từ log notebook đã lưu, làm tròn theo log đến 5 chữ số thập phân trước khi tính trung bình.
+MAE Direct/Residual trung bình qua 60 lượt mỗi mục tiêu (12 cấu hình × 5 seed); Naive qua 12 cấu hình. Log notebook hiển thị MAE làm tròn 5 chữ số trước khi tính trung bình.
 
 | Feature set | Trạng thái | Direct MAE TB | Residual MAE TB | Naive MAE TB | Residual thắng Naive |
 |---|---|---:|---:|---:|---:|
@@ -41,36 +41,37 @@ Bảng dưới tổng hợp 60 MAE cho mỗi mục tiêu (12 cấu hình × 5 se
 | FS04_METALS_CU | Hoàn tất | 1,487418 | 0,074665 | 0,073500 | 14/60 |
 | FS05_METALS_EXO | Hoàn tất | 1,476126 | 0,074533 | 0,073500 | 14/60 |
 
-### Nhận xét
+Direct kém xa baseline Naive. Residual tốt hơn Direct nhưng MAE gộp cao hơn Naive khoảng 2,6%, chỉ thắng ở 68/300 lượt so sánh. FS01 có Residual MAE thấp nhất, nhưng chưa đủ để kết luận Copper-only tổng quát hóa tốt nhất. Với K=1, attention không học quan hệ liên biến.
 
-1. Direct có MAE khoảng 1,42–1,52, lớn hơn nhiều so với Naive khoảng 0,0735.
-2. Residual tốt hơn Direct rõ rệt nhưng MAE trung bình vẫn cao hơn Naive khoảng 2,6%; thắng ở 68/300 lượt seed–cấu hình.
-3. FS01 có MAE Residual thấp nhất trong năm FS hoàn tất. Đây là mô tả trên các cấu hình hiện có, không đủ để kết luận thêm biến làm kết quả kém đi.
-4. Với FS01 (K=1), attention qua biến chỉ có một token, nên không học quan hệ giữa nhiều biến.
-5. Các tỷ lệ test dùng những giai đoạn và số lượng quan sát khác nhau. Trung bình tổng hợp hữu ích để mô tả, không thay cho đánh giá trên một tập test cố định hoặc kiểm định thống kê.
+## 6. FS06: kết quả ZIP hoàn tất
 
-Các độ lệch chuẩn theo seed trong CSV được tính từng cấu hình rồi lấy trung bình qua 12 cấu hình; không phải độ lệch chuẩn gộp giữa mọi MAE.
+ZIP [iTransformer_FS06_5Seeds_0bdcbf893b7a.zip](../outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip) ghi `complete`: 120/120 lượt neural, 12/12 baseline, 132 dòng metrics, 38.049 dòng raw predictions, 120 histories và một hình tổng hợp.
 
-## 6. FS06 chưa hoàn tất
+| Feature set | Trạng thái | Direct MAE TB | Residual MAE TB | Naive MAE TB | Residual thắng Naive |
+|---|---|---:|---:|---:|---:|
+| FS06_WTI_CU | Hoàn tất | 1,225048167 | 0,079050344 | 0,073498386 | 16/60 |
 
-Cell trạng thái cuối được lưu trong notebook báo `running`, 80/120 lượt neural và 8/12 baseline. Transcript notebook có 40 dòng MAE Direct, 37 Residual và 7 baseline; số dòng transcript không khớp checkpoint. Cell tổng hợp cuối và hình dự báo chưa có output. Ngoài ra, FS06 có fingerprint dataset khác FS01–FS05. Do đó báo cáo không đưa MAE FS06 vào bảng so sánh; cần resume trên cùng CSV chuẩn và lưu đủ output cuối trước khi kết luận.
+Metrics full-precision khớp với `metrics_mean_std.csv` tính lại từ metrics theo seed (sai khác tối đa 2,3×10⁻¹⁶). MAE tính lại từ `actual`/`pred` khớp metric trong sai số tối đa khoảng 3×10⁻⁸; số dòng từng nhóm khớp `n_test`. Có đủ metrics và predictions cho 132 job, cùng history cho 120 lượt neural.
 
-## 7. Bảng, log và biểu đồ
+Output nhúng trong notebook là checkpoint cũ `running`, 80/120 neural và 8/12 baseline. ZIP có cùng run key `itransformer_fs06_5seed_0bdcbf893b7a_sha9580ede1` và ghi kết quả cuối `complete`. Vì fingerprint FS06 khác FS01–FS05, chỉ diễn giải MAE FS06 trong chính nhóm dữ liệu đó, không xếp hạng trực tiếp sáu feature set.
 
-- [Bảng MAE từng job (744 dòng log trích được)](../outputs/tables/five_seed/job_mae_seed41_45.csv)
-- [Tóm tắt MAE theo feature set](../outputs/tables/five_seed/feature_set_summary_fs01_fs05.csv)
-- [Tóm tắt từng split × chiến lược × mục tiêu](../outputs/tables/five_seed/condition_summary_fs01_fs05.csv)
-- [Trạng thái từng notebook](../outputs/tables/five_seed/run_status.csv)
-- [Manifest nguồn trích xuất](../outputs/tables/five_seed/extraction_manifest.json)
-- [Biểu đồ MAE tổng hợp](../outputs/figures/five_seed/mean_mae_by_feature_set_fs01_fs05.png)
-- [Hình dự báo 5 seed](../outputs/tables/five_seed/figure_manifest.csv)
+## 7. Artifact kết quả
 
-Notebook có code tính so sánh Diebold–Mariano, nhưng bảng p-value và raw predictions không nằm trong các file nguồn đưa vào lần cập nhật này. Vì vậy các nhận xét trên là mô tả, không kết luận ý nghĩa thống kê. Artifact lần chạy một seed trước đây được giữ trong thư mục `archive_seed42`.
+- [Tóm tắt FS01–FS05](../outputs/tables/five_seed/feature_set_summary_fs01_fs05.csv)
+- [Tóm tắt riêng FS06](../outputs/tables/five_seed/feature_set_summary_fs06_full_run.csv)
+- [MAE theo job đủ sáu FS](../outputs/tables/five_seed/job_mae_seed41_45.csv)
+- [Tình trạng chạy](../outputs/tables/five_seed/run_status.csv)
+- [Metrics full-precision, mean/std, DM và data quality FS06](../outputs/tables/five_seed/fs06_full_run/)
+- [ZIP có raw predictions, histories và toàn bộ artifact FS06](../outputs/archives/iTransformer_FS06_5Seeds_0bdcbf893b7a.zip)
+- [Biểu đồ MAE FS01–FS05](../outputs/figures/five_seed/mean_mae_by_feature_set_fs01_fs05.png)
+- [Danh mục hình dự báo](../outputs/tables/five_seed/figure_manifest.csv)
+
+FS06 có kiểm định DM theo seed và tổng hợp mô tả trong ZIP. Do có nhiều cấu hình/phép so sánh, không suy rộng một p-value thành kết luận tổng quát. Artifact lần chạy một seed cũ được giữ trong `archive_seed42`.
 
 ## 8. Benchmark iTransformer với SA-LSTM
 
-Notebook `iTransformer_vs_SA_LSTM_K5_Fair_FINAL_Colab.ipynb` là một thí nghiệm riêng và không bị thay đổi. Các kết quả benchmark đã lưu vẫn được ghi trong [nhận xét pipeline K=5](../Nhan_xet_iTransformer_Pipeline_Input_Output.md) và các bảng `outputs/tables/cell_*.html`; không gộp các số liệu đó với grid 5 seed FS01–FS06.
+Notebook `iTransformer_vs_SA_LSTM_K5_Fair_FINAL_Colab.ipynb` là thí nghiệm riêng, không bị thay đổi. Output benchmark nằm trong [nhận xét pipeline K=5](../Nhan_xet_iTransformer_Pipeline_Input_Output.md) và `outputs/tables/cell_*.html`; không gộp với grid 5 seed FS.
 
 ## 9. Kết luận
 
-Trên năm feature set chạy đủ, Residual bám baseline tốt hơn Direct nhưng chưa thắng Naive ổn định. Hiện chưa có cơ sở để tuyên bố iTransformer cải thiện dự báo Copper trên pipeline này. Bước tiếp theo là thống nhất dataset cho FS06, resume các job còn thiếu, tải raw predictions và các bảng metric đầy đủ, rồi so sánh trên cùng giai đoạn test.
+Trên FS01–FS05, Residual bám Naive nhưng chưa thắng ổn định. FS06 cũng có MAE Residual cao hơn Naive trung bình trên fingerprint riêng. Chưa có bằng chứng iTransformer cải thiện dự báo Copper ổn định. Muốn so sánh sáu nhóm biến trực tiếp, cần chạy lại FS06 trên đúng CSV canonical của FS01–FS05 và cùng ngày test.
