@@ -74,6 +74,36 @@
 | residual | 44 | 0.07798 | 0.10190 | 49.07% | +1.17% | 0.2185 |
 | residual | 45 | 0.07834 | 0.10231 | 47.96% | +1.64% | 0.2138 |
 
+
+## 2B. Độ ổn định qua 5 Seeds mở rộng ([41, 42, 43, 44, 45], Rolling FS02 & Expanding FS03, Phase 2C)
+
+| Bộ biến | Chiến lược | Mode | Seed | MAE | RMSE | DA (%) | ΔMAE vs Naive | DM(L1) p-value |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| FEATURES_4 | rolling_window | direct | 41 | 0.31027 | 0.37492 | 49.07% | +302.55% | 0.0000 |
+| FEATURES_4 | rolling_window | direct | 42 | 0.28371 | 0.34043 | 47.21% | +268.09% | 0.0000 |
+| FEATURES_4 | rolling_window | direct | 43 | 0.29525 | 0.34960 | 46.47% | +283.05% | 0.0000 |
+| FEATURES_4 | rolling_window | direct | 44 | 0.37650 | 0.43297 | 48.33% | +388.48% | 0.0000 |
+| FEATURES_4 | rolling_window | direct | 45 | 0.36138 | 0.41878 | 49.81% | +368.85% | 0.0000 |
+| FEATURES_4 | rolling_window | residual | 41 | 0.07862 | 0.10211 | 47.58% | +2.01% | 0.1015 |
+| FEATURES_4 | rolling_window | residual | 42 | 0.08026 | 0.10382 | 47.58% | +4.13% | 0.0071 |
+| FEATURES_4 | rolling_window | residual | 43 | 0.07936 | 0.10279 | 49.44% | +2.96% | 0.0751 |
+| FEATURES_4 | rolling_window | residual | 44 | 0.07766 | 0.10153 | 52.42% | +0.76% | 0.4535 |
+| FEATURES_4 | rolling_window | residual | 45 | 0.07728 | 0.10089 | 51.67% | +0.27% | 0.7668 |
+| FEATURES_3 | expanding_window | residual | 41 | 0.07967 | 0.10491 | 50.56% | +3.36% | 0.0969 |
+| FEATURES_3 | expanding_window | residual | 42 | 0.07693 | 0.10107 | 50.93% | -0.19% | 0.7862 |
+| FEATURES_3 | expanding_window | residual | 43 | 0.07760 | 0.10156 | 48.33% | +0.68% | 0.3970 |
+| FEATURES_3 | expanding_window | residual | 44 | 0.07839 | 0.10381 | 51.67% | +1.71% | 0.3775 |
+| FEATURES_3 | expanding_window | residual | 45 | 0.07691 | 0.10137 | 51.30% | -0.22% | 0.8433 |
+
+### Tổng hợp Mean ± Std qua 5 Seeds (5 cấu hình Phase 2B + 2C)
+
+| Bộ biến | Chiến lược | Mode | Mean MAE ± Std | Mean RMSE | Mean DA (%) | Mean ΔMAE vs Naive | Số seed DM p<0.05 |
+|---|---|---|---:|---:|---:|---:|---:|
+| FEATURES_3 | expanding_window | residual | 0.07790 ± 0.00116 | 0.10254 | 50.56% | +1.07% | 0/5 |
+| FEATURES_4 | expanding_window | direct | 0.27838 ± 0.03900 | 0.32912 | 50.04% | +261.17% | 5/5 |
+| FEATURES_4 | expanding_window | residual | 0.07828 ± 0.00063 | 0.10221 | 48.85% | +1.56% | 1/5 |
+| FEATURES_4 | rolling_window | direct | 0.32542 ± 0.04117 | 0.38334 | 48.18% | +322.21% | 5/5 |
+| FEATURES_4 | rolling_window | residual | 0.07864 ± 0.00122 | 0.10223 | 49.74% | +2.02% | 1/5 |
 ## 3. Độ bền vững qua 4 mốc chia thời gian [0.8, 0.9, 0.925, 0.95] (FEATURES_4)
 
 | Mode | Ratio | n_test | Chiến lược | MAE ($/lb) | RMSE ($/lb) | R² | DA (%) |
