@@ -1,0 +1,67 @@
+<div id="m1-window-visual">
+  <style>
+    #m1-window-visual { display:grid; gap:calc(var(--font-size-base) * 1); color:var(--foreground); }
+    #m1-window-visual .intro { display:grid; gap:calc(var(--font-size-base) * .25); padding-right:96px; }
+    #m1-window-visual .rows { display:grid; gap:calc(var(--font-size-base) * .9); }
+    #m1-window-visual .strategy { display:grid; grid-template-columns:150px 1fr; gap:calc(var(--font-size-base) * .75); align-items:center; }
+    #m1-window-visual .name { display:grid; gap:calc(var(--font-size-base) * .2); }
+    #m1-window-visual .timeline { display:grid; grid-template-columns:repeat(12,1fr); gap:3px; min-height:46px; align-items:stretch; position:relative; }
+    #m1-window-visual .cell { min-width:0; background:color-mix(in srgb, var(--muted) 80%, transparent); display:flex; align-items:center; justify-content:center; color:var(--muted-foreground); }
+    #m1-window-visual .used { background:color-mix(in srgb, var(--viz-series-1) 24%, transparent); color:var(--foreground); }
+    #m1-window-visual .recent { background:color-mix(in srgb, var(--viz-series-1) 55%, transparent); color:var(--foreground); }
+    #m1-window-visual .strong { background:color-mix(in srgb, var(--viz-series-1) 78%, transparent); color:var(--foreground); }
+    #m1-window-visual .test { background:color-mix(in srgb, var(--muted) 45%, transparent); color:var(--muted-foreground); }
+    #m1-window-visual .cut { border-left:2px solid var(--foreground); }
+    #m1-window-visual .axis { margin-left:calc(150px + var(--font-size-base) * .75); display:grid; grid-template-columns:9fr 3fr; color:var(--muted-foreground); }
+    #m1-window-visual .takeaway { display:grid; grid-template-columns:repeat(3,1fr); gap:calc(var(--font-size-base) * .75); }
+    #m1-window-visual .card { display:grid; gap:calc(var(--font-size-base) * .25); }
+    #m1-window-visual .key { display:flex; align-items:center; gap:8px; }
+    #m1-window-visual .swatch { width:30px; height:12px; background:color-mix(in srgb, var(--viz-series-1) 70%, transparent); }
+    #m1-window-visual .swatch.faded { background:color-mix(in srgb, var(--viz-series-1) 20%, transparent); }
+    @media (max-width:620px) {
+      #m1-window-visual .strategy { grid-template-columns:1fr; gap:calc(var(--font-size-base) * .35); }
+      #m1-window-visual .axis { margin-left:0; }
+      #m1-window-visual .takeaway { grid-template-columns:1fr; }
+      #m1-window-visual .intro { padding-right:0; }
+      #m1-window-visual .cell { font-size:11px; }
+    }
+  </style>
+  <div class="intro">
+    <h1>Ba cách chọn dữ liệu quá khứ</h1>
+    <p class="text-muted">Cùng đứng tại một ranh giới train/test; khác nhau ở phần lịch sử được dùng để fit mô hình.</p>
+  </div>
+
+  <div class="axis text-small" aria-hidden="true"><span>Quá khứ → gần hiện tại</span><span>Test (tương lai)</span></div>
+  <div class="rows" role="img" aria-label="So sánh Expanding dùng toàn bộ quá khứ, Rolling dùng 756 phiên gần nhất, và Recency dùng toàn bộ quá khứ nhưng ưu tiên dữ liệu gần đây.">
+    <div class="strategy">
+      <div class="name"><h3>Expanding</h3><span class="text-small text-muted">Không bỏ lịch sử</span></div>
+      <div class="timeline">
+        <span class="cell used">cũ</span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell used">mới</span><span class="cell test cut">?</span><span class="cell test">?</span><span class="cell test">?</span>
+      </div>
+    </div>
+    <div class="strategy">
+      <div class="name"><h3>Rolling 756</h3><span class="text-small text-muted">Chỉ 756 phiên gần nhất</span></div>
+      <div class="timeline">
+        <span class="cell">bỏ</span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell recent">756</span><span class="cell recent"></span><span class="cell recent"></span><span class="cell recent"></span><span class="cell recent">phiên</span><span class="cell test cut">?</span><span class="cell test">?</span><span class="cell test">?</span>
+      </div>
+    </div>
+    <div class="strategy">
+      <div class="name"><h3>Recency-weighted</h3><span class="text-small text-muted">Càng mới càng nặng</span></div>
+      <div class="timeline">
+        <span class="cell used">nhẹ</span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell used"></span><span class="cell recent"></span><span class="cell recent"></span><span class="cell strong"></span><span class="cell strong">nặng</span><span class="cell test cut">?</span><span class="cell test">?</span><span class="cell test">?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="card"><h3>Expanding = nhớ hết</h3><p>Học từ dòng đầu tiên đến ranh giới train. Dữ liệu cũ và mới có trọng số như nhau.</p></div>
+    <div class="card"><h3>Rolling = quên hẳn</h3><p>Chỉ giữ cửa sổ 756 phiên gần nhất; mọi dữ liệu cũ hơn bị loại khỏi lần fit.</p></div>
+    <div class="card"><h3>Recency = nhớ nhưng thiên vị</h3><p>Vẫn giữ toàn bộ lịch sử, nhưng cứ lùi 252 phiên thì trọng số tương đối còn một nửa.</p></div>
+  </div>
+
+  <div class="viz-row text-small text-muted">
+    <span class="key"><span class="swatch faded"></span>ảnh hưởng thấp</span>
+    <span class="key"><span class="swatch"></span>ảnh hưởng cao</span>
+    <span>Đường dọc = ranh giới train/test</span>
+  </div>
+</div>

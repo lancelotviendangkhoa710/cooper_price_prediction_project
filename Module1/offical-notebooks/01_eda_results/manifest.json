@@ -1,0 +1,23 @@
+{
+  "notebook": "01_EDA_va_Kiem_Dinh_Thong_Ke.ipynb",
+  "dataset_sha256": "9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600",
+  "all_rows": 2710,
+  "eda_train_rows": 1951,
+  "eda_train_last_date": "2023-12-06",
+  "split_80_test_start": "2024-10-07",
+  "leakage_audit_passed": true,
+  "core_tests": [
+    "ADF + KPSS",
+    "Spearman Levels vs Lagged Returns (BH-FDR)",
+    "Brown-Forsythe Two-Half Variance",
+    "Ljung-Box (r, r^2) + ARCH-LM",
+    "Jarque-Bera + Robust-Z (>3.5)"
+  ],
+  "versions": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0"
+  }
+}
