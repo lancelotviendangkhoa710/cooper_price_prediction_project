@@ -13,7 +13,7 @@
 | **Kích thước & Giai đoạn** | **2.710 phiên giao dịch** (`13/01/2016 → 13/11/2026`) |
 | **Tính toàn vẹn tệp dữ liệu** | Local CRLF SHA-256: `9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600`<br>Kaggle LF SHA-256: `a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83`<br>Sai lệch giá trị số tối đa giữa hai bản: **`0.00e+00`** |
 | **4 mốc chia Train/Test** | `80/20` ($N_{\text{test}} = 542$, `07/10/2024 → 13/11/2026`)<br>`90/10` ($N_{\text{test}} = 271$, `29/10/2025 → 13/11/2026`, mốc chính)<br>`92.5/7.5` ($N_{\text{test}} = 204$)<br>`95/5` ($N_{\text{test}} = 136$) |
-| **6 tập đặc trưng (`FS01`–`FS06`)** | `FS01` (Baseline 8 chỉ báo); `FS02` (+Macro); `FS03` (+Tiền tệ & Vốn hóa); `FS04` (+Tâm lý & Biến động); `FS05` (+Hàng hóa & Chỉ số liên quan); `FS06` (Toàn bộ đặc trưng) |
+| **6 tập đặc trưng (`FS01`–`FS06`)** | `FS01` (`Copper`); `FS02` (`Copper, WTI, Gold, Silver` — tập bài báo); `FS03` (`WTI, Gold, Silver` — ngoại sinh bài báo); `FS04` (`Copper, Aluminium, Tin, Silver, Gold`); `FS05` (`Aluminium, Tin, Silver, Gold`); `FS06` (`Copper, Aluminium, Tin, WTI`) |
 
 ### Quy ước 5 Phương Pháp (PP1–PP5)
 
@@ -147,6 +147,26 @@ Trên toàn bộ ma trận thực nghiệm giống hệt nhau (4 tỷ lệ chia 
 Khi đối chiếu trực tiếp giữa dự báo phần dư giá (`Residual`) và dự báo trực tiếp mức giá (`Direct`) ở mốc `90/10` qua toàn bộ **33 cặp** thuộc tất cả 5 phương pháp (`PP1`–`PP5`):  
 **`33/33 (100%)` cặp đều đạt ý nghĩa thống kê tuyệt đối với `p = 0.0000` (`DM_L1 ∈ [-19.61, -6.26]`)**. Điều này khẳng định việc dùng mục tiêu `Residual` (học biến động sai phân $\Delta y_t$) là nhân tố quyết định nhất giúp kiểm soát hiện tượng trễ/lệch phân phối trên chuỗi giá đồng không dừng.
 
+### 3.5 Kiểm Định Phi Tham Số Wilcoxon Signed-Rank (Kèm Hiệu Chỉnh Holm–Bonferroni)
+
+Nguồn chi tiết: [group_wilcoxon_signed_rank_tests.csv](group_wilcoxon_signed_rank_tests.csv) (**109 phép kiểm định theo 5 họ thí nghiệm, 0 nulls**), thực hiện trên các cặp `(FS × Seed)` từ dữ liệu từng hạt giống gốc (`41–45`), kèm hiệu chỉnh đa kiểm định **Holm–Bonferroni (`p_holm`)** và hệ số ảnh hưởng rank-biserial **$r_{\text{rb}} = (W^+ - W^-)/(W^+ + W^-)$** (giá trị âm cho thấy vế `A` có `MAE` thấp hơn vế `B`). Khác với `DM-HAC` đo trên chuỗi sai số ngày ở từng cấu hình đơn lẻ, Wilcoxon kiểm định **tính nhất quán trên toàn ma trận thực nghiệm** mà không giả định phân phối chuẩn.
+
+![Kiểm định Wilcoxon Signed-Rank và Ablation đa chiều](fig19_group_wilcoxon_and_ablation.png)
+
+| Họ kiểm định & Phạm vi | Cặp đối chiếu (`A vs B`) | Số cặp `n` | `W` | `p_value` | `p_holm` | `r_rb` | Kết luận (`α = 5%` sau Holm) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Mục tiêu (`90/10`, 5 PP)** | `Residual` vs `Direct` (matched FS) | 50 | 0.0 | 0.00000 | **0.00000** | `-1.000` | **`Residual` thấp hơn tuyệt đối** (`0.07994` vs `0.56792`) |
+| **Mục tiêu (`90/10`, 4 PP 5s)** | `Residual` vs `Direct` (per-seed pooled) | 120 | 0.0 | 0.00000 | **0.00000** | `-1.000` | **`Residual` thấp hơn tuyệt đối** (`0.08197` vs `0.68472`) |
+| **Chéo `90/10` (6 mô hình)** | `PP4 WF-Exp` vs `PP5 Hybrid` | 30 | 89.0 | 0.00237 | **0.03551** | `-0.617` | **`PP4 WF-Exp` thấp hơn**; `14/15` cặp còn lại **Hòa** (`p_h >= 0.070`) |
+| **Chéo gộp `80/20+90/10`** | `PP4 WF-Exp` vs `PP2 TPE-LSTM` | 60 | 402.0 | 0.00016 | **0.00175** | `-0.561` | **`PP4 WF-Exp` thấp hơn** (`0.07388` vs `0.08096`) |
+| **Chéo gộp `80/20+90/10`** | `PP3 iTrans` vs `PP4 WF-Exp` | 60 | 915.0 | 1.00000 | **1.00000** | `0.000` | **Hòa thống kê hoàn toàn** |
+| **Chéo gộp `80/20+90/10`** | `PP3 iTrans` vs `PP5 Hybrid` | 60 | 325.0 | 0.00001 | **0.00018** | `-0.645` | **`PP3 iTrans` thấp hơn** (`0.07612` vs `0.07812`) |
+| **Ablation bộ biến (`n=60`)** | `FS01` vs `FS02` / `FS03` / `FS04` / `FS05` | 60 | 236–539 | `<=0.0056` | **`<=0.0226`** | `-0.742 → -0.411` | **`FS01` thấp hơn có ý nghĩa**; **`FS01` vs `FS06` Hòa (`p_h=0.110`)** |
+| **Bỏ Copper khỏi `X` (`n=60`)** | `FS02 vs FS03` / `FS04 vs FS05` | 60 | 837 / 639 | 0.566 / 0.042 | **0.566 / 0.110** | `+0.085 / +0.302` | **Hòa sau Holm** (bỏ Copper không làm suy giảm đồng loạt) |
+| **Cửa sổ (`90/10`, 4 PP)** | `Expanding` vs `Recency` / `Rolling 756` | 120 | 2423.5 / 2123.5 | 0.0024 / 0.0001 | **0.0032 / 0.0002** | `-0.321 / -0.415` | **`Expanding` thấp hơn có ý nghĩa** trên mẫu gộp |
+| **WF (`PP4` gộp `80/20+90/10`)** | `WF Expanding` vs `WF Rolling (W=756)` | 60 | 391.0 | 0.00011 | **0.00011** | `-0.573` | **Hòa ở `90/10` (`p_h=0.404`)**, **`WF-Exp` thắng ở `80/20` (`p_h<0.001`)** |
+| **HPO `PP2` (`Residual`)** | `PP2 SA-LSTM` vs `PP2 TPE-LSTM` | 180 | 6411.0 | 0.01325 | **0.01325** | `-0.213` | **`SA-LSTM` nhỉnh hơn nhẹ trên toàn lưới**; từng mốc `90/10` & `80/20` **Hòa** |
+
 ---
 
 ## 4. Phân Tích Ablation Toàn Diện
@@ -173,14 +193,22 @@ Khi đối chiếu trực tiếp giữa dự báo phần dư giá (`Residual`) v
   2. **`FS04` và `FS06` đạt hiệu quả tốt khi kiểm soát được nhiễu:** Nhóm Holdout 1-seed (`PP1 LSTM/GRU`, `PP4 Static`) đạt cực tiểu nhẹ ở `FS04`, trong khi kiến trúc chú ý theo biến (`PP3 iTransformer`) đạt `MAE` tốt nhất của mình ở **`FS06` (`0.07738 ± 0.00041`)** — chứng tỏ cơ chế attention đa biến khai thác tốt toàn bộ đặc trưng khi gom đủ 6 nhóm biến.
   3. **Walk-Forward (`PP4`) triệt tiêu độ nhạy đặc trưng:** Biên độ dao động giữa tập tốt nhất và kém nhất của `PP4 WF Expanding` chỉ là **`0.00096`** (`std` giữa 6 FS = `0.00035`) và `PP4 WF Rolling` là **`0.00134`** (`std = 0.00048`).
 
-### 4.2 Ablation theo Cửa sổ Huấn luyện & Tái huấn luyện (`PP4` & `PP5` trên mốc `90/10`)
+### 4.2 Ablation theo Cửa sổ Huấn luyện (`Expanding` vs `Recency` vs `Rolling 756` trên 4 phương pháp, `90/10`)
 
-- **Ablation lịch tái huấn luyện ở `PP4` (`5 seeds`, 6 FS):**  
-  `WF Expanding` (trung bình 6 FS = `0.07784 ± 0.00035`) và `WF Rolling` (`0.07798 ± 0.00048`) bám sát nhau với chênh lệch dưới `0.0002 $/lb` và đều giữ `std` giữa 6 tập đặc trưng thấp hơn `Static (Train+Val)` (`0.07920 ± 0.00159`).
-- **Ablation cửa sổ dữ liệu ở `PP5` (`Hybrid ARIMA-GRU`, `5 seeds`, 6 FS trên `90/10`):**  
-  - **`Expanding Window`** đạt trung bình 6 FS **`0.08048`** (`FS01 = 0.07745`).
-  - **`Recency-Weighted`** đạt trung bình 6 FS **`0.08184`** (`FS01 = 0.07732`, nhỉnh hơn nhẹ ở `FS01` nhưng tăng biến động ở các tập nhiều biến).
-  - **`Rolling 756` (~3 năm giao dịch)** cho trung bình 6 FS tăng mạnh lên **`0.10209`** (cá biệt `FS03` đạt `0.15510`), cho thấy việc cắt ngắn lịch sử xuống 756 ngày làm giảm khả năng học ổn định của cấu trúc hybrid trên các tập có số chiều biến ngoại sinh lớn.
+Nguồn chi tiết: [group_ablation_multidim_summary.csv](group_ablation_multidim_summary.csv) (**40 dòng tổng hợp 3 chiều Ablation**).
+
+| Phương pháp (`5 seeds × 6 FS`, `90/10`) | `Expanding` (Mean ± Std) | `Recency-Weighted` (Δ vs Exp) | `Rolling 756` (Δ vs Exp) | Ý nghĩa Wilcoxon (`p_holm`) |
+| :--- | :---: | :---: | :---: | :--- |
+| **PP2:** `SA-LSTM Residual` | `0.08393 ± 0.01922` | `0.08531` (`+1.63%`) | `0.08481` (`+1.04%`) | Cả 3 cửa sổ **Hòa** sau Holm (`p_h >= 0.115`) |
+| **PP2:** `TPE-LSTM Residual` | `0.08167 ± 0.00690` | `0.08438` (`+3.32%`) | `0.08375` (`+2.55%`) | `Expanding` vượt `Recency` (`p_h = 0.0040`) |
+| **PP3:** `iTransformer Residual` | `0.08178 ± 0.01521` | **`0.07839 ± 0.00259`** (`-4.14%`) | `0.08446` (`+3.28%`) | `Recency` giảm mạnh `std`, Wilcoxon **Hòa** (`p_h >= 0.104`) |
+| **PP5:** `Hybrid ARIMA-GRU` | `0.08048 ± 0.00443` | `0.08184` (`+1.69%`) | `0.10209` (`+26.85%`, `FS03=0.15510`) | `Expanding` & `Recency` vượt `Rolling 756` (`p_h <= 0.00022`) |
+
+### 4.3 Ablation Chính sách Tái huấn luyện Walk-Forward (`PP4`, đối chứng `FS02 Direct`)
+
+- **Độ dài cửa sổ trượt (`S = 40`, `cold_start`):** `W = 756` (`MAE = 0.28371`, `44.9s`) tốt hơn `W = 252` (`0.29233`, `35.8s`) và `W = 504` (`0.29514`, `41.4s`).
+- **Chu kỳ tái huấn luyện (`Retrain Stride S`):** Với `WF Expanding`, cập nhật dày `S = 10` hạ `MAE` xuống `0.22756` nhưng tốn **`364.2s` (`28` lần retrain)**, trong khi `S = 40` cân bằng ở `0.23696` (`90.8s`, `7` lần retrain); ngược lại chu kỳ thưa `S = 60` làm sai số tăng vọt (`0.32841` Expanding, `0.36364` Rolling).
+- **Cập nhật trọng số (`cold_start` vs `warm_start`, `W=756, S=40`):** `cold_start` (`0.28371`, `44.9s`) ổn định hơn rõ rệt so với `warm_start` (`0.37394`, `+31.8%`, `25.8s`) do tránh mang theo cực tiểu cục bộ của chu kỳ cũ sang chế độ giá mới.
 
 ---
 
@@ -205,6 +233,9 @@ Khi đối chiếu trực tiếp giữa dự báo phần dư giá (`Residual`) v
 | [group_cross_ratio_4_splits_all_members.csv](group_cross_ratio_4_splits_all_members.csv) | Bảng hiệu năng qua `4` mốc chia `80/20`, `90/10`, `92.5/7.5`, `95/5` (`60 dòng × 10 cột`). |
 | [group_multiseed_5seeds_summary.csv](group_multiseed_5seeds_summary.csv) | Bảng tổng hợp `5-seed (41–45)` và hiệu ứng `Ensemble 5s-Ens` (`74 dòng × 11 cột`). |
 | [group_significance_dm_tests_complete.csv](group_significance_dm_tests_complete.csv) | Toàn bộ phép kiểm định `Diebold–Mariano (DM-HAC)` mô hình–với–mô hình (`516 dòng × 12 cột`, `0 nulls`). |
+| [group_wilcoxon_signed_rank_tests.csv](group_wilcoxon_signed_rank_tests.csv) | Kiểm định phi tham số `Wilcoxon Signed-Rank` kèm hiệu chỉnh `Holm–Bonferroni` & hiệu ứng `r_rb` (`109 dòng × 21 cột`, `0 nulls`). |
+| [group_ablation_multidim_summary.csv](group_ablation_multidim_summary.csv) | Bảng tổng hợp `Ablation 3 chiều` (Mục tiêu, 6 Bộ biến, Cửa sổ & Chính sách WF, `40 dòng × 10 cột`). |
 | [fig16_group_benchmark_all_5_members.png](fig16_group_benchmark_all_5_members.png) | Biểu đồ xếp hạng Top-2 nhánh `Residual` theo từng phương pháp (`90/10`) và đường cong qua 4 mốc chia. |
 | [fig17_group_ablation_6_feature_sets.png](fig17_group_ablation_6_feature_sets.png) | Heatmap `Residual MAE` qua `FS01`–`FS06` và đối chiếu thang log nhánh `Direct` của cả 5 phương pháp. |
 | [fig18_group_dm_significance_and_pros_cons.png](fig18_group_dm_significance_and_pros_cons.png) | Biểu đồ cột `DM_L1` chọn lọc & ma trận `DM_L1` `6×6` chéo giữa các đại diện phương pháp. |
+| [fig19_group_wilcoxon_and_ablation.png](fig19_group_wilcoxon_and_ablation.png) | Ma trận kiểm định `Wilcoxon` chéo `6×6` (`n=60`) và thanh hiệu ứng `r_rb` qua các chiều Ablation. |
