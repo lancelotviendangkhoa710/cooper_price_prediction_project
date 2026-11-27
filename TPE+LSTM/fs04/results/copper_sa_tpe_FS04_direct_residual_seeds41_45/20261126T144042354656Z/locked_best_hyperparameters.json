@@ -1,0 +1,362 @@
+[
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "best_hp": {
+      "units_1": 16,
+      "units_2": 111,
+      "learning_rate": 5.8463015447194094e-05
+    },
+    "best_val_mse_scaled": 0.002799293026328087,
+    "evaluations": 16,
+    "total_search_epochs": 239,
+    "search_fit_seconds": 124.47070421899997,
+    "search_wall_seconds": 147.88709722400003,
+    "seed": 41,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_41/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "best_hp": {
+      "units_1": 96,
+      "units_2": 62,
+      "learning_rate": 0.001038423539888667
+    },
+    "best_val_mse_scaled": 0.002264054026454687,
+    "evaluations": 16,
+    "total_search_epochs": 203,
+    "search_fit_seconds": 108.86806426499993,
+    "search_wall_seconds": 140.74899718200004,
+    "seed": 41,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_41/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "best_hp": {
+      "units_1": 87,
+      "units_2": 119,
+      "learning_rate": 5.1816240009678466e-05
+    },
+    "best_val_mse_scaled": 0.0003812839859165251,
+    "evaluations": 16,
+    "total_search_epochs": 153,
+    "search_fit_seconds": 91.11588393699998,
+    "search_wall_seconds": 133.62334841400002,
+    "seed": 41,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_41/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "best_hp": {
+      "units_1": 37,
+      "units_2": 114,
+      "learning_rate": 1.1933134931188283e-05
+    },
+    "best_val_mse_scaled": 0.0003769668401218951,
+    "evaluations": 16,
+    "total_search_epochs": 166,
+    "search_fit_seconds": 95.9186852140001,
+    "search_wall_seconds": 148.52027418199998,
+    "seed": 41,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_41/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "best_hp": {
+      "units_1": 30,
+      "units_2": 60,
+      "learning_rate": 0.0029310092116156317
+    },
+    "best_val_mse_scaled": 0.0026076477952301502,
+    "evaluations": 16,
+    "total_search_epochs": 175,
+    "search_fit_seconds": 99.36282049800002,
+    "search_wall_seconds": 162.536756084,
+    "seed": 42,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_42/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "best_hp": {
+      "units_1": 47,
+      "units_2": 71,
+      "learning_rate": 6.452505533289375e-05
+    },
+    "best_val_mse_scaled": 0.002720160409808159,
+    "evaluations": 16,
+    "total_search_epochs": 233,
+    "search_fit_seconds": 118.83088984000051,
+    "search_wall_seconds": 191.78897248099997,
+    "seed": 42,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_42/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "best_hp": {
+      "units_1": 74,
+      "units_2": 134,
+      "learning_rate": 0.0003053233088560221
+    },
+    "best_val_mse_scaled": 0.00037787784822285175,
+    "evaluations": 16,
+    "total_search_epochs": 149,
+    "search_fit_seconds": 89.80737370100019,
+    "search_wall_seconds": 172.75107289400012,
+    "seed": 42,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_42/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "best_hp": {
+      "units_1": 23,
+      "units_2": 87,
+      "learning_rate": 6.919957454305011e-05
+    },
+    "best_val_mse_scaled": 0.00037351922946982086,
+    "evaluations": 16,
+    "total_search_epochs": 155,
+    "search_fit_seconds": 91.25780933199917,
+    "search_wall_seconds": 184.30783035700006,
+    "seed": 42,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_42/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "best_hp": {
+      "units_1": 47,
+      "units_2": 95,
+      "learning_rate": 5e-05
+    },
+    "best_val_mse_scaled": 0.00295821251347661,
+    "evaluations": 16,
+    "total_search_epochs": 235,
+    "search_fit_seconds": 119.87540854500071,
+    "search_wall_seconds": 222.99124767600006,
+    "seed": 43,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_43/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "best_hp": {
+      "units_1": 77,
+      "units_2": 57,
+      "learning_rate": 3.1049304748960754e-05
+    },
+    "best_val_mse_scaled": 0.0027393640484660864,
+    "evaluations": 16,
+    "total_search_epochs": 184,
+    "search_fit_seconds": 101.79636900899982,
+    "search_wall_seconds": 215.060016528,
+    "seed": 43,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_43/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "best_hp": {
+      "units_1": 40,
+      "units_2": 127,
+      "learning_rate": 7.43100491432367e-05
+    },
+    "best_val_mse_scaled": 0.000378927041310817,
+    "evaluations": 16,
+    "total_search_epochs": 158,
+    "search_fit_seconds": 91.60461527999996,
+    "search_wall_seconds": 214.28469961400015,
+    "seed": 43,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_43/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "best_hp": {
+      "units_1": 58,
+      "units_2": 64,
+      "learning_rate": 0.00037511767377689426
+    },
+    "best_val_mse_scaled": 0.0003703846305143088,
+    "evaluations": 16,
+    "total_search_epochs": 143,
+    "search_fit_seconds": 86.48000261099787,
+    "search_wall_seconds": 218.93438150899965,
+    "seed": 43,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_43/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "best_hp": {
+      "units_1": 55,
+      "units_2": 67,
+      "learning_rate": 0.0024286530542242364
+    },
+    "best_val_mse_scaled": 0.0020173487719148397,
+    "evaluations": 16,
+    "total_search_epochs": 189,
+    "search_fit_seconds": 102.3810889370011,
+    "search_wall_seconds": 244.85075791999998,
+    "seed": 44,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_44/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "best_hp": {
+      "units_1": 63,
+      "units_2": 103,
+      "learning_rate": 0.00013498142135335775
+    },
+    "best_val_mse_scaled": 0.002603403991088271,
+    "evaluations": 16,
+    "total_search_epochs": 177,
+    "search_fit_seconds": 98.16191366200019,
+    "search_wall_seconds": 250.71780027199975,
+    "seed": 44,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_44/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "best_hp": {
+      "units_1": 84,
+      "units_2": 122,
+      "learning_rate": 7.044247878918766e-05
+    },
+    "best_val_mse_scaled": 0.00037447092472575605,
+    "evaluations": 16,
+    "total_search_epochs": 143,
+    "search_fit_seconds": 86.90405015399938,
+    "search_wall_seconds": 249.60423204299968,
+    "seed": 44,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_44/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "best_hp": {
+      "units_1": 55,
+      "units_2": 103,
+      "learning_rate": 4.1214518757539084e-05
+    },
+    "best_val_mse_scaled": 0.0003799920959863812,
+    "evaluations": 16,
+    "total_search_epochs": 154,
+    "search_fit_seconds": 90.92502803599973,
+    "search_wall_seconds": 263.7267585320001,
+    "seed": 44,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_44/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "best_hp": {
+      "units_1": 47,
+      "units_2": 95,
+      "learning_rate": 6.407088602551648e-05
+    },
+    "best_val_mse_scaled": 0.002724353689700365,
+    "evaluations": 16,
+    "total_search_epochs": 202,
+    "search_fit_seconds": 107.6897800469992,
+    "search_wall_seconds": 290.7713601649998,
+    "seed": 45,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_45/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "best_hp": {
+      "units_1": 75,
+      "units_2": 105,
+      "learning_rate": 0.0010476446218793253
+    },
+    "best_val_mse_scaled": 0.0023887662682682276,
+    "evaluations": 16,
+    "total_search_epochs": 161,
+    "search_fit_seconds": 93.09811869399846,
+    "search_wall_seconds": 285.60218278599996,
+    "seed": 45,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_45/direct"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "best_hp": {
+      "units_1": 31,
+      "units_2": 143,
+      "learning_rate": 0.00010553204644233296
+    },
+    "best_val_mse_scaled": 0.0003722773108165711,
+    "evaluations": 16,
+    "total_search_epochs": 141,
+    "search_fit_seconds": 85.49390550299995,
+    "search_wall_seconds": 287.8082161149996,
+    "seed": 45,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_45/residual"
+  },
+  {
+    "feature_set": "FS04",
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "best_hp": {
+      "units_1": 85,
+      "units_2": 117,
+      "learning_rate": 0.00011689547824059271
+    },
+    "best_val_mse_scaled": 0.0003801917191594839,
+    "evaluations": 16,
+    "total_search_epochs": 153,
+    "search_fit_seconds": 89.31158804700044,
+    "search_wall_seconds": 301.3401754639999,
+    "seed": 45,
+    "folder": "/kaggle/working/copper_sa_tpe_FS04_direct_residual_seeds41_45/20261126T144042354656Z/FS04/seed_45/residual"
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "mode": "FULL_MODE",
+  "config": {
+    "epochs": 100,
+    "search_epochs": 15,
+    "sa_evals": 16,
+    "earlystop": true
+  },
+  "features": [
+    "Copper",
+    "WTI",
+    "Gold",
+    "Silver",
+    "Aluminium",
+    "Tin"
+  ],
+  "feature_sets": {
+    "FS06": [
+      "Copper",
+      "Aluminium",
+      "Tin",
+      "WTI"
+    ]
+  },
+  "target": "Copper",
+  "lookback": 22,
+  "horizon": 1,
+  "ratios": [
+    0.8,
+    0.9,
+    0.925,
+    0.95
+  ],
+  "schemes": [
+    "expanding",
+    "rolling_756",
+    "recency_weighted"
+  ],
+  "jobs": [
+    [
+      0.8,
+      "expanding"
+    ],
+    [
+      0.9,
+      "expanding"
+    ],
+    [
+      0.9,
+      "rolling_756"
+    ],
+    [
+      0.9,
+      "recency_weighted"
+    ],
+    [
+      0.925,
+      "expanding"
+    ],
+    [
+      0.95,
+      "expanding"
+    ]
+  ],
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "forecast_modes": [
+    "direct",
+    "residual"
+  ],
+  "base_methods": [
+    "sa_lstm_v22",
+    "tpe_lstm"
+  ],
+  "space": {
+    "units_1": [
+      16,
+      96
+    ],
+    "units_2": [
+      24,
+      160
+    ],
+    "learning_rate": [
+      1e-05,
+      0.003
+    ]
+  },
+  "initial_hp": {
+    "units_1": 39,
+    "units_2": 111,
+    "learning_rate": 5e-05
+  },
+  "search_seed_base": {
+    "direct": 2026,
+    "residual": 12026
+  },
+  "search_reference_ratio": 0.8,
+  "search_reference_scheme": "expanding",
+  "dataset": "/kaggle/input/datasets/thanhcong21206/ptdlkd-doan/dataset_9_commodities_daily.csv",
+  "dataset_sha256": "a761a9082de36ad8724597ff1518e24bbf1a61676bd3164676e7f4218d275d83",
+  "python": "3.13.16",
+  "versions": {
+    "tensorflow": "2.21.0",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1"
+  }
+}

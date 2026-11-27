@@ -1,0 +1,2882 @@
+[
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_41/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 143,
+      "learning_rate": 5.604788775106825e-05
+    },
+    "final_val_mse_scaled": 0.005638629663735628,
+    "final_fit_seconds": 6.634390727000209,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_41/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 58,
+      "learning_rate": 9.07674336892286e-05
+    },
+    "final_val_mse_scaled": 0.004612509626895189,
+    "final_fit_seconds": 13.021483233000254,
+    "final_epochs_run": 30
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_41/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 79,
+      "units_2": 119,
+      "learning_rate": 2.4227135975822748e-05
+    },
+    "final_val_mse_scaled": 0.0003829183697234839,
+    "final_fit_seconds": 11.910080483999991,
+    "final_epochs_run": 27
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_41/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 26,
+      "units_2": 81,
+      "learning_rate": 8.07401028361081e-05
+    },
+    "final_val_mse_scaled": 0.00038132513873279095,
+    "final_fit_seconds": 6.252435091000734,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_42/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 52,
+      "units_2": 154,
+      "learning_rate": 0.0010907794517210688
+    },
+    "final_val_mse_scaled": 0.003276845905929804,
+    "final_fit_seconds": 8.697852534999583,
+    "final_epochs_run": 18
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_42/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.004426482133567333,
+    "final_fit_seconds": 17.5259217720004,
+    "final_epochs_run": 43
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_42/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 19,
+      "units_2": 143,
+      "learning_rate": 4.202980644430165e-05
+    },
+    "final_val_mse_scaled": 0.00037881062598899007,
+    "final_fit_seconds": 12.628051163999771,
+    "final_epochs_run": 29
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_42/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.00038506180862896144,
+    "final_fit_seconds": 8.13380537500052,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_43/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.005301100201904774,
+    "final_fit_seconds": 9.146372234999944,
+    "final_epochs_run": 19
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_43/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 24,
+      "units_2": 117,
+      "learning_rate": 0.0009168103750455697
+    },
+    "final_val_mse_scaled": 0.0034659700468182564,
+    "final_fit_seconds": 11.279861893000088,
+    "final_epochs_run": 25
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_43/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 119,
+      "learning_rate": 6.137278525444377e-05
+    },
+    "final_val_mse_scaled": 0.00037923138006590307,
+    "final_fit_seconds": 11.630605927999568,
+    "final_epochs_run": 26
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_43/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 17,
+      "units_2": 62,
+      "learning_rate": 0.00012540408479865052
+    },
+    "final_val_mse_scaled": 0.00040158169576898217,
+    "final_fit_seconds": 8.088073717999578,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_44/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 96,
+      "units_2": 160,
+      "learning_rate": 0.0020894192162899164
+    },
+    "final_val_mse_scaled": 0.0031279365066438913,
+    "final_fit_seconds": 10.421681103000083,
+    "final_epochs_run": 23
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_44/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 119,
+      "learning_rate": 2.0958381730667077e-05
+    },
+    "final_val_mse_scaled": 0.0048428429290652275,
+    "final_fit_seconds": 8.023829990000195,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_44/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 37,
+      "learning_rate": 6.647026454583097e-05
+    },
+    "final_val_mse_scaled": 0.0004172328335698694,
+    "final_fit_seconds": 5.87760442599938,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_44/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0003780795377679169,
+    "final_fit_seconds": 11.197774006000145,
+    "final_epochs_run": 25
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_45/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 111,
+      "learning_rate": 0.0001257093493816678
+    },
+    "final_val_mse_scaled": 0.004003753419965506,
+    "final_fit_seconds": 18.608613235999655,
+    "final_epochs_run": 45
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_45/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 49,
+      "units_2": 129,
+      "learning_rate": 0.000571021543338799
+    },
+    "final_val_mse_scaled": 0.003554788650944829,
+    "final_fit_seconds": 10.287677146999158,
+    "final_epochs_run": 22
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_45/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 31,
+      "units_2": 151,
+      "learning_rate": 8.38895739947791e-05
+    },
+    "final_val_mse_scaled": 0.0003850280190818012,
+    "final_fit_seconds": 6.636975019999227,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.8,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.800/expanding/seed_45/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 42,
+      "learning_rate": 0.0013909812461213365
+    },
+    "final_val_mse_scaled": 0.000383337726816535,
+    "final_fit_seconds": 10.110088433999408,
+    "final_epochs_run": 22
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_41/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 143,
+      "learning_rate": 5.604788775106825e-05
+    },
+    "final_val_mse_scaled": 0.022706352174282074,
+    "final_fit_seconds": 6.810797223000009,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_41/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 58,
+      "learning_rate": 9.07674336892286e-05
+    },
+    "final_val_mse_scaled": 0.013539793901145458,
+    "final_fit_seconds": 18.861001283000405,
+    "final_epochs_run": 44
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_41/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 79,
+      "units_2": 119,
+      "learning_rate": 2.4227135975822748e-05
+    },
+    "final_val_mse_scaled": 0.0013903811341151595,
+    "final_fit_seconds": 13.341964768000253,
+    "final_epochs_run": 29
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_41/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 26,
+      "units_2": 81,
+      "learning_rate": 8.07401028361081e-05
+    },
+    "final_val_mse_scaled": 0.0013869621325284243,
+    "final_fit_seconds": 6.172967135999897,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_42/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 52,
+      "units_2": 154,
+      "learning_rate": 0.0010907794517210688
+    },
+    "final_val_mse_scaled": 0.011805539950728416,
+    "final_fit_seconds": 6.874249876000249,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_42/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.01237097941339016,
+    "final_fit_seconds": 7.161454867999964,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_42/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 19,
+      "units_2": 143,
+      "learning_rate": 4.202980644430165e-05
+    },
+    "final_val_mse_scaled": 0.001389255397953093,
+    "final_fit_seconds": 10.807048114000281,
+    "final_epochs_run": 22
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_42/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0013924668310210109,
+    "final_fit_seconds": 12.07247321200066,
+    "final_epochs_run": 26
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_43/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.01256515085697174,
+    "final_fit_seconds": 7.297448892999455,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_43/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 24,
+      "units_2": 117,
+      "learning_rate": 0.0009168103750455697
+    },
+    "final_val_mse_scaled": 0.011646836064755917,
+    "final_fit_seconds": 9.933726879999995,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_43/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 119,
+      "learning_rate": 6.137278525444377e-05
+    },
+    "final_val_mse_scaled": 0.0013885920634493232,
+    "final_fit_seconds": 15.723123719999421,
+    "final_epochs_run": 36
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_43/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 17,
+      "units_2": 62,
+      "learning_rate": 0.00012540408479865052
+    },
+    "final_val_mse_scaled": 0.001390160177834332,
+    "final_fit_seconds": 11.872787822000646,
+    "final_epochs_run": 25
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_44/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 96,
+      "units_2": 160,
+      "learning_rate": 0.0020894192162899164
+    },
+    "final_val_mse_scaled": 0.010595123283565044,
+    "final_fit_seconds": 9.859978705000685,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_44/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 119,
+      "learning_rate": 2.0958381730667077e-05
+    },
+    "final_val_mse_scaled": 0.011509389616549015,
+    "final_fit_seconds": 8.021809030999975,
+    "final_epochs_run": 15
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_44/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 37,
+      "learning_rate": 6.647026454583097e-05
+    },
+    "final_val_mse_scaled": 0.0014406649861484766,
+    "final_fit_seconds": 6.560877642000378,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_44/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0013883989304304123,
+    "final_fit_seconds": 10.943071978999797,
+    "final_epochs_run": 23
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_45/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 111,
+      "learning_rate": 0.0001257093493816678
+    },
+    "final_val_mse_scaled": 0.01306412648409605,
+    "final_fit_seconds": 14.810766121000597,
+    "final_epochs_run": 33
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_45/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 49,
+      "units_2": 129,
+      "learning_rate": 0.000571021543338799
+    },
+    "final_val_mse_scaled": 0.011966900900006294,
+    "final_fit_seconds": 9.800808351000342,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_45/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 31,
+      "units_2": 151,
+      "learning_rate": 8.38895739947791e-05
+    },
+    "final_val_mse_scaled": 0.0013927961699664593,
+    "final_fit_seconds": 6.524426481999399,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/expanding/seed_45/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 42,
+      "learning_rate": 0.0013909812461213365
+    },
+    "final_val_mse_scaled": 0.0013902042992413044,
+    "final_fit_seconds": 9.567120288000297,
+    "final_epochs_run": 19
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_41/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 143,
+      "learning_rate": 5.604788775106825e-05
+    },
+    "final_val_mse_scaled": 0.030022332444787025,
+    "final_fit_seconds": 6.034031341000627,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_41/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 58,
+      "learning_rate": 9.07674336892286e-05
+    },
+    "final_val_mse_scaled": 0.030414652079343796,
+    "final_fit_seconds": 7.795975478999935,
+    "final_epochs_run": 23
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_41/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 79,
+      "units_2": 119,
+      "learning_rate": 2.4227135975822748e-05
+    },
+    "final_val_mse_scaled": 0.003927214536815882,
+    "final_fit_seconds": 7.421693438999682,
+    "final_epochs_run": 21
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_41/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 26,
+      "units_2": 81,
+      "learning_rate": 8.07401028361081e-05
+    },
+    "final_val_mse_scaled": 0.0038714848924428225,
+    "final_fit_seconds": 5.721038335999765,
+    "final_epochs_run": 15
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_42/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 52,
+      "units_2": 154,
+      "learning_rate": 0.0010907794517210688
+    },
+    "final_val_mse_scaled": 0.033192526549100876,
+    "final_fit_seconds": 4.929883608000637,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_42/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.030944377183914185,
+    "final_fit_seconds": 7.186800536999726,
+    "final_epochs_run": 21
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_42/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 19,
+      "units_2": 143,
+      "learning_rate": 4.202980644430165e-05
+    },
+    "final_val_mse_scaled": 0.0038768912199884653,
+    "final_fit_seconds": 8.262005919999865,
+    "final_epochs_run": 25
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_42/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.003879700554534793,
+    "final_fit_seconds": 8.664721353999994,
+    "final_epochs_run": 28
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_43/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.034497443586587906,
+    "final_fit_seconds": 7.423435547999361,
+    "final_epochs_run": 22
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_43/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 24,
+      "units_2": 117,
+      "learning_rate": 0.0009168103750455697
+    },
+    "final_val_mse_scaled": 0.03514881432056427,
+    "final_fit_seconds": 4.67836505699961,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_43/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 119,
+      "learning_rate": 6.137278525444377e-05
+    },
+    "final_val_mse_scaled": 0.003907215315848589,
+    "final_fit_seconds": 4.685618787999374,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_43/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 17,
+      "units_2": 62,
+      "learning_rate": 0.00012540408479865052
+    },
+    "final_val_mse_scaled": 0.0039167460054159164,
+    "final_fit_seconds": 4.87573190799958,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_44/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 96,
+      "units_2": 160,
+      "learning_rate": 0.0020894192162899164
+    },
+    "final_val_mse_scaled": 0.029420802369713783,
+    "final_fit_seconds": 5.919164371999614,
+    "final_epochs_run": 15
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_44/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 119,
+      "learning_rate": 2.0958381730667077e-05
+    },
+    "final_val_mse_scaled": 0.031330060213804245,
+    "final_fit_seconds": 8.469946015999994,
+    "final_epochs_run": 26
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_44/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 37,
+      "learning_rate": 6.647026454583097e-05
+    },
+    "final_val_mse_scaled": 0.003971141763031483,
+    "final_fit_seconds": 6.6978399449999415,
+    "final_epochs_run": 19
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_44/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.003913254477083683,
+    "final_fit_seconds": 7.264723344999766,
+    "final_epochs_run": 21
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_45/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 111,
+      "learning_rate": 0.0001257093493816678
+    },
+    "final_val_mse_scaled": 0.03304155543446541,
+    "final_fit_seconds": 6.070466543000293,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_45/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 49,
+      "units_2": 129,
+      "learning_rate": 0.000571021543338799
+    },
+    "final_val_mse_scaled": 0.030462753027677536,
+    "final_fit_seconds": 5.497255037000286,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_45/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 31,
+      "units_2": 151,
+      "learning_rate": 8.38895739947791e-05
+    },
+    "final_val_mse_scaled": 0.003876339877024293,
+    "final_fit_seconds": 6.056837049999558,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "rolling_756",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/rolling_756/seed_45/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 42,
+      "learning_rate": 0.0013909812461213365
+    },
+    "final_val_mse_scaled": 0.003879786469042301,
+    "final_fit_seconds": 7.401776319999954,
+    "final_epochs_run": 22
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_41/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 143,
+      "learning_rate": 5.604788775106825e-05
+    },
+    "final_val_mse_scaled": 0.010548701509833336,
+    "final_fit_seconds": 17.740622708000046,
+    "final_epochs_run": 41
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_41/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 58,
+      "learning_rate": 9.07674336892286e-05
+    },
+    "final_val_mse_scaled": 0.011622421443462372,
+    "final_fit_seconds": 11.268775442000333,
+    "final_epochs_run": 24
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_41/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 79,
+      "units_2": 119,
+      "learning_rate": 2.4227135975822748e-05
+    },
+    "final_val_mse_scaled": 0.0013896013842895627,
+    "final_fit_seconds": 11.139490333999674,
+    "final_epochs_run": 23
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_41/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 26,
+      "units_2": 81,
+      "learning_rate": 8.07401028361081e-05
+    },
+    "final_val_mse_scaled": 0.0013899290934205055,
+    "final_fit_seconds": 6.199386098999639,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_42/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 52,
+      "units_2": 154,
+      "learning_rate": 0.0010907794517210688
+    },
+    "final_val_mse_scaled": 0.011113755404949188,
+    "final_fit_seconds": 6.88237301800018,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_42/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.010550753213465214,
+    "final_fit_seconds": 7.673298570000043,
+    "final_epochs_run": 14
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_42/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 19,
+      "units_2": 143,
+      "learning_rate": 4.202980644430165e-05
+    },
+    "final_val_mse_scaled": 0.0013903462095186114,
+    "final_fit_seconds": 6.571814556999925,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_42/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0013939159689471126,
+    "final_fit_seconds": 8.934293300999343,
+    "final_epochs_run": 17
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_43/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.012600964866578579,
+    "final_fit_seconds": 11.304426790999969,
+    "final_epochs_run": 23
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_43/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 24,
+      "units_2": 117,
+      "learning_rate": 0.0009168103750455697
+    },
+    "final_val_mse_scaled": 0.010947679169476032,
+    "final_fit_seconds": 15.347737146999862,
+    "final_epochs_run": 34
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_43/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 119,
+      "learning_rate": 6.137278525444377e-05
+    },
+    "final_val_mse_scaled": 0.0014029843732714653,
+    "final_fit_seconds": 6.535305089999383,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_43/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 17,
+      "units_2": 62,
+      "learning_rate": 0.00012540408479865052
+    },
+    "final_val_mse_scaled": 0.0013923360966145992,
+    "final_fit_seconds": 8.384029243999976,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_44/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 96,
+      "units_2": 160,
+      "learning_rate": 0.0020894192162899164
+    },
+    "final_val_mse_scaled": 0.01104185450822115,
+    "final_fit_seconds": 6.142979962999561,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_44/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 119,
+      "learning_rate": 2.0958381730667077e-05
+    },
+    "final_val_mse_scaled": 0.01151262130588293,
+    "final_fit_seconds": 8.768557390999376,
+    "final_epochs_run": 17
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_44/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 37,
+      "learning_rate": 6.647026454583097e-05
+    },
+    "final_val_mse_scaled": 0.0014291532570496202,
+    "final_fit_seconds": 6.5978655029994115,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_44/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0013893574941903353,
+    "final_fit_seconds": 12.951025688999835,
+    "final_epochs_run": 28
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_45/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 111,
+      "learning_rate": 0.0001257093493816678
+    },
+    "final_val_mse_scaled": 0.011882536113262177,
+    "final_fit_seconds": 8.583011787999567,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_45/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 49,
+      "units_2": 129,
+      "learning_rate": 0.000571021543338799
+    },
+    "final_val_mse_scaled": 0.010542069561779499,
+    "final_fit_seconds": 10.036615994000385,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_45/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 31,
+      "units_2": 151,
+      "learning_rate": 8.38895739947791e-05
+    },
+    "final_val_mse_scaled": 0.0013936664909124374,
+    "final_fit_seconds": 6.681861591000597,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.9,
+    "scheme": "recency_weighted",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.900/recency_weighted/seed_45/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 42,
+      "learning_rate": 0.0013909812461213365
+    },
+    "final_val_mse_scaled": 0.0013890512054786086,
+    "final_fit_seconds": 16.394018081000468,
+    "final_epochs_run": 37
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_41/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 143,
+      "learning_rate": 5.604788775106825e-05
+    },
+    "final_val_mse_scaled": 0.017626551911234856,
+    "final_fit_seconds": 7.703872748000322,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_41/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 58,
+      "learning_rate": 9.07674336892286e-05
+    },
+    "final_val_mse_scaled": 0.009434996172785759,
+    "final_fit_seconds": 13.978246749000391,
+    "final_epochs_run": 30
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_41/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 79,
+      "units_2": 119,
+      "learning_rate": 2.4227135975822748e-05
+    },
+    "final_val_mse_scaled": 0.0016122579108923674,
+    "final_fit_seconds": 11.579875806000018,
+    "final_epochs_run": 24
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_41/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 26,
+      "units_2": 81,
+      "learning_rate": 8.07401028361081e-05
+    },
+    "final_val_mse_scaled": 0.001611568732187152,
+    "final_fit_seconds": 15.820159205999516,
+    "final_epochs_run": 35
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_42/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 52,
+      "units_2": 154,
+      "learning_rate": 0.0010907794517210688
+    },
+    "final_val_mse_scaled": 0.011536607518792152,
+    "final_fit_seconds": 7.005977008000627,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_42/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.011386807076632977,
+    "final_fit_seconds": 18.211513907999688,
+    "final_epochs_run": 41
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_42/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 19,
+      "units_2": 143,
+      "learning_rate": 4.202980644430165e-05
+    },
+    "final_val_mse_scaled": 0.0016188445733860135,
+    "final_fit_seconds": 10.070001405999392,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_42/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0016143417451530695,
+    "final_fit_seconds": 8.136709870000232,
+    "final_epochs_run": 15
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_43/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.011382164433598518,
+    "final_fit_seconds": 7.456472825999299,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_43/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 24,
+      "units_2": 117,
+      "learning_rate": 0.0009168103750455697
+    },
+    "final_val_mse_scaled": 0.010245456360280514,
+    "final_fit_seconds": 8.909572487999867,
+    "final_epochs_run": 17
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_43/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 119,
+      "learning_rate": 6.137278525444377e-05
+    },
+    "final_val_mse_scaled": 0.0016371094388887286,
+    "final_fit_seconds": 6.584049164999669,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_43/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 17,
+      "units_2": 62,
+      "learning_rate": 0.00012540408479865052
+    },
+    "final_val_mse_scaled": 0.0017224815674126148,
+    "final_fit_seconds": 6.397579317000236,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_44/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 96,
+      "units_2": 160,
+      "learning_rate": 0.0020894192162899164
+    },
+    "final_val_mse_scaled": 0.011668715626001358,
+    "final_fit_seconds": 6.530481892999887,
+    "final_epochs_run": 11
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_44/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 119,
+      "learning_rate": 2.0958381730667077e-05
+    },
+    "final_val_mse_scaled": 0.011937201954424381,
+    "final_fit_seconds": 8.07113081999978,
+    "final_epochs_run": 15
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_44/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 37,
+      "learning_rate": 6.647026454583097e-05
+    },
+    "final_val_mse_scaled": 0.0017517468659207225,
+    "final_fit_seconds": 6.260573995999948,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_44/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.001611044630408287,
+    "final_fit_seconds": 9.22578462399997,
+    "final_epochs_run": 18
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_45/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 111,
+      "learning_rate": 0.0001257093493816678
+    },
+    "final_val_mse_scaled": 0.009944192133843899,
+    "final_fit_seconds": 11.516823728999952,
+    "final_epochs_run": 24
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_45/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 49,
+      "units_2": 129,
+      "learning_rate": 0.000571021543338799
+    },
+    "final_val_mse_scaled": 0.009852948598563671,
+    "final_fit_seconds": 8.627290161000019,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_45/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 31,
+      "units_2": 151,
+      "learning_rate": 8.38895739947791e-05
+    },
+    "final_val_mse_scaled": 0.0016120107611641288,
+    "final_fit_seconds": 6.352614956999787,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.925,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.925/expanding/seed_45/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 42,
+      "learning_rate": 0.0013909812461213365
+    },
+    "final_val_mse_scaled": 0.001607581740245223,
+    "final_fit_seconds": 10.155080253000051,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_41/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 143,
+      "learning_rate": 5.604788775106825e-05
+    },
+    "final_val_mse_scaled": 0.013105859979987144,
+    "final_fit_seconds": 7.601153249999697,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_41/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 58,
+      "learning_rate": 9.07674336892286e-05
+    },
+    "final_val_mse_scaled": 0.01001814752817154,
+    "final_fit_seconds": 12.667876721000539,
+    "final_epochs_run": 26
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_41/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 79,
+      "units_2": 119,
+      "learning_rate": 2.4227135975822748e-05
+    },
+    "final_val_mse_scaled": 0.0014726916560903192,
+    "final_fit_seconds": 11.789433114999156,
+    "final_epochs_run": 24
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 41,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_41/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 26,
+      "units_2": 81,
+      "learning_rate": 8.07401028361081e-05
+    },
+    "final_val_mse_scaled": 0.0014714000280946493,
+    "final_fit_seconds": 17.595717712000805,
+    "final_epochs_run": 38
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_42/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 52,
+      "units_2": 154,
+      "learning_rate": 0.0010907794517210688
+    },
+    "final_val_mse_scaled": 0.01116683054715395,
+    "final_fit_seconds": 7.252153716999601,
+    "final_epochs_run": 12
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_42/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.01042028795927763,
+    "final_fit_seconds": 22.950519014999372,
+    "final_epochs_run": 51
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_42/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 19,
+      "units_2": 143,
+      "learning_rate": 4.202980644430165e-05
+    },
+    "final_val_mse_scaled": 0.001474241609685123,
+    "final_fit_seconds": 10.458425716999955,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 42,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_42/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.0014765361556783319,
+    "final_fit_seconds": 8.739340632999301,
+    "final_epochs_run": 16
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_43/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 23,
+      "units_2": 103,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.010117377154529095,
+    "final_fit_seconds": 7.456513648000509,
+    "final_epochs_run": 13
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_43/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 24,
+      "units_2": 117,
+      "learning_rate": 0.0009168103750455697
+    },
+    "final_val_mse_scaled": 0.008358923718333244,
+    "final_fit_seconds": 11.397626452999248,
+    "final_epochs_run": 23
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_43/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 16,
+      "units_2": 119,
+      "learning_rate": 6.137278525444377e-05
+    },
+    "final_val_mse_scaled": 0.0014844114193692803,
+    "final_fit_seconds": 6.421159059000274,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 43,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_43/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 17,
+      "units_2": 62,
+      "learning_rate": 0.00012540408479865052
+    },
+    "final_val_mse_scaled": 0.0014774996088817716,
+    "final_fit_seconds": 6.422192070000165,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_44/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 96,
+      "units_2": 160,
+      "learning_rate": 0.0020894192162899164
+    },
+    "final_val_mse_scaled": 0.008085701614618301,
+    "final_fit_seconds": 6.370163180000418,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_44/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 119,
+      "learning_rate": 2.0958381730667077e-05
+    },
+    "final_val_mse_scaled": 0.013968533836305141,
+    "final_fit_seconds": 7.896645884000463,
+    "final_epochs_run": 14
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_44/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 37,
+      "learning_rate": 6.647026454583097e-05
+    },
+    "final_val_mse_scaled": 0.001644700299948454,
+    "final_fit_seconds": 6.311673850000261,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 44,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_44/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 39,
+      "units_2": 111,
+      "learning_rate": 5e-05
+    },
+    "final_val_mse_scaled": 0.001470967778004706,
+    "final_fit_seconds": 10.399459279999974,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "direct",
+    "model_key": "sa_lstm_v22_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_45/sa_lstm_v22_direct.keras",
+    "hp": {
+      "units_1": 55,
+      "units_2": 111,
+      "learning_rate": 0.0001257093493816678
+    },
+    "final_val_mse_scaled": 0.008665227331221104,
+    "final_fit_seconds": 17.61026933999983,
+    "final_epochs_run": 38
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "direct",
+    "model_key": "tpe_lstm_direct",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_45/tpe_lstm_direct.keras",
+    "hp": {
+      "units_1": 49,
+      "units_2": 129,
+      "learning_rate": 0.000571021543338799
+    },
+    "final_val_mse_scaled": 0.007804051972925663,
+    "final_fit_seconds": 10.391271475999929,
+    "final_epochs_run": 20
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "sa_lstm_v22",
+    "forecast_mode": "residual",
+    "model_key": "sa_lstm_v22_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_45/sa_lstm_v22_residual.keras",
+    "hp": {
+      "units_1": 31,
+      "units_2": 151,
+      "learning_rate": 8.38895739947791e-05
+    },
+    "final_val_mse_scaled": 0.0014662552857771516,
+    "final_fit_seconds": 6.36886642599984,
+    "final_epochs_run": 10
+  },
+  {
+    "feature_set": "FS05",
+    "features": [
+      "Aluminium",
+      "Tin",
+      "Silver",
+      "Gold"
+    ],
+    "method": "tpe_lstm",
+    "forecast_mode": "residual",
+    "model_key": "tpe_lstm_residual",
+    "ratio": 0.95,
+    "scheme": "expanding",
+    "seed": 45,
+    "model_path": "/kaggle/working/copper_sa_tpe_FS05_direct_residual_seeds41_45/20261126T135523112911Z/FS05/ratio_0.950/expanding/seed_45/tpe_lstm_residual.keras",
+    "hp": {
+      "units_1": 94,
+      "units_2": 42,
+      "learning_rate": 0.0013909812461213365
+    },
+    "final_val_mse_scaled": 0.001472467090934515,
+    "final_fit_seconds": 13.660640840999804,
+    "final_epochs_run": 29
+  }
+]
