@@ -1,233 +1,552 @@
 group,context,comparison,n_test,DM_L1,p_L1,mean_diff_L1,sig_L1_5pct,DM_L2,p_L2,sig_L2_5pct,winner_L1
-PP2 (TPE vs SA),FS01 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,2.1565,0.0315,0.000716,True,0.6362,0.5249,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.8 | expanding,SA-LSTM vs Naive,542,-1.1198,0.2633,-0.00017,False,-0.842,0.4002,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.8 | expanding,TPE-LSTM vs Naive,542,2.0013,0.0459,0.000546,True,0.4225,0.6729,False,Naive
-PP2 (TPE vs SA),FS01 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,1.0321,0.3029,0.000313,False,0.3204,0.7489,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.9 | expanding,SA-LSTM vs Naive,271,-0.5839,0.5598,-0.000125,False,-0.8698,0.3852,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.9 | expanding,TPE-LSTM vs Naive,271,1.2508,0.2121,0.000189,False,-0.6534,0.5141,False,Naive
-PP2 (TPE vs SA),FS01 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,2.6714,0.008,0.002353,True,1.6684,0.0964,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.9 | recency_weighted,SA-LSTM vs Naive,271,-0.5924,0.5541,-4.5e-05,False,-2.3766,0.0182,True,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.9 | recency_weighted,TPE-LSTM vs Naive,271,2.6443,0.0087,0.002308,True,1.5031,0.134,False,Naive
-PP2 (TPE vs SA),FS01 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,4.0047,0.0001,0.005229,True,3.5574,0.0004,True,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.9 | rolling_756,SA-LSTM vs Naive,271,1.1945,0.2333,0.000268,False,-0.4168,0.6772,False,Naive
-PP2 (vs Naive),FS01 | r=0.9 | rolling_756,TPE-LSTM vs Naive,271,3.7431,0.0002,0.005497,True,3.0126,0.0028,True,Naive
-PP2 (TPE vs SA),FS01 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,0.4369,0.6626,0.000113,False,-0.5178,0.6052,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.925 | expanding,SA-LSTM vs Naive,204,-0.244,0.8075,-6e-05,False,0.0404,0.9679,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.925 | expanding,TPE-LSTM vs Naive,204,0.5546,0.5798,5.3e-05,False,-1.4611,0.1455,False,Naive
-PP2 (TPE vs SA),FS01 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,1.2697,0.2064,0.000617,False,-0.1432,0.8863,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.95 | expanding,SA-LSTM vs Naive,136,-0.9625,0.3375,-0.000278,False,0.0697,0.9446,False,SA-LSTM
-PP2 (vs Naive),FS01 | r=0.95 | expanding,TPE-LSTM vs Naive,136,1.5943,0.1132,0.000339,False,-0.2559,0.7984,False,Naive
-PP2 (TPE vs SA),FS02 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,-4.5059,0.0,-0.012474,True,-4.0575,0.0001,True,TPE-LSTM
-PP2 (vs Naive),FS02 | r=0.8 | expanding,SA-LSTM vs Naive,542,4.8866,0.0,0.012931,True,4.4647,0.0,True,Naive
-PP2 (vs Naive),FS02 | r=0.8 | expanding,TPE-LSTM vs Naive,542,0.6961,0.4867,0.000456,False,1.0636,0.288,False,Naive
-PP2 (TPE vs SA),FS02 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,-3.1593,0.0018,-0.006551,True,-3.562,0.0004,True,TPE-LSTM
-PP2 (vs Naive),FS02 | r=0.9 | expanding,SA-LSTM vs Naive,271,3.4052,0.0008,0.007455,True,3.3933,0.0008,True,Naive
-PP2 (vs Naive),FS02 | r=0.9 | expanding,TPE-LSTM vs Naive,271,1.6863,0.0929,0.000905,False,0.5938,0.5532,False,Naive
-PP2 (TPE vs SA),FS02 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,-5.3258,0.0,-0.013623,True,-5.1061,0.0,True,TPE-LSTM
-PP2 (vs Naive),FS02 | r=0.9 | recency_weighted,SA-LSTM vs Naive,271,5.4117,0.0,0.018109,True,4.8872,0.0,True,Naive
-PP2 (vs Naive),FS02 | r=0.9 | recency_weighted,TPE-LSTM vs Naive,271,3.41,0.0007,0.004486,True,2.9817,0.0031,True,Naive
-PP2 (TPE vs SA),FS02 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,-6.9001,0.0,-0.01933,True,-6.5579,0.0,True,TPE-LSTM
-PP2 (vs Naive),FS02 | r=0.9 | rolling_756,SA-LSTM vs Naive,271,6.3074,0.0,0.02683,True,5.669,0.0,True,Naive
-PP2 (vs Naive),FS02 | r=0.9 | rolling_756,TPE-LSTM vs Naive,271,3.831,0.0002,0.0075,True,3.1924,0.0016,True,Naive
-PP2 (TPE vs SA),FS02 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,-0.0464,0.963,-3.5e-05,False,-1.2703,0.2054,False,TPE-LSTM
-PP2 (vs Naive),FS02 | r=0.925 | expanding,SA-LSTM vs Naive,204,0.6653,0.5066,0.000554,False,1.1733,0.2421,False,Naive
-PP2 (vs Naive),FS02 | r=0.925 | expanding,TPE-LSTM vs Naive,204,1.0743,0.284,0.000519,False,0.1315,0.8955,False,Naive
-PP2 (TPE vs SA),FS02 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,-1.7477,0.0828,-0.004712,False,-2.3412,0.0207,True,TPE-LSTM
-PP2 (vs Naive),FS02 | r=0.95 | expanding,SA-LSTM vs Naive,136,2.2068,0.029,0.005287,True,2.5896,0.0107,True,Naive
-PP2 (vs Naive),FS02 | r=0.95 | expanding,TPE-LSTM vs Naive,136,1.3153,0.1906,0.000576,False,-0.4211,0.6744,False,Naive
-PP2 (TPE vs SA),FS03 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,-9.769,0.0,-0.028712,True,-7.9,0.0,True,TPE-LSTM
-PP2 (vs Naive),FS03 | r=0.8 | expanding,SA-LSTM vs Naive,542,9.9828,0.0,0.028697,True,8.1087,0.0,True,Naive
-PP2 (vs Naive),FS03 | r=0.8 | expanding,TPE-LSTM vs Naive,542,-0.0561,0.9553,-1.5e-05,False,0.1305,0.8962,False,TPE-LSTM
-PP2 (TPE vs SA),FS03 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,-3.1352,0.0019,-0.001873,True,-3.3012,0.0011,True,TPE-LSTM
-PP2 (vs Naive),FS03 | r=0.9 | expanding,SA-LSTM vs Naive,271,2.6324,0.009,0.002915,True,2.7698,0.006,True,Naive
-PP2 (vs Naive),FS03 | r=0.9 | expanding,TPE-LSTM vs Naive,271,1.5023,0.1342,0.001043,False,1.6426,0.1016,False,Naive
-PP2 (TPE vs SA),FS03 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,1.7926,0.0742,0.000822,False,1.7517,0.081,False,SA-LSTM
-PP2 (vs Naive),FS03 | r=0.9 | recency_weighted,SA-LSTM vs Naive,271,2.0298,0.0434,0.002429,True,2.132,0.0339,True,Naive
-PP2 (vs Naive),FS03 | r=0.9 | recency_weighted,TPE-LSTM vs Naive,271,2.7839,0.0058,0.003251,True,2.6096,0.0096,True,Naive
-PP2 (TPE vs SA),FS03 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,-7.6931,0.0,-0.021572,True,-6.7836,0.0,True,TPE-LSTM
-PP2 (vs Naive),FS03 | r=0.9 | rolling_756,SA-LSTM vs Naive,271,7.2795,0.0,0.021942,True,6.5022,0.0,True,Naive
-PP2 (vs Naive),FS03 | r=0.9 | rolling_756,TPE-LSTM vs Naive,271,1.0181,0.3095,0.000369,False,1.0484,0.2954,False,Naive
-PP2 (TPE vs SA),FS03 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,-1.3642,0.174,-0.000599,False,-0.8177,0.4145,False,TPE-LSTM
-PP2 (vs Naive),FS03 | r=0.925 | expanding,SA-LSTM vs Naive,204,1.5351,0.1263,0.001396,False,0.6837,0.495,False,Naive
-PP2 (vs Naive),FS03 | r=0.925 | expanding,TPE-LSTM vs Naive,204,1.1116,0.2676,0.000797,False,0.3683,0.7131,False,Naive
-PP2 (TPE vs SA),FS03 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,0.5187,0.6048,0.000532,False,-0.1034,0.9178,False,SA-LSTM
-PP2 (vs Naive),FS03 | r=0.95 | expanding,SA-LSTM vs Naive,136,0.7934,0.4289,0.000576,False,0.9113,0.3638,False,Naive
-PP2 (vs Naive),FS03 | r=0.95 | expanding,TPE-LSTM vs Naive,136,1.9737,0.0505,0.001108,False,0.8536,0.3948,False,Naive
-PP2 (TPE vs SA),FS04 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,7.3162,0.0,0.05006,True,6.2094,0.0,True,SA-LSTM
-PP2 (vs Naive),FS04 | r=0.8 | expanding,SA-LSTM vs Naive,542,3.4696,0.0006,0.002028,True,2.4634,0.0141,True,Naive
-PP2 (vs Naive),FS04 | r=0.8 | expanding,TPE-LSTM vs Naive,542,7.4232,0.0,0.052088,True,6.2259,0.0,True,Naive
-PP2 (TPE vs SA),FS04 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,3.6848,0.0003,0.019096,True,3.6353,0.0003,True,SA-LSTM
-PP2 (vs Naive),FS04 | r=0.9 | expanding,SA-LSTM vs Naive,271,2.3908,0.0175,0.003891,True,2.9306,0.0037,True,Naive
-PP2 (vs Naive),FS04 | r=0.9 | expanding,TPE-LSTM vs Naive,271,5.2485,0.0,0.022988,True,4.9391,0.0,True,Naive
-PP2 (TPE vs SA),FS04 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,4.3728,0.0,0.027088,True,4.1753,0.0,True,SA-LSTM
-PP2 (vs Naive),FS04 | r=0.9 | recency_weighted,SA-LSTM vs Naive,271,2.4473,0.015,0.004395,True,2.7886,0.0057,True,Naive
-PP2 (vs Naive),FS04 | r=0.9 | recency_weighted,TPE-LSTM vs Naive,271,5.622,0.0,0.031482,True,5.1962,0.0,True,Naive
-PP2 (TPE vs SA),FS04 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,5.6899,0.0,0.024287,True,5.1854,0.0,True,SA-LSTM
-PP2 (vs Naive),FS04 | r=0.9 | rolling_756,SA-LSTM vs Naive,271,0.4071,0.6843,0.000178,False,0.8806,0.3793,False,Naive
-PP2 (vs Naive),FS04 | r=0.9 | rolling_756,TPE-LSTM vs Naive,271,5.6823,0.0,0.024465,True,5.2672,0.0,True,Naive
-PP2 (TPE vs SA),FS04 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,-1.7983,0.0736,-0.002041,False,-2.1045,0.0366,True,TPE-LSTM
-PP2 (vs Naive),FS04 | r=0.925 | expanding,SA-LSTM vs Naive,204,1.4368,0.1523,0.001771,False,1.8695,0.063,False,Naive
-PP2 (vs Naive),FS04 | r=0.925 | expanding,TPE-LSTM vs Naive,204,-1.1702,0.2433,-0.00027,False,-0.7308,0.4658,False,TPE-LSTM
-PP2 (TPE vs SA),FS04 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,-0.1439,0.8858,-0.00011,False,-0.7627,0.447,False,TPE-LSTM
-PP2 (vs Naive),FS04 | r=0.95 | expanding,SA-LSTM vs Naive,136,0.076,0.9395,6.3e-05,False,0.7558,0.4511,False,Naive
-PP2 (vs Naive),FS04 | r=0.95 | expanding,TPE-LSTM vs Naive,136,-0.2693,0.7881,-4.7e-05,False,-0.0034,0.9973,False,TPE-LSTM
-PP2 (TPE vs SA),FS05 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,8.7908,0.0,0.020582,True,8.5997,0.0,True,SA-LSTM
-PP2 (vs Naive),FS05 | r=0.8 | expanding,SA-LSTM vs Naive,542,4.1797,0.0,0.010879,True,4.1854,0.0,True,Naive
-PP2 (vs Naive),FS05 | r=0.8 | expanding,TPE-LSTM vs Naive,542,7.5931,0.0,0.031461,True,7.0867,0.0,True,Naive
-PP2 (TPE vs SA),FS05 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,1.1815,0.2384,0.003017,False,1.993,0.0473,True,SA-LSTM
-PP2 (vs Naive),FS05 | r=0.9 | expanding,SA-LSTM vs Naive,271,2.4912,0.0133,0.001884,True,1.8469,0.0659,False,Naive
-PP2 (vs Naive),FS05 | r=0.9 | expanding,TPE-LSTM vs Naive,271,2.3936,0.0174,0.004901,True,2.9589,0.0034,True,Naive
-PP2 (TPE vs SA),FS05 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,-1.5523,0.1218,-0.006049,False,-0.4848,0.6282,False,TPE-LSTM
-PP2 (vs Naive),FS05 | r=0.9 | recency_weighted,SA-LSTM vs Naive,271,5.2526,0.0,0.011772,True,4.5315,0.0,True,Naive
-PP2 (vs Naive),FS05 | r=0.9 | recency_weighted,TPE-LSTM vs Naive,271,2.5472,0.0114,0.005723,True,2.9603,0.0033,True,Naive
-PP2 (TPE vs SA),FS05 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,-1.3557,0.1763,-0.002939,False,-1.3017,0.1941,False,TPE-LSTM
-PP2 (vs Naive),FS05 | r=0.9 | rolling_756,SA-LSTM vs Naive,271,2.6493,0.0085,0.004736,True,2.7885,0.0057,True,Naive
-PP2 (vs Naive),FS05 | r=0.9 | rolling_756,TPE-LSTM vs Naive,271,2.1512,0.0323,0.001797,True,1.8515,0.0652,False,Naive
-PP2 (TPE vs SA),FS05 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,2.6891,0.0078,0.010058,True,2.7931,0.0057,True,SA-LSTM
-PP2 (vs Naive),FS05 | r=0.925 | expanding,SA-LSTM vs Naive,204,2.9406,0.0037,0.002385,True,2.4262,0.0161,True,Naive
-PP2 (vs Naive),FS05 | r=0.925 | expanding,TPE-LSTM vs Naive,204,3.4722,0.0006,0.012442,True,3.1898,0.0016,True,Naive
-PP2 (TPE vs SA),FS05 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,-1.1729,0.2429,-0.00064,False,0.3403,0.7341,False,TPE-LSTM
-PP2 (vs Naive),FS05 | r=0.95 | expanding,SA-LSTM vs Naive,136,1.2634,0.2086,0.000204,False,-0.1017,0.9192,False,Naive
-PP2 (vs Naive),FS05 | r=0.95 | expanding,TPE-LSTM vs Naive,136,-0.9328,0.3526,-0.000436,False,0.3755,0.7079,False,TPE-LSTM
-PP2 (TPE vs SA),FS06 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,0.2337,0.8153,8.6e-05,False,-1.4242,0.155,False,SA-LSTM
-PP2 (vs Naive),FS06 | r=0.8 | expanding,SA-LSTM vs Naive,542,2.6328,0.0087,0.000916,True,2.8349,0.0048,True,Naive
-PP2 (vs Naive),FS06 | r=0.8 | expanding,TPE-LSTM vs Naive,542,2.3869,0.0173,0.001001,True,-0.2364,0.8132,False,Naive
-PP2 (TPE vs SA),FS06 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,0.6605,0.5095,0.000227,False,-0.2149,0.83,False,SA-LSTM
-PP2 (vs Naive),FS06 | r=0.9 | expanding,SA-LSTM vs Naive,271,0.0209,0.9834,8e-06,False,0.8082,0.4197,False,Naive
-PP2 (vs Naive),FS06 | r=0.9 | expanding,TPE-LSTM vs Naive,271,0.4446,0.6569,0.000235,False,0.4321,0.666,False,Naive
-PP2 (TPE vs SA),FS06 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,-0.3637,0.7163,-0.000437,False,-0.1327,0.8945,False,TPE-LSTM
-PP2 (vs Naive),FS06 | r=0.9 | recency_weighted,SA-LSTM vs Naive,271,1.715,0.0875,0.000922,False,1.8637,0.0635,False,Naive
-PP2 (vs Naive),FS06 | r=0.9 | recency_weighted,TPE-LSTM vs Naive,271,0.5917,0.5545,0.000485,False,0.7799,0.4361,False,Naive
-PP2 (TPE vs SA),FS06 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,4.9552,0.0,0.007703,True,4.8977,0.0,True,SA-LSTM
-PP2 (vs Naive),FS06 | r=0.9 | rolling_756,SA-LSTM vs Naive,271,3.1045,0.0021,0.003309,True,1.9788,0.0489,True,Naive
-PP2 (vs Naive),FS06 | r=0.9 | rolling_756,TPE-LSTM vs Naive,271,4.571,0.0,0.011012,True,4.1043,0.0001,True,Naive
-PP2 (TPE vs SA),FS06 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,2.9533,0.0035,0.002954,True,3.9598,0.0001,True,SA-LSTM
-PP2 (vs Naive),FS06 | r=0.925 | expanding,SA-LSTM vs Naive,204,0.5682,0.5705,0.000304,False,1.2672,0.2065,False,Naive
-PP2 (vs Naive),FS06 | r=0.925 | expanding,TPE-LSTM vs Naive,204,2.2342,0.0266,0.003259,True,2.9278,0.0038,True,Naive
-PP2 (TPE vs SA),FS06 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,0.4404,0.6604,0.000269,False,-1.1167,0.2661,False,SA-LSTM
-PP2 (vs Naive),FS06 | r=0.95 | expanding,SA-LSTM vs Naive,136,-0.5365,0.5925,-0.000359,False,1.0083,0.3151,False,SA-LSTM
-PP2 (vs Naive),FS06 | r=0.95 | expanding,TPE-LSTM vs Naive,136,-0.8211,0.413,-9e-05,False,-0.0733,0.9417,False,TPE-LSTM
-90/10 Expanding (vs Naive),FS01 | r=0.90 | expanding,PP1: LSTM-Res vs Naive,271,-0.3159,0.7523,-6.9e-05,False,-1.0183,0.3094,False,PP1: LSTM-Res
-90/10 Expanding (vs Naive),FS01 | r=0.90 | expanding,PP1: GRU-Res vs Naive,271,3.0399,0.0026,0.003106,True,2.2753,0.0237,True,Naive
-90/10 Expanding (vs Naive),FS01 | r=0.90 | expanding,PP4: WF-Expanding vs Naive,271,0.7763,0.4382,0.000282,False,1.1347,0.2575,False,Naive
-90/10 Expanding (vs Naive),FS01 | r=0.90 | expanding,PP5: Hybrid (s42) vs Naive,271,2.0137,0.045,0.000802,True,1.7211,0.0864,False,Naive
-90/10 Expanding (vs Naive),FS01 | r=0.90 | expanding,PP5: Hybrid (5-seed ens.) vs Naive,271,2.1404,0.0332,0.000255,True,2.131,0.034,True,Naive
-90/10 Expanding (vs Naive),FS02 | r=0.90 | expanding,PP1: LSTM-Res vs Naive,271,-0.1802,0.8571,-7.1e-05,False,-0.3402,0.734,False,PP1: LSTM-Res
-90/10 Expanding (vs Naive),FS02 | r=0.90 | expanding,PP1: GRU-Res vs Naive,271,0.2461,0.8058,6.6e-05,False,-0.4333,0.6651,False,Naive
-90/10 Expanding (vs Naive),FS02 | r=0.90 | expanding,PP4: WF-Expanding vs Naive,271,1.8699,0.0626,0.001441,False,1.4877,0.138,False,Naive
-90/10 Expanding (vs Naive),FS02 | r=0.90 | expanding,PP5: Hybrid (s42) vs Naive,271,1.9988,0.0466,0.00185,True,2.4977,0.0131,True,Naive
-90/10 Expanding (vs Naive),FS02 | r=0.90 | expanding,PP5: Hybrid (5-seed ens.) vs Naive,271,3.1288,0.0019,0.000985,True,2.996,0.003,True,Naive
-90/10 Expanding (vs Naive),FS03 | r=0.90 | expanding,PP4: WF-Expanding vs Naive,271,-0.3387,0.7351,-0.00015,False,0.1035,0.9176,False,PP4: WF-Expanding
-90/10 Expanding (vs Naive),FS03 | r=0.90 | expanding,PP5: Hybrid (s42) vs Naive,271,3.6025,0.0004,0.005382,True,2.9556,0.0034,True,Naive
-90/10 Expanding (vs Naive),FS03 | r=0.90 | expanding,PP5: Hybrid (5-seed ens.) vs Naive,271,1.1588,0.2476,0.001306,False,1.734,0.0841,False,Naive
-90/10 Expanding (vs Naive),FS04 | r=0.90 | expanding,PP1: LSTM-Res vs Naive,271,-0.28,0.7797,-9.9e-05,False,-0.2092,0.8345,False,PP1: LSTM-Res
-90/10 Expanding (vs Naive),FS04 | r=0.90 | expanding,PP1: GRU-Res vs Naive,271,-0.4936,0.622,-0.000126,False,-0.7786,0.4369,False,PP1: GRU-Res
-90/10 Expanding (vs Naive),FS04 | r=0.90 | expanding,PP4: WF-Expanding vs Naive,271,0.7748,0.4391,0.000615,False,1.3935,0.1646,False,Naive
-90/10 Expanding (vs Naive),FS04 | r=0.90 | expanding,PP5: Hybrid (s42) vs Naive,271,5.1369,0.0,0.015284,True,5.6371,0.0,True,Naive
-90/10 Expanding (vs Naive),FS04 | r=0.90 | expanding,PP5: Hybrid (5-seed ens.) vs Naive,271,2.0166,0.0447,0.002143,True,2.6555,0.0084,True,Naive
-90/10 Expanding (vs Naive),FS05 | r=0.90 | expanding,PP4: WF-Expanding vs Naive,271,0.2284,0.8195,0.000122,False,0.8945,0.3718,False,Naive
-90/10 Expanding (vs Naive),FS05 | r=0.90 | expanding,PP5: Hybrid (s42) vs Naive,271,2.9374,0.0036,0.007832,True,3.3639,0.0009,True,Naive
-90/10 Expanding (vs Naive),FS05 | r=0.90 | expanding,PP5: Hybrid (5-seed ens.) vs Naive,271,0.7407,0.4595,0.000712,False,0.9751,0.3304,False,Naive
-90/10 Expanding (vs Naive),FS06 | r=0.90 | expanding,PP1: LSTM-Res vs Naive,271,-0.5451,0.5861,-4e-05,False,-0.773,0.4402,False,PP1: LSTM-Res
-90/10 Expanding (vs Naive),FS06 | r=0.90 | expanding,PP1: GRU-Res vs Naive,271,1.3745,0.1704,0.000386,False,0.0659,0.9475,False,Naive
-90/10 Expanding (vs Naive),FS06 | r=0.90 | expanding,PP4: WF-Expanding vs Naive,271,1.0679,0.2865,0.000563,False,0.8852,0.3768,False,Naive
-90/10 Expanding (vs Naive),FS06 | r=0.90 | expanding,PP5: Hybrid (s42) vs Naive,271,2.7716,0.006,0.003918,True,3.3093,0.0011,True,Naive
-90/10 Expanding (vs Naive),FS06 | r=0.90 | expanding,PP5: Hybrid (5-seed ens.) vs Naive,271,1.6997,0.0903,0.000455,False,1.4525,0.1475,False,Naive
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,-2.714,0.0071,-0.003174,True,-2.1315,0.034,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,-0.6399,0.5228,-0.000137,False,-0.1077,0.9143,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,0.2395,0.8109,2.7e-05,False,1.0401,0.2992,False,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,-1.4942,0.1363,-0.000426,False,-0.2451,0.8066,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,0.9635,0.3361,5.6e-05,False,-0.5443,0.5867,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-3.0612,0.0024,-0.007526,True,-3.0614,0.0024,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-2.8227,0.0051,-0.00399,True,-3.6076,0.0004,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-0.127,0.899,-4.8e-05,False,-0.9947,0.3208,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-0.9159,0.3605,-0.000257,False,-0.4455,0.6563,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-1.3608,0.1747,-0.000976,False,-0.5859,0.5584,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-5.0917,0.0,-0.023086,True,-4.8028,0.0,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-0.5489,0.5835,-0.000275,False,-0.5372,0.5916,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Expanding,271,-0.7157,0.4748,-0.000351,False,-1.2476,0.2133,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Expanding,271,-1.6034,0.11,-0.001512,False,-1.3517,0.1776,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Expanding,271,-0.8659,0.3873,-0.000714,False,-1.4476,0.1489,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Expanding,271,-1.1203,0.2636,-0.000602,False,-0.9909,0.3226,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (s42),271,-1.4916,0.137,-0.000871,False,-1.5159,0.1307,False,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (s42),271,-2.5055,0.0128,-0.001921,True,-3.2373,0.0014,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (s42),271,-5.6256,0.0,-0.015383,True,-6.2469,0.0,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (s42),271,-2.8654,0.0045,-0.003958,True,-3.4266,0.0007,True,PP1: LSTM-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,2.7088,0.0072,0.00323,True,2.0576,0.0406,True,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,-3.179,0.0016,-0.007389,True,-3.2709,0.0012,True,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,-2.72,0.007,-0.004017,True,-3.4584,0.0006,True,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,0.5994,0.5494,0.000378,False,-0.481,0.6309,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,3.1883,0.0016,0.002917,True,2.6881,0.0076,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,-1.5913,0.1127,-0.000839,False,-0.7762,0.4383,False,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,-5.1458,0.0,-0.023113,True,-4.8662,0.0,True,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,0.2086,0.8349,0.000151,False,-0.2934,0.7694,False,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Expanding,271,2.8055,0.0054,0.002824,True,1.9058,0.0577,False,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Expanding,271,-1.6545,0.0992,-0.001375,False,-1.5752,0.1164,False,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Expanding,271,-0.9354,0.3504,-0.000741,False,-1.6378,0.1026,False,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Expanding,271,-0.2972,0.7665,-0.000177,False,-0.8083,0.4197,False,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (s42),271,3.3487,0.0009,0.002304,True,2.5058,0.0128,True,PP5: Hybrid (s42)
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (s42),271,-1.9666,0.0502,-0.001784,False,-2.6815,0.0078,True,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (s42),271,-5.4978,0.0,-0.01541,True,-6.0891,0.0,True,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (s42),271,-2.273,0.0238,-0.003532,True,-2.9158,0.0038,True,PP1: GRU-Res
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,-1.0321,0.3029,-0.000313,False,-0.3204,0.7489,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,3.1593,0.0018,0.006551,True,3.562,0.0004,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,3.1353,0.0019,0.001873,True,3.3012,0.0011,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,-3.6848,0.0003,-0.019096,True,-3.6353,0.0003,True,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,-1.1815,0.2384,-0.003017,False,-1.993,0.0473,True,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,-0.6605,0.5095,-0.000227,False,0.2149,0.83,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Expanding,271,-0.8428,0.4001,-0.000407,False,-1.203,0.23,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Expanding,271,3.1576,0.0018,0.006015,True,3.215,0.0015,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Expanding,271,2.4045,0.0169,0.003065,True,2.5821,0.0103,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Expanding,271,2.1184,0.0351,0.003276,True,2.3193,0.0211,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Expanding,271,1.7526,0.0808,0.001762,False,1.0044,0.3161,False,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Expanding,271,-0.902,0.3678,-0.000554,False,-0.1602,0.8729,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (s42),271,-1.5587,0.1202,-0.000927,False,-1.4258,0.1551,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (s42),271,2.037,0.0426,0.005605,True,1.7896,0.0746,False,PP5: Hybrid (s42)
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (s42),271,-1.9031,0.0581,-0.002467,False,-0.5868,0.5578,False,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (s42),271,-6.7348,0.0,-0.011393,True,-7.053,0.0,True,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (s42),271,-1.8973,0.0588,-0.005948,False,-2.5433,0.0115,True,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (s42),271,-3.5522,0.0005,-0.00391,True,-4.0303,0.0001,True,PP2: SA-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Expanding,271,-0.2313,0.8173,-9.4e-05,False,-1.2959,0.1961,False,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Expanding,271,-0.6196,0.536,-0.000536,False,-1.0495,0.2949,False,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Expanding,271,1.4194,0.1569,0.001192,False,1.4197,0.1569,False,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Expanding,271,5.1632,0.0,0.022373,True,4.8399,0.0,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Expanding,271,2.3825,0.0179,0.004779,True,2.7922,0.0056,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Expanding,271,-0.4083,0.6834,-0.000327,False,-0.2208,0.8254,False,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (s42),271,-1.8789,0.0613,-0.000613,False,-2.5181,0.0124,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (s42),271,-0.7209,0.4716,-0.000945,False,-1.6111,0.1083,False,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (s42),271,-3.724,0.0002,-0.004339,True,-2.6954,0.0075,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (s42),271,1.3061,0.1926,0.007704,False,1.3668,0.1728,False,PP5: Hybrid (s42)
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (s42),271,-3.6951,0.0003,-0.002931,True,-3.7054,0.0003,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (s42),271,-3.4216,0.0007,-0.003683,True,-4.3882,0.0,True,PP2: TPE-LSTM
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS01 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (s42),271,-1.1704,0.2429,-0.00052,False,-0.564,0.5732,False,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS02 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (s42),271,-0.3079,0.7584,-0.000409,False,-0.9821,0.3269,False,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS03 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (s42),271,-3.3284,0.001,-0.005532,True,-2.6292,0.009,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS04 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (s42),271,-5.085,0.0,-0.014669,True,-5.3955,0.0,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS05 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (s42),271,-2.9383,0.0036,-0.00771,True,-3.2291,0.0014,True,PP4: WF-Expanding
-"Cross-Method Pairwise (90/10 Expanding, s42)",FS06 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (s42),271,-2.3496,0.0195,-0.003356,True,-2.8714,0.0044,True,PP4: WF-Expanding
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (5-seed ens.),271,-1.2515,0.2118,-0.000324,False,-1.9283,0.0549,False,PP1: LSTM-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (5-seed ens.),271,-1.8367,0.0674,-0.001056,False,-1.7083,0.0887,False,PP1: LSTM-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (5-seed ens.),271,-2.7991,0.0055,-0.002242,True,-3.6755,0.0003,True,PP1: LSTM-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid (5-seed ens.),271,-2.124,0.0346,-0.000495,True,-1.8737,0.0621,False,PP1: LSTM-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (5-seed ens.),271,2.8834,0.0043,0.002851,True,2.0385,0.0425,True,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (5-seed ens.),271,-2.1487,0.0325,-0.000919,True,-2.2884,0.0229,True,PP1: GRU-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (5-seed ens.),271,-2.5986,0.0099,-0.002269,True,-3.4563,0.0006,True,PP1: GRU-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid (5-seed ens.),271,-0.2327,0.8162,-6.9e-05,False,-1.2076,0.2283,False,PP1: GRU-Res
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (5-seed ens.),271,-1.4316,0.1534,-0.00038,False,-1.7243,0.0858,False,PP2: SA-LSTM
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (5-seed ens.),271,3.1021,0.0021,0.00647,True,3.1768,0.0017,True,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (5-seed ens.),271,0.7664,0.4441,0.00161,False,0.5059,0.6133,False,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (5-seed ens.),271,1.8523,0.0651,0.001748,False,2.1853,0.0297,True,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (5-seed ens.),271,0.7557,0.4505,0.001172,False,0.2556,0.7985,False,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid (5-seed ens.),271,-0.9631,0.3363,-0.000447,False,-0.1523,0.8791,False,PP2: SA-LSTM
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (5-seed ens.),271,-0.4313,0.6666,-6.6e-05,False,-2.0636,0.04,True,PP2: TPE-LSTM
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (5-seed ens.),271,-0.1546,0.8773,-8e-05,False,-1.1996,0.2313,False,PP2: TPE-LSTM
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (5-seed ens.),271,-0.1508,0.8802,-0.000263,False,-0.5277,0.5981,False,PP2: TPE-LSTM
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (5-seed ens.),271,4.2764,0.0,0.020844,True,4.0586,0.0001,True,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (5-seed ens.),271,3.3072,0.0011,0.004189,True,3.7811,0.0002,True,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid (5-seed ens.),271,-0.3967,0.6919,-0.00022,False,-0.2517,0.8014,False,PP2: TPE-LSTM
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS01 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (5-seed ens.),271,0.0739,0.9412,2.7e-05,False,0.4254,0.6709,False,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS02 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (5-seed ens.),271,0.6538,0.5138,0.000455,False,0.3768,0.7067,False,PP5: Hybrid (5-seed ens.)
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS03 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (5-seed ens.),271,-1.358,0.1756,-0.001455,False,-1.7067,0.089,False,PP4: WF-Expanding
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS04 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (5-seed ens.),271,-1.3127,0.1904,-0.001528,False,-1.4623,0.1448,False,PP4: WF-Expanding
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS05 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (5-seed ens.),271,-0.5811,0.5617,-0.00059,False,-0.5117,0.6093,False,PP4: WF-Expanding
-"Cross-Method (vs PP5 5-seed ensemble, 90/10 Exp)",FS06 | r=0.90 | expanding,PP4: WF-Expanding vs PP5: Hybrid (5-seed ens.),271,0.1942,0.8461,0.000107,False,0.0727,0.9421,False,PP5: Hybrid (5-seed ens.)
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.8 | expanding | s=41,TPE-LSTM vs SA-LSTM,542,-2.5846,0.01,-0.00059,True,-0.8856,0.3762,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.8 | expanding | s=42,TPE-LSTM vs SA-LSTM,542,3.5468,0.0004,0.001575,True,1.8097,0.0709,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.8 | expanding | s=43,TPE-LSTM vs SA-LSTM,542,3.4028,0.0007,0.000677,True,2.3555,0.0189,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.8 | expanding | s=44,TPE-LSTM vs SA-LSTM,542,-1.7518,0.0804,-0.0,False,-0.2597,0.7952,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.8 | expanding | s=45,TPE-LSTM vs SA-LSTM,542,2.6811,0.0076,0.001258,True,1.0619,0.2888,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | expanding | s=41,TPE-LSTM vs SA-LSTM,271,-2.3974,0.0172,-0.000653,True,-1.5144,0.1311,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | expanding | s=42,TPE-LSTM vs SA-LSTM,271,2.711,0.0071,0.001311,True,1.9642,0.0505,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | expanding | s=43,TPE-LSTM vs SA-LSTM,271,1.4372,0.1518,0.000818,False,0.5326,0.5947,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | expanding | s=44,TPE-LSTM vs SA-LSTM,271,2.242,0.0258,0.0,True,2.7,0.0074,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | expanding | s=45,TPE-LSTM vs SA-LSTM,271,2.644,0.0087,0.001321,True,1.6119,0.1081,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | recency_weighted | s=41,TPE-LSTM vs SA-LSTM,271,-3.288,0.0011,-0.001327,True,-2.7802,0.0058,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | recency_weighted | s=42,TPE-LSTM vs SA-LSTM,271,3.7663,0.0002,0.003737,True,3.2051,0.0015,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | recency_weighted | s=43,TPE-LSTM vs SA-LSTM,271,2.9526,0.0034,0.000827,True,2.1053,0.0362,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | recency_weighted | s=44,TPE-LSTM vs SA-LSTM,271,-2.1055,0.0362,-0.000991,True,-1.2898,0.1982,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | recency_weighted | s=45,TPE-LSTM vs SA-LSTM,271,4.0797,0.0001,0.003435,True,3.5326,0.0005,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | rolling_756 | s=41,TPE-LSTM vs SA-LSTM,271,0.5797,0.5626,0.000637,False,-0.5568,0.5781,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | rolling_756 | s=42,TPE-LSTM vs SA-LSTM,271,5.3957,0.0,0.008997,True,5.5964,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | rolling_756 | s=43,TPE-LSTM vs SA-LSTM,271,2.1312,0.034,0.000741,True,1.8271,0.0688,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | rolling_756 | s=44,TPE-LSTM vs SA-LSTM,271,-0.4833,0.6293,-0.0,False,-0.4915,0.6235,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.9 | rolling_756 | s=45,TPE-LSTM vs SA-LSTM,271,2.0337,0.043,0.00134,True,0.7605,0.4476,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.925 | expanding | s=41,TPE-LSTM vs SA-LSTM,204,0.9498,0.3434,0.000306,False,-0.2921,0.7705,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.925 | expanding | s=42,TPE-LSTM vs SA-LSTM,204,1.9191,0.0564,0.001622,False,0.8748,0.3827,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.925 | expanding | s=43,TPE-LSTM vs SA-LSTM,204,0.6434,0.5207,0.000402,False,-0.4692,0.6395,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.925 | expanding | s=44,TPE-LSTM vs SA-LSTM,204,0.8864,0.3764,0.0,False,0.2018,0.8403,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.925 | expanding | s=45,TPE-LSTM vs SA-LSTM,204,-0.0381,0.9696,-7e-06,False,-1.5856,0.1144,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.95 | expanding | s=41,TPE-LSTM vs SA-LSTM,136,2.1926,0.03,0.00125,True,1.1215,0.2641,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.95 | expanding | s=42,TPE-LSTM vs SA-LSTM,136,1.6503,0.1012,0.00051,False,-0.022,0.9825,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.95 | expanding | s=43,TPE-LSTM vs SA-LSTM,136,0.4122,0.6809,0.000343,False,-0.763,0.4468,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.95 | expanding | s=44,TPE-LSTM vs SA-LSTM,136,0.3485,0.728,0.0,False,0.052,0.9586,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS01 | r=0.95 | expanding | s=45,TPE-LSTM vs SA-LSTM,136,0.4187,0.6761,7.4e-05,False,-2.0232,0.045,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.8 | expanding | s=41,TPE-LSTM vs SA-LSTM,542,-9.2532,0.0,-0.045061,True,-7.5237,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.8 | expanding | s=42,TPE-LSTM vs SA-LSTM,542,-2.8507,0.0045,-0.0,True,-2.5235,0.0119,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.8 | expanding | s=43,TPE-LSTM vs SA-LSTM,542,-4.9911,0.0,-0.00897,True,-3.8741,0.0001,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.8 | expanding | s=44,TPE-LSTM vs SA-LSTM,542,0.6937,0.4881,0.003114,False,2.1112,0.0352,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.8 | expanding | s=45,TPE-LSTM vs SA-LSTM,542,-1.6193,0.106,-0.002056,False,-1.5156,0.1302,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | expanding | s=41,TPE-LSTM vs SA-LSTM,271,-6.1606,0.0,-0.038829,True,-5.7933,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | expanding | s=42,TPE-LSTM vs SA-LSTM,271,-0.6249,0.5325,-0.0,False,-1.2431,0.2149,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | expanding | s=43,TPE-LSTM vs SA-LSTM,271,-6.7729,0.0,-0.030254,True,-6.0395,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | expanding | s=44,TPE-LSTM vs SA-LSTM,271,-10.5596,0.0,-0.092581,True,-10.2034,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | expanding | s=45,TPE-LSTM vs SA-LSTM,271,0.4043,0.6863,0.000916,False,-0.4397,0.6605,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | recency_weighted | s=41,TPE-LSTM vs SA-LSTM,271,-6.5394,0.0,-0.041197,True,-6.0254,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | recency_weighted | s=42,TPE-LSTM vs SA-LSTM,271,0.8021,0.4232,0.0,False,0.5287,0.5974,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | recency_weighted | s=43,TPE-LSTM vs SA-LSTM,271,-8.902,0.0,-0.044792,True,-7.8301,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | recency_weighted | s=44,TPE-LSTM vs SA-LSTM,271,-12.1871,0.0,-0.075123,True,-10.9035,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | recency_weighted | s=45,TPE-LSTM vs SA-LSTM,271,3.0086,0.0029,0.006758,True,1.9893,0.0477,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | rolling_756 | s=41,TPE-LSTM vs SA-LSTM,271,-0.9791,0.3284,-0.0017,False,-1.4026,0.1619,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | rolling_756 | s=42,TPE-LSTM vs SA-LSTM,271,0.9018,0.3679,0.0,False,1.0865,0.2782,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | rolling_756 | s=43,TPE-LSTM vs SA-LSTM,271,-8.2335,0.0,-0.031528,True,-7.7447,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | rolling_756 | s=44,TPE-LSTM vs SA-LSTM,271,1.9512,0.0521,0.008588,False,2.0694,0.0395,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.9 | rolling_756 | s=45,TPE-LSTM vs SA-LSTM,271,-6.5488,0.0,-0.023061,True,-6.3288,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.925 | expanding | s=41,TPE-LSTM vs SA-LSTM,204,-1.6497,0.1005,-0.001696,False,-1.8625,0.064,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.925 | expanding | s=42,TPE-LSTM vs SA-LSTM,204,0.262,0.7936,0.0,False,-0.6369,0.5249,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.925 | expanding | s=43,TPE-LSTM vs SA-LSTM,204,-5.5641,0.0,-0.035781,True,-4.6108,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.925 | expanding | s=44,TPE-LSTM vs SA-LSTM,204,-2.3422,0.0201,-0.004975,True,-1.7757,0.0773,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.925 | expanding | s=45,TPE-LSTM vs SA-LSTM,204,-1.4308,0.154,-0.002128,False,-0.9324,0.3523,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.95 | expanding | s=41,TPE-LSTM vs SA-LSTM,136,-2.684,0.0082,-0.002443,True,-1.741,0.084,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.95 | expanding | s=42,TPE-LSTM vs SA-LSTM,136,1.3175,0.1899,0.0,False,0.9598,0.3389,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.95 | expanding | s=43,TPE-LSTM vs SA-LSTM,136,-5.3309,0.0,-0.02323,True,-3.638,0.0004,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.95 | expanding | s=44,TPE-LSTM vs SA-LSTM,136,2.702,0.0078,0.003798,True,1.7772,0.0778,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS02 | r=0.95 | expanding | s=45,TPE-LSTM vs SA-LSTM,136,4.8175,0.0,0.003671,True,3.0306,0.0029,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.8 | expanding | s=41,TPE-LSTM vs SA-LSTM,542,9.5305,0.0,0.025662,True,7.5375,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.8 | expanding | s=42,TPE-LSTM vs SA-LSTM,542,5.5337,0.0,0.010046,True,4.6528,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.8 | expanding | s=43,TPE-LSTM vs SA-LSTM,542,14.5707,0.0,0.105837,True,11.4928,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.8 | expanding | s=44,TPE-LSTM vs SA-LSTM,542,1.5306,0.1264,0.001108,False,1.2103,0.2267,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.8 | expanding | s=45,TPE-LSTM vs SA-LSTM,542,-1.2111,0.2264,-0.000826,False,-0.5016,0.6162,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | expanding | s=41,TPE-LSTM vs SA-LSTM,271,3.7,0.0003,0.010531,True,2.9849,0.0031,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | expanding | s=42,TPE-LSTM vs SA-LSTM,271,-1.4428,0.1502,-0.002282,False,-1.64,0.1022,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | expanding | s=43,TPE-LSTM vs SA-LSTM,271,3.5205,0.0005,0.013845,True,3.508,0.0005,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | expanding | s=44,TPE-LSTM vs SA-LSTM,271,-2.7067,0.0072,-0.005457,True,-1.8504,0.0654,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | expanding | s=45,TPE-LSTM vs SA-LSTM,271,5.5016,0.0,0.016185,True,4.6452,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | recency_weighted | s=41,TPE-LSTM vs SA-LSTM,271,3.1279,0.002,0.013404,True,2.3269,0.0207,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | recency_weighted | s=42,TPE-LSTM vs SA-LSTM,271,-0.8886,0.375,-0.001094,False,-0.8775,0.381,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | recency_weighted | s=43,TPE-LSTM vs SA-LSTM,271,3.1313,0.0019,0.010099,True,3.3534,0.0009,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | recency_weighted | s=44,TPE-LSTM vs SA-LSTM,271,-5.3078,0.0,-0.015828,True,-4.686,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | recency_weighted | s=45,TPE-LSTM vs SA-LSTM,271,7.5974,0.0,0.020713,True,6.727,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | rolling_756 | s=41,TPE-LSTM vs SA-LSTM,271,7.1673,0.0,0.032802,True,6.6143,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | rolling_756 | s=42,TPE-LSTM vs SA-LSTM,271,6.5948,0.0,0.020202,True,6.0398,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | rolling_756 | s=43,TPE-LSTM vs SA-LSTM,271,-0.5556,0.579,-0.001378,False,0.76,0.4479,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | rolling_756 | s=44,TPE-LSTM vs SA-LSTM,271,-5.3022,0.0,-0.017449,True,-4.773,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.9 | rolling_756 | s=45,TPE-LSTM vs SA-LSTM,271,-6.2477,0.0,-0.019193,True,-4.8505,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.925 | expanding | s=41,TPE-LSTM vs SA-LSTM,204,0.6094,0.543,0.00097,False,0.0611,0.9513,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.925 | expanding | s=42,TPE-LSTM vs SA-LSTM,204,0.8816,0.379,0.001017,False,0.9359,0.3504,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.925 | expanding | s=43,TPE-LSTM vs SA-LSTM,204,1.935,0.0544,0.006636,False,1.7535,0.081,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.925 | expanding | s=44,TPE-LSTM vs SA-LSTM,204,-0.0702,0.9441,-8.1e-05,False,0.7118,0.4774,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.925 | expanding | s=45,TPE-LSTM vs SA-LSTM,204,2.3711,0.0187,0.006581,True,1.5756,0.1167,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.95 | expanding | s=41,TPE-LSTM vs SA-LSTM,136,2.0383,0.0435,0.004625,True,0.7235,0.4706,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.95 | expanding | s=42,TPE-LSTM vs SA-LSTM,136,0.9946,0.3217,0.001045,False,0.8097,0.4195,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.95 | expanding | s=43,TPE-LSTM vs SA-LSTM,136,3.8147,0.0002,0.018729,True,2.8393,0.0052,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.95 | expanding | s=44,TPE-LSTM vs SA-LSTM,136,-0.6453,0.5199,-0.000413,False,0.8659,0.3881,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS03 | r=0.95 | expanding | s=45,TPE-LSTM vs SA-LSTM,136,1.4414,0.1518,0.005585,False,0.3323,0.7402,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.8 | expanding | s=41,TPE-LSTM vs SA-LSTM,542,6.4416,0.0,0.014408,True,5.8073,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.8 | expanding | s=42,TPE-LSTM vs SA-LSTM,542,-3.1007,0.002,-0.002146,True,-3.0871,0.0021,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.8 | expanding | s=43,TPE-LSTM vs SA-LSTM,542,9.235,0.0,0.022853,True,8.057,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.8 | expanding | s=44,TPE-LSTM vs SA-LSTM,542,1.2763,0.2024,0.005669,False,0.3733,0.7091,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.8 | expanding | s=45,TPE-LSTM vs SA-LSTM,542,3.7486,0.0002,0.003643,True,2.6042,0.0095,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | expanding | s=41,TPE-LSTM vs SA-LSTM,271,7.0794,0.0,0.026469,True,6.3526,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | expanding | s=42,TPE-LSTM vs SA-LSTM,271,-4.3174,0.0,-0.009673,True,-4.6389,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | expanding | s=43,TPE-LSTM vs SA-LSTM,271,1.4243,0.1555,0.000727,False,1.5936,0.1122,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | expanding | s=44,TPE-LSTM vs SA-LSTM,271,0.2082,0.8352,0.000342,False,-0.3336,0.7389,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | expanding | s=45,TPE-LSTM vs SA-LSTM,271,1.2246,0.2218,0.000438,False,1.2455,0.214,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | recency_weighted | s=41,TPE-LSTM vs SA-LSTM,271,4.3137,0.0,0.027963,True,4.6746,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | recency_weighted | s=42,TPE-LSTM vs SA-LSTM,271,-0.3197,0.7494,-0.000883,False,-1.6405,0.1021,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | recency_weighted | s=43,TPE-LSTM vs SA-LSTM,271,0.8712,0.3844,0.000851,False,1.946,0.0527,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | recency_weighted | s=44,TPE-LSTM vs SA-LSTM,271,6.5438,0.0,0.011319,True,6.0767,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | recency_weighted | s=45,TPE-LSTM vs SA-LSTM,271,3.8162,0.0002,0.003785,True,4.2873,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | rolling_756 | s=41,TPE-LSTM vs SA-LSTM,271,-0.7812,0.4354,-0.002982,False,0.2732,0.7849,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | rolling_756 | s=42,TPE-LSTM vs SA-LSTM,271,-7.1096,0.0,-0.019719,True,-6.3208,0.0,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | rolling_756 | s=43,TPE-LSTM vs SA-LSTM,271,-0.7747,0.4392,-0.001658,False,-0.147,0.8832,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | rolling_756 | s=44,TPE-LSTM vs SA-LSTM,271,1.1244,0.2618,0.00118,False,2.1385,0.0334,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.9 | rolling_756 | s=45,TPE-LSTM vs SA-LSTM,271,0.3257,0.7449,0.000429,False,1.7147,0.0876,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.925 | expanding | s=41,TPE-LSTM vs SA-LSTM,204,6.2392,0.0,0.032281,True,5.3609,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.925 | expanding | s=42,TPE-LSTM vs SA-LSTM,204,-3.0973,0.0022,-0.00669,True,-3.2069,0.0016,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.925 | expanding | s=43,TPE-LSTM vs SA-LSTM,204,-2.323,0.0212,-0.003133,True,-2.4917,0.0135,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.925 | expanding | s=44,TPE-LSTM vs SA-LSTM,204,-2.1965,0.0292,-0.004329,True,-1.9165,0.0567,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.925 | expanding | s=45,TPE-LSTM vs SA-LSTM,204,0.7548,0.4512,0.000706,False,1.4058,0.1613,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.95 | expanding | s=41,TPE-LSTM vs SA-LSTM,136,0.7304,0.4664,0.000553,False,1.7318,0.0856,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.95 | expanding | s=42,TPE-LSTM vs SA-LSTM,136,-2.7135,0.0075,-0.003204,True,-1.6142,0.1088,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.95 | expanding | s=43,TPE-LSTM vs SA-LSTM,136,-0.6577,0.5119,-0.000192,False,-0.8687,0.3865,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.95 | expanding | s=44,TPE-LSTM vs SA-LSTM,136,-3.7461,0.0003,-0.012211,True,-4.0395,0.0001,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS04 | r=0.95 | expanding | s=45,TPE-LSTM vs SA-LSTM,136,0.0183,0.9854,2.1e-05,False,1.1053,0.271,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.8 | expanding | s=41,TPE-LSTM vs SA-LSTM,542,1.5588,0.1196,0.000565,False,1.0106,0.3127,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.8 | expanding | s=42,TPE-LSTM vs SA-LSTM,542,1.0276,0.3046,0.000811,False,0.4894,0.6247,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.8 | expanding | s=43,TPE-LSTM vs SA-LSTM,542,5.2129,0.0,0.011231,True,5.5072,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.8 | expanding | s=44,TPE-LSTM vs SA-LSTM,542,5.3871,0.0,0.012194,True,5.3391,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.8 | expanding | s=45,TPE-LSTM vs SA-LSTM,542,-2.8833,0.0041,-0.002275,True,-2.016,0.0443,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | expanding | s=41,TPE-LSTM vs SA-LSTM,271,3.5764,0.0004,0.006677,True,2.8285,0.005,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | expanding | s=42,TPE-LSTM vs SA-LSTM,271,1.7566,0.0801,0.002132,False,0.9875,0.3243,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | expanding | s=43,TPE-LSTM vs SA-LSTM,271,5.1108,0.0,0.009237,True,5.0608,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | expanding | s=44,TPE-LSTM vs SA-LSTM,271,4.3686,0.0,0.018131,True,4.8091,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | expanding | s=45,TPE-LSTM vs SA-LSTM,271,0.8805,0.3794,0.001772,False,0.224,0.8229,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | recency_weighted | s=41,TPE-LSTM vs SA-LSTM,271,2.8463,0.0048,0.010704,True,2.8929,0.0041,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | recency_weighted | s=42,TPE-LSTM vs SA-LSTM,271,1.8549,0.0647,0.004317,False,2.3339,0.0203,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | recency_weighted | s=43,TPE-LSTM vs SA-LSTM,271,7.1144,0.0,0.022306,True,6.5718,0.0,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | recency_weighted | s=44,TPE-LSTM vs SA-LSTM,271,1.9464,0.0526,0.00511,False,2.3353,0.0203,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | recency_weighted | s=45,TPE-LSTM vs SA-LSTM,271,0.351,0.7258,0.000671,False,0.1824,0.8554,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | rolling_756 | s=41,TPE-LSTM vs SA-LSTM,271,-2.1431,0.033,-0.003799,True,-1.983,0.0484,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | rolling_756 | s=42,TPE-LSTM vs SA-LSTM,271,1.7368,0.0836,0.001033,False,0.0171,0.9864,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | rolling_756 | s=43,TPE-LSTM vs SA-LSTM,271,0.8428,0.4001,0.000941,False,0.5179,0.6049,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | rolling_756 | s=44,TPE-LSTM vs SA-LSTM,271,4.1082,0.0001,0.005441,True,3.6911,0.0003,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.9 | rolling_756 | s=45,TPE-LSTM vs SA-LSTM,271,1.9126,0.0569,0.001558,False,1.7402,0.083,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.925 | expanding | s=41,TPE-LSTM vs SA-LSTM,204,-1.1736,0.2419,-0.000419,False,-1.6149,0.1079,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.925 | expanding | s=42,TPE-LSTM vs SA-LSTM,204,-0.1828,0.8552,-0.000134,False,-0.6485,0.5174,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.925 | expanding | s=43,TPE-LSTM vs SA-LSTM,204,2.4477,0.0152,0.002892,True,1.9522,0.0523,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.925 | expanding | s=44,TPE-LSTM vs SA-LSTM,204,1.6787,0.0947,0.005634,False,2.2874,0.0232,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.925 | expanding | s=45,TPE-LSTM vs SA-LSTM,204,-1.8877,0.0605,-0.002082,False,-1.1332,0.2585,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.95 | expanding | s=41,TPE-LSTM vs SA-LSTM,136,0.5708,0.5691,0.000238,False,-0.5787,0.5637,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.95 | expanding | s=42,TPE-LSTM vs SA-LSTM,136,-2.3832,0.0186,-0.001645,True,-0.7945,0.4283,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.95 | expanding | s=43,TPE-LSTM vs SA-LSTM,136,2.9647,0.0036,0.005257,True,3.4675,0.0007,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.95 | expanding | s=44,TPE-LSTM vs SA-LSTM,136,1.3634,0.175,0.004152,False,1.9389,0.0546,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS05 | r=0.95 | expanding | s=45,TPE-LSTM vs SA-LSTM,136,-1.6123,0.1092,-0.002936,False,-2.0928,0.0382,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.8 | expanding | s=41,TPE-LSTM vs SA-LSTM,542,6.4638,0.0,0.004838,True,2.6407,0.0085,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.8 | expanding | s=42,TPE-LSTM vs SA-LSTM,542,1.4392,0.1507,0.000485,False,0.7876,0.4313,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.8 | expanding | s=43,TPE-LSTM vs SA-LSTM,542,-0.8553,0.3927,-0.000405,False,-0.4911,0.6235,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.8 | expanding | s=44,TPE-LSTM vs SA-LSTM,542,-2.0786,0.0381,-0.001028,True,-0.5262,0.599,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.8 | expanding | s=45,TPE-LSTM vs SA-LSTM,542,-1.3681,0.1719,-0.000656,False,-2.0843,0.0376,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | expanding | s=41,TPE-LSTM vs SA-LSTM,271,2.682,0.0078,0.003115,True,2.4263,0.0159,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | expanding | s=42,TPE-LSTM vs SA-LSTM,271,-0.644,0.5201,-0.000184,False,-0.1471,0.8831,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | expanding | s=43,TPE-LSTM vs SA-LSTM,271,0.0204,0.9837,4e-06,False,-0.8211,0.4123,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | expanding | s=44,TPE-LSTM vs SA-LSTM,271,-3.0976,0.0022,-0.004431,True,-2.9653,0.0033,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | expanding | s=45,TPE-LSTM vs SA-LSTM,271,0.9667,0.3346,0.002394,False,0.3572,0.7212,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | recency_weighted | s=41,TPE-LSTM vs SA-LSTM,271,3.1504,0.0018,0.005241,True,3.7292,0.0002,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | recency_weighted | s=42,TPE-LSTM vs SA-LSTM,271,1.2918,0.1975,0.002419,False,1.7971,0.0734,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | recency_weighted | s=43,TPE-LSTM vs SA-LSTM,271,-1.1079,0.2689,-0.000224,False,-1.6457,0.101,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | recency_weighted | s=44,TPE-LSTM vs SA-LSTM,271,-0.8422,0.4004,-0.000778,False,-1.9154,0.0565,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | recency_weighted | s=45,TPE-LSTM vs SA-LSTM,271,1.2176,0.2245,0.000798,False,0.435,0.6639,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | rolling_756 | s=41,TPE-LSTM vs SA-LSTM,271,2.2186,0.0273,0.002764,True,2.2135,0.0277,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | rolling_756 | s=42,TPE-LSTM vs SA-LSTM,271,2.3884,0.0176,0.001831,True,1.7601,0.0795,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | rolling_756 | s=43,TPE-LSTM vs SA-LSTM,271,-0.8396,0.4019,-0.000356,False,0.4606,0.6455,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | rolling_756 | s=44,TPE-LSTM vs SA-LSTM,271,-0.3485,0.7277,-0.000674,False,-1.5136,0.1313,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.9 | rolling_756 | s=45,TPE-LSTM vs SA-LSTM,271,2.1115,0.0357,0.00319,True,2.0226,0.0441,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.925 | expanding | s=41,TPE-LSTM vs SA-LSTM,204,0.3262,0.7446,0.000208,False,0.6494,0.5168,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.925 | expanding | s=42,TPE-LSTM vs SA-LSTM,204,0.2961,0.7675,7.8e-05,False,0.2753,0.7834,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.925 | expanding | s=43,TPE-LSTM vs SA-LSTM,204,-0.2005,0.8413,-6.6e-05,False,-1.2393,0.2166,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.925 | expanding | s=44,TPE-LSTM vs SA-LSTM,204,-3.1061,0.0022,-0.006687,True,-3.3063,0.0011,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.925 | expanding | s=45,TPE-LSTM vs SA-LSTM,204,-2.1312,0.0343,-0.004278,True,-2.1037,0.0366,True,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.95 | expanding | s=41,TPE-LSTM vs SA-LSTM,136,1.4075,0.1616,0.001571,False,2.196,0.0298,True,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.95 | expanding | s=42,TPE-LSTM vs SA-LSTM,136,-0.612,0.5415,-0.000207,False,-0.4566,0.6487,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.95 | expanding | s=43,TPE-LSTM vs SA-LSTM,136,-0.8117,0.4184,-0.000222,False,-0.4884,0.6261,False,TPE-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.95 | expanding | s=44,TPE-LSTM vs SA-LSTM,136,0.2007,0.8413,0.000143,False,-0.9086,0.3652,False,SA-LSTM
+"PP2 (TPE vs SA, per-seed)",FS06 | r=0.95 | expanding | s=45,TPE-LSTM vs SA-LSTM,136,-0.3349,0.7382,-0.000156,False,-1.6091,0.1099,False,TPE-LSTM
+"PP2 (TPE vs SA, 5-seed ens.)",FS01 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,2.9305,0.0035,0.000493,True,1.4572,0.1456,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.8 | expanding,SA-LSTM (5s-Ens) vs Naive,542,0.7641,0.4452,0.000102,False,-0.794,0.4276,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.8 | expanding,TPE-LSTM (5s-Ens) vs Naive,542,2.081,0.0379,0.000595,True,0.4712,0.6377,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS01 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,2.1475,0.0326,0.000559,True,1.3482,0.1787,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.9 | expanding,SA-LSTM (5s-Ens) vs Naive,271,1.157,0.2483,0.00021,False,-0.292,0.7705,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.9 | expanding,TPE-LSTM (5s-Ens) vs Naive,271,1.7743,0.0771,0.000769,False,0.678,0.4983,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS01 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,3.2808,0.0012,0.000781,True,2.5087,0.0127,True,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.9 | recency_weighted,SA-LSTM (5s-Ens) vs Naive,271,2.0022,0.0463,0.001055,True,1.0909,0.2763,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.9 | recency_weighted,TPE-LSTM (5s-Ens) vs Naive,271,2.462,0.0144,0.001836,True,1.5104,0.1321,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS01 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,2.9797,0.0031,0.002169,True,1.9183,0.0561,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.9 | rolling_756,SA-LSTM (5s-Ens) vs Naive,271,1.1248,0.2617,0.000216,False,0.3954,0.6929,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.9 | rolling_756,TPE-LSTM (5s-Ens) vs Naive,271,2.7028,0.0073,0.002385,True,1.6305,0.1042,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS01 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,0.822,0.4121,0.0003,False,-0.4951,0.621,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.925 | expanding,SA-LSTM (5s-Ens) vs Naive,204,-0.5251,0.6001,-0.000113,False,0.0368,0.9707,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.925 | expanding,TPE-LSTM (5s-Ens) vs Naive,204,0.9156,0.361,0.000187,False,-0.965,0.3357,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS01 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,1.4866,0.1395,0.000546,False,-0.1578,0.8748,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.95 | expanding,SA-LSTM (5s-Ens) vs Naive,136,-1.273,0.2052,-0.000131,False,-0.7648,0.4457,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS01 | r=0.95 | expanding,TPE-LSTM (5s-Ens) vs Naive,136,1.4546,0.1481,0.000414,False,-0.5627,0.5746,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS02 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,4.4156,0.0,0.004358,True,3.7036,0.0002,True,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.8 | expanding,SA-LSTM (5s-Ens) vs Naive,542,1.6888,0.0918,0.000915,False,1.3628,0.1735,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.8 | expanding,TPE-LSTM (5s-Ens) vs Naive,542,4.4141,0.0,0.005273,True,3.951,0.0001,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS02 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,-3.2789,0.0012,-0.00368,True,-2.7411,0.0065,True,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.9 | expanding,SA-LSTM (5s-Ens) vs Naive,271,3.2372,0.0014,0.003775,True,2.2591,0.0247,True,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.9 | expanding,TPE-LSTM (5s-Ens) vs Naive,271,0.2357,0.8138,9.5e-05,False,-0.6832,0.495,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS02 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,-4.9803,0.0,-0.003539,True,-5.2305,0.0,True,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.9 | recency_weighted,SA-LSTM (5s-Ens) vs Naive,271,3.9422,0.0001,0.006397,True,3.1494,0.0018,True,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.9 | recency_weighted,TPE-LSTM (5s-Ens) vs Naive,271,2.6522,0.0085,0.002857,True,1.7913,0.0744,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS02 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,-6.4736,0.0,-0.00784,True,-7.3544,0.0,True,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.9 | rolling_756,SA-LSTM (5s-Ens) vs Naive,271,5.6574,0.0,0.015396,True,5.3237,0.0,True,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.9 | rolling_756,TPE-LSTM (5s-Ens) vs Naive,271,4.2511,0.0,0.007555,True,3.5101,0.0005,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS02 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,-1.8468,0.0662,-0.003927,False,-1.229,0.2205,False,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.925 | expanding,SA-LSTM (5s-Ens) vs Naive,204,2.4038,0.0171,0.004132,True,1.7586,0.0802,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.925 | expanding,TPE-LSTM (5s-Ens) vs Naive,204,0.4137,0.6795,0.000205,False,0.7768,0.4382,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS02 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,-2.6131,0.01,-0.001926,True,-1.5037,0.135,False,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.95 | expanding,SA-LSTM (5s-Ens) vs Naive,136,2.3945,0.018,0.002834,True,0.902,0.3687,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS02 | r=0.95 | expanding,TPE-LSTM (5s-Ens) vs Naive,136,1.6098,0.1098,0.000908,False,-0.0746,0.9406,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS03 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,4.9416,0.0,0.007687,True,3.9451,0.0001,True,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.8 | expanding,SA-LSTM (5s-Ens) vs Naive,542,0.3037,0.7615,6.5e-05,False,0.4635,0.6432,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.8 | expanding,TPE-LSTM (5s-Ens) vs Naive,542,4.7753,0.0,0.007752,True,3.6455,0.0003,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS03 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,1.615,0.1075,0.001933,False,1.3944,0.1644,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.9 | expanding,SA-LSTM (5s-Ens) vs Naive,271,-0.0181,0.9855,-6e-06,False,0.2934,0.7694,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.9 | expanding,TPE-LSTM (5s-Ens) vs Naive,271,1.9591,0.0511,0.001927,False,1.8425,0.0665,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS03 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,4.8343,0.0,0.004751,True,4.1694,0.0,True,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.9 | recency_weighted,SA-LSTM (5s-Ens) vs Naive,271,1.8037,0.0724,0.001556,False,1.6732,0.0955,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.9 | recency_weighted,TPE-LSTM (5s-Ens) vs Naive,271,3.7024,0.0003,0.006307,True,3.2555,0.0013,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS03 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,3.2181,0.0014,0.00326,True,3.5842,0.0004,True,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.9 | rolling_756,SA-LSTM (5s-Ens) vs Naive,271,3.8203,0.0002,0.006238,True,3.4116,0.0007,True,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.9 | rolling_756,TPE-LSTM (5s-Ens) vs Naive,271,4.3525,0.0,0.009498,True,3.8557,0.0001,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS03 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,0.3133,0.7544,0.000361,False,-0.0357,0.9715,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.925 | expanding,SA-LSTM (5s-Ens) vs Naive,204,0.4927,0.6227,0.000216,False,1.0769,0.2828,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.925 | expanding,TPE-LSTM (5s-Ens) vs Naive,204,0.73,0.4662,0.000577,False,0.5353,0.593,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS03 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,2.1819,0.0309,0.004213,True,1.0157,0.3116,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.95 | expanding,SA-LSTM (5s-Ens) vs Naive,136,-0.39,0.6972,-0.000234,False,0.0983,0.9218,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS03 | r=0.95 | expanding,TPE-LSTM (5s-Ens) vs Naive,136,2.7486,0.0068,0.003979,True,1.3747,0.1715,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS04 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,8.6984,0.0,0.009489,True,7.3923,0.0,True,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.8 | expanding,SA-LSTM (5s-Ens) vs Naive,542,2.6289,0.0088,0.002958,True,2.8318,0.0048,True,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.8 | expanding,TPE-LSTM (5s-Ens) vs Naive,542,6.3726,0.0,0.012447,True,5.6654,0.0,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS04 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,0.9032,0.3673,0.000392,False,1.8168,0.0704,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.9 | expanding,SA-LSTM (5s-Ens) vs Naive,271,0.8085,0.4195,0.000787,False,1.1351,0.2573,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.9 | expanding,TPE-LSTM (5s-Ens) vs Naive,271,1.0119,0.3125,0.001179,False,1.6288,0.1045,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS04 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,-0.5475,0.5845,-0.00029,False,-1.249,0.2128,False,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.9 | recency_weighted,SA-LSTM (5s-Ens) vs Naive,271,1.3621,0.1743,0.000657,False,0.8904,0.374,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.9 | recency_weighted,TPE-LSTM (5s-Ens) vs Naive,271,0.8226,0.4114,0.000367,False,-0.5147,0.6072,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS04 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,-3.9968,0.0001,-0.00618,True,-3.5452,0.0005,True,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.9 | rolling_756,SA-LSTM (5s-Ens) vs Naive,271,4.2137,0.0,0.006743,True,3.5582,0.0004,True,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.9 | rolling_756,TPE-LSTM (5s-Ens) vs Naive,271,1.7609,0.0794,0.000563,False,0.6051,0.5456,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS04 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,1.6322,0.1042,0.00156,False,1.8259,0.0693,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.925 | expanding,SA-LSTM (5s-Ens) vs Naive,204,1.5304,0.1275,0.001881,False,1.8914,0.06,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.925 | expanding,TPE-LSTM (5s-Ens) vs Naive,204,1.9714,0.05,0.00344,False,2.2591,0.0249,True,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS04 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,-1.8859,0.0615,-0.000578,False,-0.7492,0.455,False,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.95 | expanding,SA-LSTM (5s-Ens) vs Naive,136,0.4984,0.619,0.000303,False,1.159,0.2485,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS04 | r=0.95 | expanding,TPE-LSTM (5s-Ens) vs Naive,136,-0.4351,0.6642,-0.000275,False,0.7314,0.4658,False,TPE-LSTM (5s-Ens)
+"PP2 (TPE vs SA, 5-seed ens.)",FS05 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,1.3792,0.1684,0.000284,False,0.9358,0.3498,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.8 | expanding,SA-LSTM (5s-Ens) vs Naive,542,-0.8429,0.3997,-6e-05,False,-0.6846,0.4939,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.8 | expanding,TPE-LSTM (5s-Ens) vs Naive,542,1.1282,0.2597,0.000224,False,0.7294,0.4661,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS05 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,1.6865,0.0928,0.000703,False,0.736,0.4624,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.9 | expanding,SA-LSTM (5s-Ens) vs Naive,271,-0.9922,0.322,-0.000166,False,-0.6805,0.4967,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.9 | expanding,TPE-LSTM (5s-Ens) vs Naive,271,1.3818,0.1682,0.000537,False,0.4968,0.6198,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS05 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,0.6185,0.5368,0.000564,False,0.2736,0.7846,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.9 | recency_weighted,SA-LSTM (5s-Ens) vs Naive,271,0.343,0.7319,0.000135,False,0.8679,0.3862,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.9 | recency_weighted,TPE-LSTM (5s-Ens) vs Naive,271,1.185,0.2371,0.000699,False,0.9123,0.3624,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS05 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,-0.1327,0.8945,-4.8e-05,False,-0.6264,0.5316,False,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.9 | rolling_756,SA-LSTM (5s-Ens) vs Naive,271,0.504,0.6146,0.000155,False,1.7175,0.087,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.9 | rolling_756,TPE-LSTM (5s-Ens) vs Naive,271,0.3449,0.7305,0.000106,False,0.6631,0.5078,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS05 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,0.7554,0.4509,0.000361,False,0.7335,0.4641,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.925 | expanding,SA-LSTM (5s-Ens) vs Naive,204,0.045,0.9642,1.1e-05,False,0.6783,0.4984,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.925 | expanding,TPE-LSTM (5s-Ens) vs Naive,204,0.564,0.5733,0.000371,False,0.7828,0.4347,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS05 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,0.1349,0.8929,8e-05,False,0.8048,0.4223,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.95 | expanding,SA-LSTM (5s-Ens) vs Naive,136,-0.0265,0.9789,-1.2e-05,False,0.8733,0.384,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS05 | r=0.95 | expanding,TPE-LSTM (5s-Ens) vs Naive,136,0.0725,0.9423,6.8e-05,False,0.967,0.3353,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS06 | r=0.8 | expanding,TPE-LSTM vs SA-LSTM,542,0.7821,0.4345,9.7e-05,False,-0.0003,0.9998,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.8 | expanding,SA-LSTM (5s-Ens) vs Naive,542,0.4653,0.6419,4.7e-05,False,-0.6203,0.5353,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.8 | expanding,TPE-LSTM (5s-Ens) vs Naive,542,1.0518,0.2934,0.000144,False,-0.2214,0.8248,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS06 | r=0.9 | expanding,TPE-LSTM vs SA-LSTM,271,1.8209,0.0697,0.000856,False,1.153,0.2499,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.9 | expanding,SA-LSTM (5s-Ens) vs Naive,271,0.3745,0.7083,0.000127,False,0.0527,0.958,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.9 | expanding,TPE-LSTM (5s-Ens) vs Naive,271,2.3595,0.019,0.000983,True,1.575,0.1164,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS06 | r=0.9 | recency_weighted,TPE-LSTM vs SA-LSTM,271,0.2651,0.7911,0.000134,False,0.6601,0.5098,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.9 | recency_weighted,SA-LSTM (5s-Ens) vs Naive,271,-0.0896,0.9286,-2.5e-05,False,0.1667,0.8677,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.9 | recency_weighted,TPE-LSTM (5s-Ens) vs Naive,271,0.1981,0.8431,0.000109,False,0.6593,0.5102,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS06 | r=0.9 | rolling_756,TPE-LSTM vs SA-LSTM,271,0.6822,0.4957,0.000332,False,-0.1756,0.8607,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.9 | rolling_756,SA-LSTM (5s-Ens) vs Naive,271,0.9234,0.3566,0.000299,False,1.641,0.102,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.9 | rolling_756,TPE-LSTM (5s-Ens) vs Naive,271,1.2444,0.2144,0.000631,False,0.8414,0.4009,False,Naive
+"PP2 (TPE vs SA, 5-seed ens.)",FS06 | r=0.925 | expanding,TPE-LSTM vs SA-LSTM,204,-0.8402,0.4018,-0.000733,False,-1.028,0.3052,False,TPE-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.925 | expanding,SA-LSTM (5s-Ens) vs Naive,204,0.7437,0.4579,0.000731,False,1.0419,0.2987,False,Naive
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.925 | expanding,TPE-LSTM (5s-Ens) vs Naive,204,-0.0129,0.9897,-2e-06,False,0.853,0.3947,False,TPE-LSTM (5s-Ens)
+"PP2 (TPE vs SA, 5-seed ens.)",FS06 | r=0.95 | expanding,TPE-LSTM vs SA-LSTM,136,1.055,0.2933,9.9e-05,False,-0.6495,0.5171,False,SA-LSTM
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.95 | expanding,SA-LSTM (5s-Ens) vs Naive,136,-0.9573,0.3401,-0.000385,False,0.4815,0.631,False,SA-LSTM (5s-Ens)
+"PP2 (vs Naive, 5-seed ens.)",FS06 | r=0.95 | expanding,TPE-LSTM (5s-Ens) vs Naive,136,-0.7093,0.4793,-0.000285,False,0.3642,0.7163,False,TPE-LSTM (5s-Ens)
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs Naive,271,-0.3159,0.7523,-6.9e-05,False,-1.0183,0.3094,False,PP1: LSTM-Res (1s)
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP1: GRU-Res (1s) vs Naive,271,3.0399,0.0026,0.003106,True,2.2753,0.0237,True,Naive
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,271,1.1569,0.2483,0.00021,False,-0.292,0.7705,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,271,1.7743,0.0771,0.000769,False,0.678,0.4983,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,271,0.7249,0.4691,0.000193,False,1.0989,0.2728,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,271,0.3402,0.734,0.000114,False,0.8741,0.3828,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS01 | r=0.90 | expanding,PP5: Hybrid (5s-Ens) vs Naive,271,2.1404,0.0332,0.000255,True,2.131,0.034,True,Naive
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs Naive,271,-0.1802,0.8571,-7.1e-05,False,-0.3402,0.734,False,PP1: LSTM-Res (1s)
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP1: GRU-Res (1s) vs Naive,271,0.2461,0.8058,6.6e-05,False,-0.4333,0.6651,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,271,3.2372,0.0014,0.003775,True,2.2591,0.0247,True,Naive
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,271,0.2357,0.8138,9.5e-05,False,-0.6833,0.495,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,271,1.3963,0.1638,0.000849,False,0.9211,0.3578,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,271,1.6715,0.0958,0.0011,False,0.7723,0.4406,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS02 | r=0.90 | expanding,PP5: Hybrid (5s-Ens) vs Naive,271,3.1288,0.0019,0.000985,True,2.996,0.003,True,Naive
+"90/10 Expanding (vs Naive, Primary)",FS03 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,271,-0.0181,0.9855,-6e-06,False,0.2934,0.7694,False,PP2: SA-LSTM (5s-Ens)
+"90/10 Expanding (vs Naive, Primary)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,271,1.9591,0.0511,0.001927,False,1.8425,0.0665,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS03 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,271,0.1427,0.8866,9.1e-05,False,0.9221,0.3573,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS03 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,271,-0.0909,0.9276,-5.7e-05,False,0.7935,0.4282,False,PP4: WF-Roll (5s-Ens)
+"90/10 Expanding (vs Naive, Primary)",FS03 | r=0.90 | expanding,PP5: Hybrid (5s-Ens) vs Naive,271,1.1588,0.2476,0.001306,False,1.734,0.0841,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs Naive,271,-0.28,0.7797,-9.9e-05,False,-0.2092,0.8345,False,PP1: LSTM-Res (1s)
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP1: GRU-Res (1s) vs Naive,271,-0.4936,0.622,-0.000126,False,-0.7786,0.4369,False,PP1: GRU-Res (1s)
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,271,0.8085,0.4195,0.000787,False,1.1351,0.2573,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,271,1.0119,0.3125,0.001179,False,1.6288,0.1045,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,271,0.6321,0.5279,0.000471,False,1.0522,0.2937,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,271,1.3437,0.1802,0.000753,False,0.9462,0.3449,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS04 | r=0.90 | expanding,PP5: Hybrid (5s-Ens) vs Naive,271,2.0166,0.0447,0.002143,True,2.6555,0.0084,True,Naive
+"90/10 Expanding (vs Naive, Primary)",FS05 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,271,-0.9923,0.322,-0.000166,False,-0.6806,0.4967,False,PP2: SA-LSTM (5s-Ens)
+"90/10 Expanding (vs Naive, Primary)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,271,1.3818,0.1682,0.000537,False,0.4968,0.6198,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS05 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,271,0.4117,0.6809,0.00027,False,0.9721,0.3319,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS05 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,271,0.6024,0.5474,0.000332,False,1.1562,0.2486,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS05 | r=0.90 | expanding,PP5: Hybrid (5s-Ens) vs Naive,271,0.7407,0.4595,0.000712,False,0.9751,0.3304,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs Naive,271,-0.5451,0.5861,-4e-05,False,-0.773,0.4402,False,PP1: LSTM-Res (1s)
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs Naive,271,1.3745,0.1704,0.000386,False,0.0659,0.9475,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,271,0.3745,0.7083,0.000127,False,0.0527,0.958,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,271,2.3595,0.019,0.000983,True,1.575,0.1164,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP3: iTrans (5s-Ens) vs Naive,271,-0.7265,0.4682,-0.000241,False,-0.6063,0.5448,False,PP3: iTrans (5s-Ens)
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,271,0.7567,0.4499,0.000278,False,0.2927,0.77,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,271,0.8897,0.3744,0.000486,False,0.7262,0.4683,False,Naive
+"90/10 Expanding (vs Naive, Primary)",FS06 | r=0.90 | expanding,PP5: Hybrid (5s-Ens) vs Naive,271,1.6997,0.0903,0.000455,False,1.4525,0.1475,False,Naive
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP1: GRU-Res (1s),271,-2.714,0.0071,-0.003174,True,-2.1315,0.034,True,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP1: GRU-Res (1s),271,-0.6399,0.5228,-0.000137,False,-0.1077,0.9143,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP1: GRU-Res (1s),271,0.2395,0.8109,2.7e-05,False,1.0401,0.2992,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP1: GRU-Res (1s),271,-1.4942,0.1363,-0.000426,False,-0.2451,0.8066,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,-0.8386,0.4024,-0.000279,False,-0.4887,0.6255,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,-2.7338,0.0067,-0.003846,True,-1.8685,0.0628,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,-1.3046,0.1931,-0.000886,False,-1.8699,0.0626,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,-0.4445,0.657,-0.000166,False,-0.1671,0.8674,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-1.4634,0.1445,-0.000838,False,-0.8691,0.3856,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-0.3032,0.762,-0.000166,False,0.1436,0.8859,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-1.5255,0.1283,-0.001277,False,-2.2914,0.0227,True,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-2.1911,0.0293,-0.001023,True,-1.5155,0.1308,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP3: iTrans (5s-Ens),271,0.6761,0.4996,0.000201,False,0.4934,0.6222,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Exp (5s-Ens),271,-0.6348,0.5261,-0.000261,False,-1.2021,0.2304,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Exp (5s-Ens),271,-1.1003,0.2722,-0.00092,False,-0.7997,0.4246,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Exp (5s-Ens),271,-0.6929,0.489,-0.00057,False,-1.0403,0.2991,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Exp (5s-Ens),271,-0.8296,0.4075,-0.000318,False,-0.4171,0.6769,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-0.3605,0.7188,-0.000183,False,-0.9959,0.3202,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-1.662,0.0977,-0.001171,False,-0.8413,0.4009,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-1.3468,0.1792,-0.000852,False,-0.9009,0.3685,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-1.0315,0.3032,-0.000526,False,-0.8433,0.3998,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP5: Hybrid (5s-Ens),271,-1.2515,0.2118,-0.000324,False,-1.9283,0.0549,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP5: Hybrid (5s-Ens),271,-1.8367,0.0674,-0.001056,False,-1.7083,0.0887,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP5: Hybrid (5s-Ens),271,-2.7991,0.0055,-0.002242,True,-3.6755,0.0003,True,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: LSTM-Res (1s) vs PP5: Hybrid (5s-Ens),271,-2.124,0.0346,-0.000495,True,-1.8737,0.0621,False,PP1: LSTM-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,3.3237,0.001,0.002895,True,2.7989,0.0055,True,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,-3.0325,0.0027,-0.003709,True,-2.1805,0.0301,True,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,-1.1992,0.2315,-0.000913,False,-1.7701,0.0778,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: SA-LSTM (5s-Ens),271,0.4739,0.6359,0.000259,False,-0.0043,0.9966,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,3.6697,0.0003,0.002337,True,3.4099,0.0007,True,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-0.0686,0.9454,-2.9e-05,False,0.2647,0.7915,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-1.3981,0.1632,-0.001304,False,-2.1735,0.0306,True,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP2: TPE-LSTM (5s-Ens),271,-1.513,0.1315,-0.000597,False,-1.57,0.1176,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP3: iTrans (5s-Ens),271,1.1978,0.232,0.000627,False,0.4092,0.6827,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Exp (5s-Ens),271,2.9613,0.0033,0.002913,True,2.0956,0.0371,True,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Exp (5s-Ens),271,-1.0865,0.2782,-0.000783,False,-0.9461,0.3449,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Exp (5s-Ens),271,-0.7691,0.4425,-0.000597,False,-1.2527,0.2114,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Exp (5s-Ens),271,0.3139,0.7538,0.000108,False,-0.2761,0.7827,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Roll (5s-Ens),271,3.1165,0.002,0.002991,True,2.1782,0.0303,True,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-1.5607,0.1198,-0.001034,False,-0.9196,0.3586,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-1.5216,0.1293,-0.000879,False,-1.1804,0.2389,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP4: WF-Roll (5s-Ens),271,-0.1806,0.8568,-0.0001,False,-0.6755,0.5,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP5: Hybrid (5s-Ens),271,2.8834,0.0043,0.002851,True,2.0385,0.0425,True,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP5: Hybrid (5s-Ens),271,-2.1487,0.0325,-0.000919,True,-2.2884,0.0229,True,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP5: Hybrid (5s-Ens),271,-2.5986,0.0099,-0.002269,True,-3.4563,0.0006,True,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP1: GRU-Res (1s) vs PP5: Hybrid (5s-Ens),271,-0.2327,0.8162,-6.9e-05,False,-1.2076,0.2283,False,PP1: GRU-Res (1s)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP2: TPE-LSTM (5s-Ens),271,-2.1475,0.0326,-0.000559,True,-1.3482,0.1787,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP2: TPE-LSTM (5s-Ens),271,3.2789,0.0012,0.00368,True,2.7411,0.0065,True,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP2: TPE-LSTM (5s-Ens),271,-1.615,0.1075,-0.001933,False,-1.3944,0.1644,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP2: TPE-LSTM (5s-Ens),271,-0.9031,0.3673,-0.000392,False,-1.8168,0.0704,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP2: TPE-LSTM (5s-Ens),271,-1.6865,0.0928,-0.000703,False,-0.736,0.4624,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP2: TPE-LSTM (5s-Ens),271,-1.8209,0.0697,-0.000856,False,-1.153,0.2499,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP3: iTrans (5s-Ens),271,0.9047,0.3665,0.000367,False,0.4904,0.6242,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,0.0551,0.9561,1.7e-05,False,-1.1936,0.2337,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,2.5931,0.01,0.002926,True,1.8443,0.0662,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,-0.1666,0.8678,-9.7e-05,False,-0.9103,0.3635,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,0.2611,0.7943,0.000315,False,0.2422,0.8088,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,-0.6944,0.488,-0.000436,False,-1.1398,0.2554,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,-0.25,0.8028,-0.000151,False,-0.1295,0.8971,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.2655,0.7908,9.6e-05,False,-1.0545,0.2926,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,2.1456,0.0328,0.002675,True,1.734,0.0841,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.0879,0.93,5.1e-05,False,-0.7384,0.4609,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.0305,0.9757,3.4e-05,False,0.4275,0.6694,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-0.9952,0.3205,-0.000498,False,-1.3995,0.1628,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-0.5053,0.6138,-0.000359,False,-0.5296,0.5968,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.2302,0.8181,-4.5e-05,False,-1.4419,0.1505,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,2.609,0.0096,0.00279,True,1.6042,0.1098,False,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.4789,0.1403,-0.001312,False,-2.1138,0.0354,True,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-3.1909,0.0016,-0.001357,True,-3.6786,0.0003,True,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.0363,0.301,-0.000878,False,-1.2007,0.2309,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: SA-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.6231,0.5338,-0.000328,False,-0.6484,0.5173,False,PP2: SA-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP3: iTrans (5s-Ens),271,1.8675,0.0629,0.001224,False,1.269,0.2055,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,1.2126,0.2263,0.000576,False,-0.0329,0.9738,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,-1.1433,0.2539,-0.000754,False,-1.3017,0.1941,False,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,1.4272,0.1547,0.001836,False,0.8657,0.3874,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,0.527,0.5986,0.000707,False,0.9353,0.3505,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,0.3778,0.7059,0.000267,False,-0.7215,0.4712,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,1.4337,0.1528,0.000705,False,1.0473,0.2959,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,1.3206,0.1878,0.000655,False,-0.034,0.9729,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-1.5598,0.12,-0.001005,False,-1.1268,0.2608,False,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,1.564,0.119,0.001985,False,0.9795,0.3282,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.3414,0.7331,0.000426,False,1.0925,0.2756,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.3345,0.7383,0.000205,False,-0.7816,0.4351,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.6393,0.5232,0.000497,False,0.2221,0.8244,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,1.2556,0.2103,0.000514,False,0.0777,0.9382,False,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-2.3951,0.0173,-0.00089,True,-3.3565,0.0009,True,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,0.3274,0.7436,0.000622,False,-0.1305,0.8963,False,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.6171,0.107,-0.000965,False,-1.3315,0.1842,False,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.209,0.8346,-0.000175,False,-0.96,0.3379,False,PP2: TPE-LSTM (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM (5s-Ens) vs PP5: Hybrid (5s-Ens),271,0.9007,0.3685,0.000528,False,0.3454,0.7301,False,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP3: iTrans (5s-Ens) vs PP4: WF-Exp (5s-Ens),271,-0.881,0.3791,-0.000519,False,-0.5277,0.5981,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP3: iTrans (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-1.2676,0.206,-0.000727,False,-1.0322,0.3029,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP3: iTrans (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.6931,0.0916,-0.000696,False,-1.4579,0.146,False,PP3: iTrans (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.2416,0.8093,7.9e-05,False,-0.0021,0.9984,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-0.3392,0.7347,-0.000251,False,0.0484,0.9614,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,0.3467,0.7291,0.000149,False,0.3504,0.7263,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-0.451,0.6524,-0.000281,False,0.367,0.7139,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-0.1726,0.8631,-6.2e-05,False,0.2048,0.8379,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP4: WF-Roll (5s-Ens),271,-0.395,0.6932,-0.000208,False,-0.5593,0.5764,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.225,0.8222,-6.2e-05,False,0.1594,0.8735,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.2635,0.7923,-0.000136,False,-0.6528,0.5145,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.2082,0.228,-0.001214,False,-1.3809,0.1685,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.3673,0.1727,-0.001672,False,-1.7315,0.0845,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.4541,0.6501,-0.000442,False,-0.2951,0.7682,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP4: WF-Exp (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.4409,0.6597,-0.000177,False,-0.7192,0.4727,False,PP4: WF-Exp (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS01 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.373,0.7094,-0.000141,False,0.1215,0.9034,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS02 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs PP5: Hybrid (5s-Ens),271,0.1767,0.8599,0.000115,False,-0.5803,0.5622,False,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS03 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.3903,0.1656,-0.001363,False,-1.5539,0.1214,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS04 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-1.184,0.2375,-0.00139,False,-1.826,0.069,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS05 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs PP5: Hybrid (5s-Ens),271,-0.4377,0.662,-0.00038,False,-0.3919,0.6954,False,PP4: WF-Roll (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Primary)",FS06 | r=0.90 | expanding,PP4: WF-Roll (5s-Ens) vs PP5: Hybrid (5s-Ens),271,0.0685,0.9454,3.1e-05,False,0.058,0.9538,False,PP5: Hybrid (5s-Ens)
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,-2.714,0.0071,-0.003174,True,-2.1315,0.034,True,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,-0.6399,0.5228,-0.000137,False,-0.1077,0.9143,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,0.2395,0.8109,2.7e-05,False,1.0401,0.2992,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP1: GRU-Res,271,-1.4942,0.1363,-0.000426,False,-0.2451,0.8066,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-1.1278,0.2604,-0.000424,False,-0.5523,0.5812,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-0.3154,0.7527,-0.000195,False,-1.0014,0.3175,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-4.1081,0.0001,-0.009812,True,-4.4056,0.0,True,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: SA-LSTM,271,-1.4067,0.1607,-0.000511,False,-0.8729,0.3835,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-2.0889,0.0377,-0.001735,True,-1.3331,0.1836,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-0.3154,0.7527,-0.000195,False,-1.0014,0.3175,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-0.6775,0.4987,-0.000139,False,-1.0565,0.2917,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP2: TPE-LSTM,271,-0.9914,0.3224,-0.000327,False,-0.7497,0.4541,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP3: iTrans,271,-1.0084,0.3142,-0.000905,False,-0.5095,0.6108,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Exp,271,-0.7157,0.4748,-0.000351,False,-1.2476,0.2133,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Exp,271,-1.6034,0.11,-0.001512,False,-1.3517,0.1776,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Exp,271,-0.8659,0.3873,-0.000714,False,-1.4476,0.1489,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP4: WF-Exp,271,-1.1203,0.2636,-0.000602,False,-0.9909,0.3226,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid,271,-1.4916,0.137,-0.000871,False,-1.5159,0.1307,False,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid,271,-2.5055,0.0128,-0.001921,True,-3.2373,0.0014,True,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid,271,-5.6256,0.0,-0.015383,True,-6.2469,0.0,True,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: LSTM-Res vs PP5: Hybrid,271,-2.8654,0.0045,-0.003958,True,-3.4266,0.0007,True,PP1: LSTM-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,3.3295,0.001,0.00275,True,2.9273,0.0037,True,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,-0.0861,0.9314,-5.8e-05,False,-0.9044,0.3666,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,-3.9896,0.0001,-0.009839,True,-4.2917,0.0,True,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP2: SA-LSTM,271,-0.2844,0.7763,-8.5e-05,False,-0.7359,0.4624,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,3.6234,0.0003,0.001439,True,3.9826,0.0001,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,-0.0861,0.9314,-5.8e-05,False,-0.9044,0.3666,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,-0.5445,0.5865,-0.000166,False,-1.0749,0.2834,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP2: TPE-LSTM,271,0.4415,0.6592,9.8e-05,False,-0.8066,0.4206,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP3: iTrans,271,-0.4754,0.6349,-0.000479,False,-0.3992,0.6901,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Exp,271,2.8055,0.0054,0.002824,True,1.9058,0.0577,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Exp,271,-1.6545,0.0992,-0.001375,False,-1.5752,0.1164,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Exp,271,-0.9354,0.3504,-0.000741,False,-1.6378,0.1026,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP4: WF-Exp,271,-0.2972,0.7665,-0.000177,False,-0.8083,0.4197,False,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid,271,3.3487,0.0009,0.002304,True,2.5058,0.0128,True,PP5: Hybrid
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid,271,-1.9666,0.0502,-0.001784,False,-2.6815,0.0078,True,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid,271,-5.4978,0.0,-0.01541,True,-6.0891,0.0,True,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP1: GRU-Res vs PP5: Hybrid,271,-2.273,0.0238,-0.003532,True,-2.9158,0.0038,True,PP1: GRU-Res
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,-2.711,0.0071,-0.001311,True,-1.9642,0.0505,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,0.6249,0.5325,0.0,False,1.2431,0.2149,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,1.4428,0.1502,0.002282,False,1.64,0.1022,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,4.3174,0.0,0.009673,True,4.6389,0.0,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,-1.7566,0.0801,-0.002132,False,-0.9875,0.3243,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP2: TPE-LSTM,271,0.644,0.5201,0.000184,False,0.1471,0.8831,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP3: iTrans,271,-0.4031,0.6872,-0.000394,False,-0.2106,0.8334,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Exp,271,0.1685,0.8663,7.3e-05,False,-1.0193,0.309,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Exp,271,-1.2876,0.199,-0.001317,False,-0.7911,0.4296,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Exp,271,2.2147,0.0276,0.002783,True,2.22,0.0273,True,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Exp,271,3.5642,0.0004,0.009099,True,3.6755,0.0003,True,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Exp,271,-0.056,0.9554,-3.7e-05,False,-0.1731,0.8627,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP4: WF-Exp,271,-0.152,0.8793,-9.1e-05,False,-0.3592,0.7197,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid,271,-1.6893,0.0923,-0.000446,False,-2.9374,0.0036,True,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid,271,-2.3425,0.0199,-0.001726,True,-2.5116,0.0126,True,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS03 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid,271,-1.081,0.2807,-0.002749,False,-0.4235,0.6723,False,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid,271,-4.9762,0.0,-0.005571,True,-5.774,0.0,True,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS05 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid,271,-3.2877,0.0011,-0.007747,True,-3.634,0.0003,True,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: SA-LSTM vs PP5: Hybrid,271,-2.1593,0.0317,-0.003447,True,-2.7689,0.006,True,PP2: SA-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM vs PP3: iTrans,271,-0.5765,0.5648,-0.000577,False,-0.2504,0.8025,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Exp,271,1.8152,0.0706,0.001385,False,0.6562,0.5123,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Exp,271,-1.2876,0.199,-0.001317,False,-0.7911,0.4296,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Exp,271,0.7448,0.4571,0.000501,False,0.5846,0.5593,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Exp,271,-0.6355,0.5257,-0.000575,False,-1.0972,0.2735,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Exp,271,2.0803,0.0384,0.002094,True,1.1535,0.2497,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM vs PP4: WF-Exp,271,-0.5047,0.6142,-0.000275,False,-0.4858,0.6275,False,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid,271,1.9709,0.0498,0.000865,True,0.602,0.5477,False,PP5: Hybrid
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid,271,-2.3425,0.0199,-0.001726,True,-2.5116,0.0126,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS03 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid,271,-3.8884,0.0001,-0.00503,True,-2.8555,0.0046,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid,271,-5.8399,0.0,-0.015244,True,-6.5496,0.0,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS05 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid,271,-1.7502,0.0812,-0.005616,False,-2.5046,0.0128,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP2: TPE-LSTM vs PP5: Hybrid,271,-2.2688,0.0241,-0.003631,True,-2.7566,0.0062,True,PP2: TPE-LSTM
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP3: iTrans vs PP4: WF-Exp,271,0.2841,0.7765,0.000302,False,0.02,0.984,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP3: iTrans vs PP5: Hybrid,271,-1.8341,0.0677,-0.003053,False,-2.3662,0.0187,True,PP3: iTrans
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS01 | r=0.90 | expanding,PP4: WF-Exp vs PP5: Hybrid,271,-1.1704,0.2429,-0.00052,False,-0.564,0.5732,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS02 | r=0.90 | expanding,PP4: WF-Exp vs PP5: Hybrid,271,-0.3079,0.7584,-0.000409,False,-0.9821,0.3269,False,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS03 | r=0.90 | expanding,PP4: WF-Exp vs PP5: Hybrid,271,-3.3284,0.001,-0.005532,True,-2.6292,0.009,True,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS04 | r=0.90 | expanding,PP4: WF-Exp vs PP5: Hybrid,271,-5.085,0.0,-0.014669,True,-5.3955,0.0,True,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS05 | r=0.90 | expanding,PP4: WF-Exp vs PP5: Hybrid,271,-2.9383,0.0036,-0.00771,True,-3.2291,0.0014,True,PP4: WF-Exp
+"Cross-Method Pairwise (90/10 Exp, Seed 42)",FS06 | r=0.90 | expanding,PP4: WF-Exp vs PP5: Hybrid,271,-2.3496,0.0195,-0.003356,True,-2.8714,0.0044,True,PP4: WF-Exp
+"80/20 Expanding (vs Naive, 5s-Ens)",FS01 | r=0.80 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,542,0.764,0.4452,0.000102,False,-0.794,0.4275,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS01 | r=0.80 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,542,2.081,0.0379,0.000595,True,0.4712,0.6377,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS01 | r=0.80 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,542,1.5682,0.1174,0.000258,False,0.8699,0.3847,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS01 | r=0.80 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,542,2.2395,0.0255,0.000454,True,2.3826,0.0175,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS01 | r=0.80 | expanding,PP5: Hybrid (5s-Ens) vs Naive,542,4.3909,0.0,0.003542,True,3.6421,0.0003,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS02 | r=0.80 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,542,1.6888,0.0918,0.000915,False,1.3628,0.1735,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS02 | r=0.80 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,542,4.4141,0.0,0.005273,True,3.951,0.0001,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS02 | r=0.80 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,542,0.641,0.5218,0.000319,False,1.432,0.1527,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS02 | r=0.80 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,542,2.3438,0.0194,0.001975,True,2.1777,0.0299,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS02 | r=0.80 | expanding,PP5: Hybrid (5s-Ens) vs Naive,542,2.1972,0.0284,0.000811,True,2.4023,0.0166,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS03 | r=0.80 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,542,0.3036,0.7615,6.5e-05,False,0.4635,0.6432,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS03 | r=0.80 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,542,4.7753,0.0,0.007752,True,3.6455,0.0003,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS03 | r=0.80 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,542,1.4367,0.1514,0.000602,False,2.3539,0.0189,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS03 | r=0.80 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,542,1.5239,0.1281,0.000836,False,3.0766,0.0022,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS03 | r=0.80 | expanding,PP5: Hybrid (5s-Ens) vs Naive,542,3.8637,0.0001,0.005132,True,3.9504,0.0001,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS04 | r=0.80 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,542,2.6288,0.0088,0.002958,True,2.8318,0.0048,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS04 | r=0.80 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,542,6.3726,0.0,0.012447,True,5.6654,0.0,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS04 | r=0.80 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,542,1.2973,0.1951,0.000716,False,1.7646,0.0782,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS04 | r=0.80 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,542,2.0983,0.0363,0.001476,True,2.3264,0.0204,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS04 | r=0.80 | expanding,PP5: Hybrid (5s-Ens) vs Naive,542,4.4065,0.0,0.002955,True,3.4117,0.0007,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS05 | r=0.80 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,542,-0.843,0.3996,-6e-05,False,-0.6847,0.4938,False,PP2: SA-LSTM (5s-Ens)
+"80/20 Expanding (vs Naive, 5s-Ens)",FS05 | r=0.80 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,542,1.1282,0.2597,0.000224,False,0.7294,0.4661,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS05 | r=0.80 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,542,1.4208,0.1559,0.000491,False,1.5999,0.1102,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS05 | r=0.80 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,542,2.3314,0.0201,0.001111,True,2.8938,0.004,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS05 | r=0.80 | expanding,PP5: Hybrid (5s-Ens) vs Naive,542,-0.8498,0.3958,-0.000151,False,-0.9632,0.3359,False,PP5: Hybrid (5s-Ens)
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | expanding,PP2: SA-LSTM (5s-Ens) vs Naive,542,0.4652,0.642,4.7e-05,False,-0.6204,0.5353,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | expanding,PP2: TPE-LSTM (5s-Ens) vs Naive,542,1.0517,0.2934,0.000144,False,-0.2215,0.8248,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | expanding,PP4: WF-Exp (5s-Ens) vs Naive,542,1.6357,0.1025,0.000521,False,1.9875,0.0474,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | expanding,PP4: WF-Roll (5s-Ens) vs Naive,542,2.3106,0.0212,0.000969,True,2.6055,0.0094,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | expanding,PP5: Hybrid (5s-Ens) vs Naive,542,3.7858,0.0002,0.001754,True,3.7569,0.0002,True,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | expanding,PP3: iTrans (5s-Ens) vs Naive,542,0.6,0.5487,0.000208,False,1.2694,0.2049,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | walk-forward,PP1: WF GRU-Res (5s-Ens) vs Naive,542,0.8641,0.3879,6.8e-05,False,1.0547,0.2921,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | walk-forward,PP1: WF LSTM-Res (5s-Ens) vs Naive,542,1.2384,0.2161,0.00013,False,1.4093,0.1593,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | walk-forward,PP1: WF CNN-GRU-Res (5s-Ens) vs Naive,542,1.8701,0.062,0.000216,False,0.1434,0.886,False,Naive
+"80/20 Expanding (vs Naive, 5s-Ens)",FS06 | r=0.80 | walk-forward,PP1: WF CNN-LSTM-Res (5s-Ens) vs Naive,542,1.5525,0.1211,0.000246,False,1.1793,0.2388,False,Naive
