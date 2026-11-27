@@ -1,14 +1,14 @@
-# BÁO CÁO THỰC NGHIỆM TỔNG HỢP: DỰ BÁO GIÁ ĐỒNG MỘT PHIÊN TRƯỚC
+﻿# BÁO CÁO THỰC NGHIỆM TỔNG HỢP: DỰ BÁO GIÁ ĐỒNG MỘT PHIÊN TRƯỚC
 
-**Ngày cập nhật:** 20/11/2026 (hợp nhất V24 và EDA V26)  |  **Tác giả thực nghiệm:** Viên Đăng Khoa  |  **Học phần:** IS403
+**Ngày cập nhật:** 27/11/2026 (hợp nhất V24, EDA V26 và phạm vi 9 mô hình)  |  **Tác giả thực nghiệm:** Viên Đăng Khoa  |  **Học phần:** IS403
 
 **Quy ước trình bày:** Không chia nội dung kết quả theo phiên bản. Kết quả được hợp nhất theo **mô hình – bộ đặc trưng – chiến lược – split**, với phiên bản ghi ngay sau mỗi số liệu để truy xuất. Mọi bảng được tính trực tiếp từ CSV của các ZIP; không train lại trong lúc biên soạn.
 
 ## Tóm tắt
 
-Nghiên cứu đối chiếu các mô hình LSTM, GRU, CNN-LSTM, CNN-GRU, SimpleRNN, Ridge, và SA-LSTM bằng hai cách biểu diễn dự báo giá trực tiếp (Direct) hoặc sai phân giá (Residual). Thí nghiệm mở rộng bộ đầu vào `Copper, Aluminium, Tin, WTI` nhằm kiểm tra liệu thay Gold/Silver bằng WTI có cải thiện sai số ngoài mẫu. **Xếp hạng mô hình tốt nhất chỉ tính các mô hình fitted**, trong khi Naive Persistence luôn được báo riêng như baseline định lượng. Dữ liệu V24 hoàn tất ma trận 48/48 tổ hợp SA-LSTM cho hai bộ FS04/FS06 ở bốn split và ba chiến lược; các thứ hạng dựa trên MAE holdout chưa đồng nghĩa chứng minh ưu thế tổng quát hóa.
+Nghiên cứu đối chiếu chín mô hình được huấn luyện: LSTM và GRU theo hai cách biểu diễn Direct/Residual, Ridge Residual, SimpleRNN Direct, Baseline LSTM Direct, Paper SA-LSTM và Reoptimized SA-LSTM. Các biến thể kết hợp CNN và mô hình Naive đã được loại khỏi phạm vi huấn luyện, đánh giá và xếp hạng. Thí nghiệm mở rộng bộ đầu vào `Copper, Aluminium, Tin, WTI` nhằm kiểm tra liệu thay Gold/Silver bằng WTI có cải thiện sai số ngoài mẫu. Dữ liệu V24 hoàn tất ma trận 48/48 tổ hợp SA-LSTM cho hai bộ FS04/FS06 ở bốn split và ba chiến lược; các thứ hạng dựa trên MAE holdout chưa đồng nghĩa chứng minh ưu thế tổng quát hóa.
 
-**Từ khóa—** dự báo giá đồng, chuỗi thời gian, LSTM, GRU, CNN-LSTM, residual learning, simulated annealing, walk-forward, kiểm định thống kê, khả năng tái lập.
+**Từ khóa—** dự báo giá đồng, chuỗi thời gian, LSTM, GRU, residual learning, simulated annealing, walk-forward, kiểm định thống kê, khả năng tái lập.
 
 **Cấu trúc báo cáo—** Theo bố cục bài báo thực nghiệm, phần 1 khóa bài toán, dữ liệu, EDA và phương pháp; phần 2–8 trình bày kết quả định lượng/độ bền; phần 9–11 thảo luận, giới hạn và kết luận. Hình kiến trúc mô tả đúng code đã chạy; hình định lượng luôn có CSV nguồn và provenance trong `copper-forecasting/docs/MODULE1_VISUAL_EVIDENCE.md`.
 
@@ -20,7 +20,7 @@ Nghiên cứu đối chiếu các mô hình LSTM, GRU, CNN-LSTM, CNN-GRU, Simple
 
 - Holdout theo thời gian gồm 80/20 (542 test), 90/10 (271), 92.5/7.5 (204), 95/5 (136); bảng cùng split chỉ hợp lệ nếu ngày test tương đồng. MAE/RMSE tính trên đơn vị giá gốc. Không chọn hyperparameters bằng test.
 
-- **Direct:** dự đoán `Copper(t)` trực tiếp. **Residual:** dự đoán `ΔCopper(t) = Copper(t) − Copper(t−1)` rồi cộng lại Copper(t−1). **Naive:** dùng Copper(t−1) làm dự báo. Đây là baseline không huấn luyện, không tham gia xếp hạng fitted.
+- **Direct:** dự đoán `Copper(t)` trực tiếp. **Residual:** dự đoán `ΔCopper(t) = Copper(t) − Copper(t−1)` rồi cộng lại Copper(t−1). Cả hai nhánh đều là mô hình được huấn luyện và được đánh giá bằng MAE, RMSE, MAPE, R² và DA khi có dữ liệu tương ứng.
 
 - **Expanding:** dùng lịch sử đến ranh giới train. **Rolling 756:** giữ 756 phiên gần nhất trước fit. **Recency:** toàn lịch sử nhưng weighted half-life 252 phiên. Các chiến lược holdout không phải mỗi phiên lại retrain; chỉ walk-forward mới refit theo lịch.
 
@@ -270,7 +270,7 @@ Không thể kết luận *chắc chắn không có* đồng liên kết: kiểm
 #### 1.3.10. Tổng hợp ý nghĩa EDA đối với FS01–FS06 và thiết kế mô hình
 
 1. **Đầu vào & target:** Mức giá Copper và các ngoại sinh có dấu hiệu không dừng, sai phân/returns biểu hiện gần dừng trong train EDA. Residual là một giả thuyết thiết kế hợp lý để đối chứng Direct; EDA chưa chứng minh Residual là phương pháp tốt nhất trên mọi thời điểm.
-2. **Khả năng dự báo:** Copper returns không có tự tương quan tuyến tính nổi bật đến lag 22 theo Ljung–Box, nhưng returns² và ARCH-LM cho thấy volatility clustering. Điều này phù hợp với việc cần benchmark Naive và đánh giá thêm các tín hiệu về độ biến động; không khẳng định mức giá là random walk.
+2. **Khả năng dự báo:** Copper returns không có tự tương quan tuyến tính nổi bật đến lag 22 theo Ljung–Box, nhưng returns² và ARCH-LM cho thấy volatility clustering. Điều này gợi ý đánh giá thêm các tín hiệu về độ biến động; không khẳng định mức giá là random walk.
 3. **Chọn biến:** FS06_WTI_CU là thử nghiệm thay **cả Gold+Silver bằng WTI** và giảm F từ 5 xuống 4 so với FS04_METALS_CU. Spearman mức giá và các lagged correlations chưa đủ chứng minh WTI tốt hơn; Gold lag 1 là tín hiệu tương quan nhỏ được FDR giữ lại, cần đánh giá incremental forecast value bằng validation thích hợp.
 4. **Đứt gãy:** CUSUM trung bình không phát hiện bất ổn rõ, nhưng phương sai Copper thay đổi giữa hai nửa mẫu và ARCH có ý nghĩa. Điều này gợi ý bổ sung kiểm tra ổn định theo thời gian; không thể gán mặc định “concept drift đã được chứng minh”.
 5. **Rủi ro dữ liệu:** Gap ngày lên đến 66, returns WTI có đuôi cực lớn và chưa có audit thời điểm thị trường. Đây là các rủi ro dữ liệu cần kiểm tra nguồn trước khi khẳng định các biến đã sẵn có vào thời điểm dự báo.
@@ -280,17 +280,15 @@ Không thể kết luận *chắc chắn không có* đồng liên kết: kiểm
 
 ### 1.4. Mô hình, hyperparameters và tính công bằng
 
-- Nhóm Non-SA: LSTM/GRU/CNN-LSTM/CNN-GRU Direct và Residual, Ridge Residual, Naive; cấu hình cũ 65 epochs tối đa, EarlyStopping patience 9, batch 64, Adam LR 0.001. Các so sánh WTI với Legacy14 nội bộ nhóm Non-SA gần nhất với phép thay feature có kiểm soát.
+- Nhóm Non-SA: LSTM/GRU Direct và Residual cùng Ridge Residual, tổng cộng 5 mô hình; tối đa 65 epochs, EarlyStopping patience 9, batch 64, Adam LR 0.001. Các so sánh WTI với Legacy14 nội bộ nhóm Non-SA gần nhất với phép thay feature có kiểm soát.
 
 - Nhóm SA-series: LSTM Direct, SimpleRNN Direct, LSTM dùng Paper HP, LSTM dùng SA tìm/tối ưu HP; tối đa 100 epochs ở holdout. Paper HP của Chen et al. (2023) được tái hiện theo những chi tiết đã công bố, không phải code gốc xác minh được.
 
 - **V21 Reoptimized** dùng hyperparameters đã lưu, còn **V22 Reoptimized** tìm mới bằng SA (16 trials, reference split 80/20, 15 epochs/trial). V23/V24 chỉ huấn luyện từ các hyperparameters đã chọn, không chạy SA Search lại. Do vậy, MAE V21–V22 của nhánh này đồng thời chịu tác động đổi feature **và** đổi hyperparameters, không phải ablation thuần feature.
 
-![Hình 8 — Kiến trúc CNN-LSTM/CNN-GRU đúng theo build_net](copper-forecasting/docs/assets/generated/cnn_lstm_gru_architecture.svg)
+- **Giao thức notebook chính thức sau tinh gọn:** 4 mô hình SA-series + 5 mô hình Non-SA × 6 feature set × 4 split × 3 chiến lược = **648 lượt fit holdout**. Các bảng V20–V24 bên dưới là bằng chứng lịch sử đã lọc còn **420 bản ghi**, không được hiểu là lưới 648 lượt mới đã chạy hoàn tất.
 
-*Hình 8. Input `(N,22,F)` qua Conv1D 32 filters, kernel 3, causal/ReLU, MaxPooling1D(2), hai tầng LSTM hoặc GRU 48→24, Dense 16→1. Direct và Residual dùng cùng backbone; chỉ target/reconstruction khác nhau. Nguồn: V20 cell 10 và V22 Non-SA cell 10; `fig:cnn_recurrent_code_architecture`.*
-
-## 2. Xếp hạng tổng hợp theo 4 split (không tính Naive)
+## 2. Xếp hạng tổng hợp theo 4 split
 
 **Top 5 mỗi split** được xếp theo MAE tăng dần trên tất cả kết quả fitted có sẵn, bất kể phiên bản hay họ mô hình. Đây là top cấu hình **hậu nghiệm**, chưa phải xác nhận từ một test hoàn toàn mới.
 
@@ -298,84 +296,59 @@ Không thể kết luận *chắc chắn không có* đồng liên kết: kiểm
 | --- | --- | --- | --- | --- | --- | --- |
 | 80/20 | 1 | GRU Residual | FS02_PAPER_CU | Expanding | 0.068780 (V20) | 0.107853 (V20) |
 | 80/20 | 2 | LSTM Residual | FS06_WTI_CU | Expanding | 0.068840 (V22-N) | 0.107996 (V22-N) |
-| 80/20 | 3 | CNN-LSTM Residual | FS01_CU | Recency | 0.068841 (V20) | 0.108019 (V20) |
-| 80/20 | 4 | CNN-LSTM Residual | FS02_PAPER_CU | Recency | 0.068843 (V20) | 0.107912 (V20) |
-| 80/20 | 5 | LSTM Residual | FS02_PAPER_CU | Recency | 0.068850 (V20) | 0.107992 (V20) |
+| 80/20 | 3 | LSTM Residual | FS02_PAPER_CU | Recency | 0.068850 (V20) | 0.107992 (V20) |
+| 80/20 | 4 | GRU Residual | FS04_METALS_CU | Expanding | 0.068857 (V20) | 0.107932 (V20) |
+| 80/20 | 5 | LSTM Residual | FS02_PAPER_CU | Expanding | 0.068903 (V20) | 0.107998 (V20) |
 | 90/10 | 1 | GRU Residual | FS04_METALS_CU | Expanding | 0.076951 (V20) | 0.100810 (V20) |
 | 90/10 | 2 | LSTM Residual | FS04_METALS_CU | Expanding | 0.076978 (V20) | 0.100948 (V20) |
-| 90/10 | 3 | CNN-LSTM Residual | FS01_CU | Rolling 756 | 0.077000 (V20) | 0.100895 (V20) |
-| 90/10 | 4 | LSTM Residual | FS02_PAPER_CU | Expanding | 0.077006 (V20) | 0.100878 (V20) |
-| 90/10 | 5 | LSTM Residual | FS01_CU | Expanding | 0.077008 (V20) | 0.100810 (V20) |
+| 90/10 | 3 | LSTM Residual | FS02_PAPER_CU | Expanding | 0.077006 (V20) | 0.100878 (V20) |
+| 90/10 | 4 | LSTM Residual | FS01_CU | Expanding | 0.077008 (V20) | 0.100810 (V20) |
+| 90/10 | 5 | LSTM Residual | FS06_WTI_CU | Expanding | 0.077037 (V22-N) | 0.100980 (V22-N) |
 | 92.5/7.5 | 1 | GRU Residual | FS06_WTI_CU | Recency | 0.075028 (V22-N) | 0.098307 (V22-N) |
-| 92.5/7.5 | 2 | CNN-LSTM Residual | FS01_CU | Recency | 0.075050 (V20) | 0.098426 (V20) |
-| 92.5/7.5 | 3 | CNN-LSTM Residual | FS06_WTI_CU | Expanding | 0.075054 (V22-N) | 0.098459 (V22-N) |
-| 92.5/7.5 | 4 | CNN-LSTM Residual | FS01_CU | Expanding | 0.075057 (V20) | 0.098416 (V20) |
-| 92.5/7.5 | 5 | CNN-LSTM Residual | FS01_CU | Rolling 756 | 0.075059 (V20) | 0.098468 (V20) |
+| 92.5/7.5 | 2 | GRU Residual | FS01_CU | Recency | 0.075088 (V20) | 0.098480 (V20) |
+| 92.5/7.5 | 3 | LSTM Residual | FS06_WTI_CU | Expanding | 0.075094 (V22-N) | 0.098551 (V22-N) |
+| 92.5/7.5 | 4 | LSTM Residual | FS06_WTI_CU | Recency | 0.075120 (V22-N) | 0.098612 (V22-N) |
+| 92.5/7.5 | 5 | GRU Residual | FS06_WTI_CU | Expanding | 0.075198 (V22-N) | 0.098460 (V22-N) |
 | 95/5 | 1 | GRU Residual | FS02_PAPER_CU | Recency | 0.072357 (V20) | 0.096414 (V20) |
 | 95/5 | 2 | GRU Residual | FS04_METALS_CU | Recency | 0.072507 (V20) | 0.096463 (V20) |
 | 95/5 | 3 | LSTM Residual | FS02_PAPER_CU | Expanding | 0.072517 (V20) | 0.096496 (V20) |
 | 95/5 | 4 | LSTM Residual | FS02_PAPER_CU | Rolling 756 | 0.072554 (V20) | 0.096450 (V20) |
-| 95/5 | 5 | CNN-GRU Residual | FS02_PAPER_CU | Expanding | 0.072575 (V20) | 0.096666 (V20) |
-
-**Naive baseline (không tham gia xếp hạng):**
-
-| Split | MAE | RMSE | Nguồn kiểm tra |
-| --- | --- | --- | --- |
-| 80/20 | 0.069001 | 0.108000 | V20 / V21-80 / V22-N / V22-S |
-| 90/10 | 0.077077 | 0.101033 | V20 / V21 / V22-N / V22-S |
-| 92.5/7.5 | 0.075116 | 0.098399 | V20 / V21 / V22-N / V22-S |
-| 95/5 | 0.072799 | 0.096612 | V20 / V21 / V22-N / V22-S |
+| 95/5 | 5 | GRU Residual | FS01_CU | Rolling 756 | 0.072609 (V20) | 0.096910 (V20) |
 
 ## 2.1. Bốn metrics theo kiến trúc và split (cấu hình có MAE tốt nhất đã quan sát)
 
-Bảng được tái lập từ toàn bộ **702 bản ghi đánh giá holdout**, bao gồm các kết quả V24. Mỗi hàng chọn cấu hình có MAE nhỏ nhất trong số các bộ features/strategies đã thử cho kiến trúc đó, nên có **selection bias**. R² được tính trên mức giá Copper của cùng đoạn test; **R² không đo riêng khả năng dự báo biến động**. MAPE tính được vì không có `actual=0` trong các mẫu đã đối chiếu. Chỉ báo cáo MAE, RMSE, MAPE và R².
+Bảng được tái lập từ **420 bản ghi đánh giá holdout còn lại sau khi lọc CNN và Naive**, bao gồm các kết quả V24. Mỗi hàng chọn cấu hình có MAE nhỏ nhất trong số các bộ features/strategies đã thử cho kiến trúc đó, nên có **selection bias**. R² được tính trên mức giá Copper của cùng đoạn test; **R² không đo riêng khả năng dự báo biến động**. MAPE tính được vì không có `actual=0` trong các mẫu đã đối chiếu. Chỉ báo cáo MAE, RMSE, MAPE và R².
 
 | Train | Mô hình | Feature | Chiến lược | MAE | RMSE | MAPE (%) | R² | Nguồn |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| 80% | CNN-GRU Direct | FS04_METALS_CU | Expanding | 0.214288 | 0.273292 | 3.951 | 0.8931 | V20 |
-| 80% | CNN-LSTM Direct | FS01_CU | Recency | 0.384733 | 0.473176 | 6.700 | 0.6795 | V20 |
 | 80% | GRU Direct | FS01_CU | Recency | 0.141899 | 0.191724 | 2.550 | 0.9474 | V20 |
 | 80% | LSTM Direct | FS01_CU | Expanding | 0.110100 | 0.161307 | 2.082 | 0.9628 | V20 |
 | 80% | Paper SA-LSTM | FS06_WTI_CU | Recency | 0.270155 | 0.343050 | 4.827 | 0.8315 | V24 |
 | 80% | Reoptimized SA-LSTM | FS06_WTI_CU | Expanding | 0.223809 | 0.297888 | 4.063 | 0.8730 | V22-S |
-| 80% | Residual-CNN-GRU | FS06_WTI_CU | Recency | 0.068947 | 0.107682 | 1.289 | 0.9834 | V22-N |
-| 80% | Residual-CNN-LSTM | FS01_CU | Recency | 0.068841 | 0.108019 | 1.287 | 0.9833 | V20 |
 | 80% | Residual-GRU | FS02_PAPER_CU | Expanding | 0.068780 | 0.107853 | 1.286 | 0.9833 | V20 |
 | 80% | Residual-LSTM | FS06_WTI_CU | Expanding | 0.068840 | 0.107996 | 1.287 | 0.9833 | V22-N |
 | 80% | Residual-Ridge | FS01_CU | Expanding | 0.069408 | 0.108075 | 1.296 | 0.9833 | V20 |
 | 80% | SimpleRNN Direct | FS04_METALS_CU | Expanding | 0.795791 | 0.916974 | 13.894 | -0.2037 | V21-80 |
-| 90% | CNN-GRU Direct | FS02_PAPER_CU | Expanding | 0.296379 | 0.359605 | 4.803 | 0.4661 | V20 |
-| 90% | CNN-LSTM Direct | FS04_METALS_CU | Expanding | 0.393469 | 0.492822 | 6.193 | -0.0028 | V20 |
 | 90% | GRU Direct | FS01_CU | Recency | 0.205153 | 0.243488 | 3.285 | 0.7552 | V20 |
 | 90% | LSTM Direct | FS04_METALS_CU | Expanding | 0.247409 | 0.304619 | 3.933 | 0.6169 | V21 |
 | 90% | Paper SA-LSTM | FS06_WTI_CU | Expanding | 0.184634 | 0.225723 | 2.993 | 0.7896 | V22-S |
 | 90% | Reoptimized SA-LSTM | FS06_WTI_CU | Recency | 0.326683 | 0.376388 | 5.222 | 0.4151 | V22-S |
-| 90% | Residual-CNN-GRU | FS06_WTI_CU | Expanding | 0.077229 | 0.101285 | 1.281 | 0.9576 | V22-N |
-| 90% | Residual-CNN-LSTM | FS01_CU | Rolling 756 | 0.077000 | 0.100895 | 1.277 | 0.9580 | V20 |
 | 90% | Residual-GRU | FS04_METALS_CU | Expanding | 0.076951 | 0.100810 | 1.276 | 0.9580 | V20 |
 | 90% | Residual-LSTM | FS04_METALS_CU | Expanding | 0.076978 | 0.100948 | 1.277 | 0.9579 | V20 |
 | 90% | Residual-Ridge | FS01_CU | Expanding | 0.077306 | 0.101190 | 1.280 | 0.9577 | V20 |
 | 90% | SimpleRNN Direct | FS05_METALS_EXO | Recency | 0.608387 | 0.710083 | 9.616 | -1.0818 | V21 |
-| 92.5% | CNN-GRU Direct | FS04_METALS_CU | Recency | 0.351300 | 0.400391 | 5.555 | -0.2614 | V20 |
-| 92.5% | CNN-LSTM Direct | FS06_WTI_CU | Rolling 756 | 0.522778 | 0.560252 | 8.204 | -1.4697 | V22-N |
 | 92.5% | GRU Direct | FS06_WTI_CU | Recency | 0.182461 | 0.215549 | 2.858 | 0.6344 | V22-N |
 | 92.5% | LSTM Direct | FS01_CU | Rolling 756 | 0.247864 | 0.280534 | 3.905 | 0.3808 | V20 |
 | 92.5% | Paper SA-LSTM | FS06_WTI_CU | Expanding | 0.194868 | 0.236334 | 3.077 | 0.5605 | V22-S |
 | 92.5% | Reoptimized SA-LSTM | FS04_METALS_CU | Expanding | 0.352332 | 0.409124 | 5.490 | -0.3170 | V21 |
-| 92.5% | Residual-CNN-GRU | FS01_CU | Recency | 0.075340 | 0.098272 | 1.211 | 0.9240 | V20 |
-| 92.5% | Residual-CNN-LSTM | FS01_CU | Recency | 0.075050 | 0.098426 | 1.207 | 0.9238 | V20 |
 | 92.5% | Residual-GRU | FS06_WTI_CU | Recency | 0.075028 | 0.098307 | 1.207 | 0.9240 | V22-N |
 | 92.5% | Residual-LSTM | FS06_WTI_CU | Expanding | 0.075094 | 0.098551 | 1.208 | 0.9236 | V22-N |
 | 92.5% | Residual-Ridge | FS01_CU | Expanding | 0.075285 | 0.098422 | 1.210 | 0.9238 | V20 |
 | 92.5% | SimpleRNN Direct | FS04_METALS_CU | Expanding | 0.724220 | 0.772906 | 11.350 | -3.7003 | V21 |
-| 95% | CNN-GRU Direct | FS06_WTI_CU | Recency | 0.408640 | 0.438568 | 6.251 | -4.4429 | V22-N |
-| 95% | CNN-LSTM Direct | FS01_CU | Recency | 0.659669 | 0.679916 | 10.124 | -12.0817 | V20 |
 | 95% | GRU Direct | FS01_CU | Recency | 0.167929 | 0.194203 | 2.570 | -0.0673 | V20 |
 | 95% | LSTM Direct | FS01_CU | Rolling 756 | 0.404888 | 0.428586 | 6.204 | -4.1979 | V20 |
 | 95% | Paper SA-LSTM | FS06_WTI_CU | Expanding | 0.200803 | 0.235800 | 3.070 | -0.5734 | V22-S |
 | 95% | Reoptimized SA-LSTM | FS06_WTI_CU | Expanding | 0.325427 | 0.360107 | 4.978 | -2.6696 | V22-S |
-| 95% | Residual-CNN-GRU | FS02_PAPER_CU | Expanding | 0.072575 | 0.096666 | 1.127 | 0.7356 | V20 |
-| 95% | Residual-CNN-LSTM | FS01_CU | Expanding | 0.072625 | 0.096669 | 1.128 | 0.7356 | V20 |
 | 95% | Residual-GRU | FS02_PAPER_CU | Recency | 0.072357 | 0.096414 | 1.124 | 0.7370 | V20 |
 | 95% | Residual-LSTM | FS02_PAPER_CU | Expanding | 0.072517 | 0.096496 | 1.126 | 0.7365 | V20 |
 | 95% | Residual-Ridge | FS01_CU | Expanding | 0.073685 | 0.096928 | 1.143 | 0.7341 | V20 |
@@ -387,22 +360,6 @@ Bảng này giải quyết trực tiếp việc đọc rời rạc giữa các p
 
 | Mô hình | Bộ biến | Expanding MAE | Rolling MAE | Recency MAE |
 | --- | --- | --- | --- | --- |
-| CNN-GRU Direct | FS01_CU | 0.633998 (V20) | 0.432151 (V20) | 0.508912 (V20) |
-| CNN-GRU Direct | FS04_METALS_CU | 0.313523 (V20) | 0.483141 (V20) | 0.298726 (V20) |
-| CNN-GRU Direct | FS02_PAPER_CU | 0.296379 (V20) | 0.311519 (V20) | 0.457908 (V20) |
-| CNN-GRU Direct | FS06_WTI_CU | 0.619798 (V22-N) | 0.427192 (V22-N) | 0.643456 (V22-N) |
-| CNN-GRU Residual | FS01_CU | 0.078067 (V20) | 0.088180 (V20) | 0.080173 (V20) |
-| CNN-GRU Residual | FS04_METALS_CU | 0.090563 (V20) | 0.098870 (V20) | 0.077522 (V20) |
-| CNN-GRU Residual | FS02_PAPER_CU | 0.078132 (V20) | 0.097694 (V20) | 0.083405 (V20) |
-| CNN-GRU Residual | FS06_WTI_CU | 0.077229 (V22-N) | 0.085898 (V22-N) | 0.077639 (V22-N) |
-| CNN-LSTM Direct | FS01_CU | 0.702867 (V20) | 0.686135 (V20) | 0.829593 (V20) |
-| CNN-LSTM Direct | FS04_METALS_CU | 0.393469 (V20) | 0.687898 (V20) | 0.991953 (V20) |
-| CNN-LSTM Direct | FS02_PAPER_CU | 1.108590 (V20) | 0.790701 (V20) | 0.716936 (V20) |
-| CNN-LSTM Direct | FS06_WTI_CU | 0.888314 (V22-N) | 0.873802 (V22-N) | 0.886170 (V22-N) |
-| CNN-LSTM Residual | FS01_CU | 0.080098 (V20) | 0.077000 (V20) | 0.078311 (V20) |
-| CNN-LSTM Residual | FS04_METALS_CU | 0.077245 (V20) | 0.081200 (V20) | 0.077304 (V20) |
-| CNN-LSTM Residual | FS02_PAPER_CU | 0.077432 (V20) | 0.091009 (V20) | 0.079093 (V20) |
-| CNN-LSTM Residual | FS06_WTI_CU | 0.077638 (V22-N) | 0.085373 (V22-N) | 0.078023 (V22-N) |
 | GRU Direct | FS01_CU | 0.437113 (V20) | 0.206817 (V20) | 0.205153 (V20) |
 | GRU Direct | FS04_METALS_CU | 0.240815 (V20) | 0.357864 (V20) | 0.273153 (V20) |
 | GRU Direct | FS02_PAPER_CU | 0.247893 (V20) | 0.492330 (V20) | 0.254494 (V20) |
@@ -446,14 +403,6 @@ Bảng này giải quyết trực tiếp việc đọc rời rạc giữa các p
 
 **Cách đọc:** Trước hết so sánh ba cột trong cùng hàng (đổi strategy), rồi so sánh giữa các hàng có cùng mô hình và cùng cột (đổi features). Không kết luận chiến lược tốt hơn toàn cục từ một hàng.
 
-![Hình 9 — Actual vs Predicted với Naive và fitted residual models](<copper-forecasting/results/17-11-Copper-NonSA-Fair-Full-Protocol-V20/actual_pred_0.8_copper_paper3.png>)
-
-*Hình 9. Copper thực tế, Residual-GRU, Ridge Residual và Naive trên V20 split 80/20, Expanding, FS02, H=1. Đường gần nhau không thay thế MAE/RMSE hoặc DM-HAC; nguồn điểm `grid_predictions.csv`; `fig:actual_predicted_residual_naive`.*
-
-![Hình 10 — Direct vs Residual trên cùng backbone](copper-forecasting/docs/assets/generated/direct_vs_residual_v20_90_expanding.svg)
-
-*Hình 10. MAE Direct/Residual cho LSTM, GRU, CNN-LSTM, CNN-GRU ở đúng V20 split 90/10, Expanding, FS02; đường đứt là Naive. Script đọc `grid_results.csv`, không dùng số suy đoán; `fig:direct_vs_residual_v20`.*
-
 ## 4. Tác động thay FS04_METALS_CU bằng FS06_WTI_CU — ghép cặp đúng mô hình và chiến lược
 
 Định nghĩa `ΔMAE (%) = 100 × (MAE_WTI / MAE_Legacy14 − 1)`. **Âm = WTI giảm sai số, tốt hơn; dương = WTI tăng sai số, kém hơn**. Chỉ ghép các trường hợp trùng mô hình, split và strategy; bảng dưới còn ghi rõ nguồn. Với SA Reoptimized, chênh lệch bao gồm cả SA search mới.
@@ -462,18 +411,6 @@ Bảng này giải quyết trực tiếp việc đọc rời rạc giữa các p
 
 | Mô hình | Chiến lược | MAE Legacy14 | MAE WTI | ΔMAE | RMSE cũ | RMSE mới |
 | --- | --- | --- | --- | --- | --- | --- |
-| CNN-GRU Direct | Expanding | 0.214287 (V20) | 0.301326 (V22-N) | +40.62% | 0.273292 | 0.379359 |
-| CNN-GRU Direct | Recency | 0.313767 (V20) | 0.321193 (V22-N) | +2.37% | 0.385948 | 0.400114 |
-| CNN-GRU Direct | Rolling 756 | 0.594207 (V20) | 0.315794 (V22-N) | -46.85% | 0.717580 | 0.404259 |
-| CNN-GRU Residual | Expanding | 0.074771 (V20) | 0.069742 (V22-N) | -6.73% | 0.114417 | 0.108045 |
-| CNN-GRU Residual | Recency | 0.111344 (V20) | 0.068947 (V22-N) | -38.08% | 0.151494 | 0.107682 |
-| CNN-GRU Residual | Rolling 756 | 0.095740 (V20) | 0.069534 (V22-N) | -27.37% | 0.135472 | 0.107919 |
-| CNN-LSTM Direct | Expanding | 0.718548 (V20) | 0.438657 (V22-N) | -38.95% | 0.844535 | 0.556630 |
-| CNN-LSTM Direct | Recency | 0.558670 (V20) | 0.435179 (V22-N) | -22.10% | 0.702984 | 0.550786 |
-| CNN-LSTM Direct | Rolling 756 | 0.842083 (V20) | 0.636210 (V22-N) | -24.45% | 1.052927 | 0.781975 |
-| CNN-LSTM Residual | Expanding | 0.068916 (V20) | 0.068972 (V22-N) | +0.08% | 0.108116 | 0.107827 |
-| CNN-LSTM Residual | Recency | 0.068914 (V20) | 0.068931 (V22-N) | +0.02% | 0.107779 | 0.107935 |
-| CNN-LSTM Residual | Rolling 756 | 0.069998 (V20) | 0.069118 (V22-N) | -1.26% | 0.108669 | 0.107833 |
 | GRU Direct | Expanding | 0.196520 (V20) | 0.164666 (V22-N) | -16.21% | 0.258860 | 0.222705 |
 | GRU Direct | Recency | 0.246072 (V20) | 0.156398 (V22-N) | -36.44% | 0.324673 | 0.209462 |
 | GRU Direct | Rolling 756 | 0.687417 (V20) | 0.212751 (V22-N) | -69.05% | 0.842202 | 0.282181 |
@@ -500,18 +437,6 @@ Có 31 cặp được ghép có số liệu tại split 80/20. Các cặp không
 
 | Mô hình | Chiến lược | MAE Legacy14 | MAE WTI | ΔMAE | RMSE cũ | RMSE mới |
 | --- | --- | --- | --- | --- | --- | --- |
-| CNN-GRU Direct | Expanding | 0.313523 (V20) | 0.619798 (V22-N) | +97.69% | 0.381001 | 0.664925 |
-| CNN-GRU Direct | Recency | 0.298726 (V20) | 0.643456 (V22-N) | +115.40% | 0.372347 | 0.689708 |
-| CNN-GRU Direct | Rolling 756 | 0.483141 (V20) | 0.427192 (V22-N) | -11.58% | 0.527339 | 0.470401 |
-| CNN-GRU Residual | Expanding | 0.090563 (V20) | 0.077229 (V22-N) | -14.72% | 0.117479 | 0.101285 |
-| CNN-GRU Residual | Recency | 0.077522 (V20) | 0.077639 (V22-N) | +0.15% | 0.100867 | 0.101300 |
-| CNN-GRU Residual | Rolling 756 | 0.098870 (V20) | 0.085898 (V22-N) | -13.12% | 0.122720 | 0.108409 |
-| CNN-LSTM Direct | Expanding | 0.393469 (V20) | 0.888314 (V22-N) | +125.76% | 0.492822 | 0.952557 |
-| CNN-LSTM Direct | Recency | 0.991953 (V20) | 0.886170 (V22-N) | -10.66% | 1.048918 | 0.953553 |
-| CNN-LSTM Direct | Rolling 756 | 0.687898 (V20) | 0.873802 (V22-N) | +27.02% | 0.810581 | 0.945043 |
-| CNN-LSTM Residual | Expanding | 0.077245 (V20) | 0.077638 (V22-N) | +0.51% | 0.100856 | 0.101076 |
-| CNN-LSTM Residual | Recency | 0.077304 (V20) | 0.078023 (V22-N) | +0.93% | 0.101023 | 0.101646 |
-| CNN-LSTM Residual | Rolling 756 | 0.081200 (V20) | 0.085373 (V22-N) | +5.14% | 0.103617 | 0.107714 |
 | GRU Direct | Expanding | 0.240815 (V20) | 0.243208 (V22-N) | +0.99% | 0.302923 | 0.287070 |
 | GRU Direct | Recency | 0.273153 (V20) | 0.235421 (V22-N) | -13.81% | 0.325727 | 0.275645 |
 | GRU Direct | Rolling 756 | 0.357864 (V20) | 0.256292 (V22-N) | -28.38% | 0.398964 | 0.292692 |
@@ -546,18 +471,6 @@ Có 39 cặp được ghép có số liệu tại split 90/10. Các cặp không
 
 | Mô hình | Chiến lược | MAE Legacy14 | MAE WTI | ΔMAE | RMSE cũ | RMSE mới |
 | --- | --- | --- | --- | --- | --- | --- |
-| CNN-GRU Direct | Expanding | 0.443855 (V20) | 0.719336 (V22-N) | +62.07% | 0.504454 | 0.750956 |
-| CNN-GRU Direct | Recency | 0.351300 (V20) | 0.633058 (V22-N) | +80.20% | 0.400391 | 0.672985 |
-| CNN-GRU Direct | Rolling 756 | 0.470120 (V20) | 0.571354 (V22-N) | +21.53% | 0.529660 | 0.608944 |
-| CNN-GRU Residual | Expanding | 0.080471 (V20) | 0.076010 (V22-N) | -5.54% | 0.105340 | 0.099649 |
-| CNN-GRU Residual | Recency | 0.079462 (V20) | 0.081707 (V22-N) | +2.82% | 0.103679 | 0.106210 |
-| CNN-GRU Residual | Rolling 756 | 0.076120 (V20) | 0.079791 (V22-N) | +4.82% | 0.100282 | 0.102662 |
-| CNN-LSTM Direct | Expanding | 0.618529 (V20) | 1.030310 (V22-N) | +66.57% | 0.711877 | 1.071730 |
-| CNN-LSTM Direct | Recency | 0.798469 (V20) | 1.025076 (V22-N) | +28.38% | 0.893468 | 1.065589 |
-| CNN-LSTM Direct | Rolling 756 | 0.849618 (V20) | 0.522778 (V22-N) | -38.47% | 0.939924 | 0.560252 |
-| CNN-LSTM Residual | Expanding | 0.076109 (V20) | 0.075054 (V22-N) | -1.39% | 0.099989 | 0.098459 |
-| CNN-LSTM Residual | Recency | 0.076140 (V20) | 0.075275 (V22-N) | -1.14% | 0.099782 | 0.098951 |
-| CNN-LSTM Residual | Rolling 756 | 0.076066 (V20) | 0.077000 (V22-N) | +1.23% | 0.098508 | 0.099843 |
 | GRU Direct | Expanding | 0.408172 (V20) | 0.268112 (V22-N) | -34.31% | 0.463556 | 0.303433 |
 | GRU Direct | Recency | 0.381128 (V20) | 0.182461 (V22-N) | -52.13% | 0.425980 | 0.215549 |
 | GRU Direct | Rolling 756 | 0.379187 (V20) | 0.369189 (V22-N) | -2.64% | 0.429467 | 0.397711 |
@@ -584,18 +497,6 @@ Có 31 cặp được ghép có số liệu tại split 92.5/7.5. Các cặp kh�
 
 | Mô hình | Chiến lược | MAE Legacy14 | MAE WTI | ΔMAE | RMSE cũ | RMSE mới |
 | --- | --- | --- | --- | --- | --- | --- |
-| CNN-GRU Direct | Expanding | 0.419085 (V20) | 0.558294 (V22-N) | +33.22% | 0.446224 | 0.580681 |
-| CNN-GRU Direct | Recency | 0.460504 (V20) | 0.408640 (V22-N) | -11.26% | 0.496450 | 0.438568 |
-| CNN-GRU Direct | Rolling 756 | 0.526928 (V20) | 0.622279 (V22-N) | +18.10% | 0.551093 | 0.645350 |
-| CNN-GRU Residual | Expanding | 0.072810 (V20) | 0.073054 (V22-N) | +0.34% | 0.097681 | 0.096493 |
-| CNN-GRU Residual | Recency | 0.075763 (V20) | 0.072810 (V22-N) | -3.90% | 0.097734 | 0.096709 |
-| CNN-GRU Residual | Rolling 756 | 0.072839 (V20) | 0.074883 (V22-N) | +2.81% | 0.097354 | 0.096766 |
-| CNN-LSTM Direct | Expanding | 0.884860 (V20) | 0.950946 (V22-N) | +7.47% | 0.913996 | 0.964782 |
-| CNN-LSTM Direct | Recency | 0.697727 (V20) | 0.923828 (V22-N) | +32.41% | 0.734079 | 0.939854 |
-| CNN-LSTM Direct | Rolling 756 | 0.910641 (V20) | 0.959533 (V22-N) | +5.37% | 0.934973 | 0.974685 |
-| CNN-LSTM Residual | Expanding | 0.072917 (V20) | 0.073456 (V22-N) | +0.74% | 0.096419 | 0.096595 |
-| CNN-LSTM Residual | Recency | 0.074450 (V20) | 0.074737 (V22-N) | +0.38% | 0.097025 | 0.097229 |
-| CNN-LSTM Residual | Rolling 756 | 0.073683 (V20) | 0.074180 (V22-N) | +0.67% | 0.096634 | 0.096942 |
 | GRU Direct | Expanding | 0.370773 (V20) | 0.285936 (V22-N) | -22.88% | 0.390730 | 0.311670 |
 | GRU Direct | Recency | 0.384643 (V20) | 0.249627 (V22-N) | -35.10% | 0.413438 | 0.274234 |
 | GRU Direct | Rolling 756 | 0.352270 (V20) | 0.521993 (V22-N) | +48.18% | 0.371524 | 0.545712 |
@@ -620,27 +521,27 @@ Có 31 cặp được ghép có số liệu tại split 95/5. Các cặp không 
 
 ## 5. Xếp hạng chiến lược theo mô hình và theo split
 
-Để tránh kết luận từ một lần thắng, đếm số lần mỗi chiến lược đạt **MAE nhỏ nhất trong ba chiến lược trên cùng một mô hình + features + split + nguồn**. Chỉ tính nhóm có đủ cả 3 chiến lược (không tính Naive). Đây là **thống kê mô tả**, không phải kiểm định độc lập.
+Để tránh kết luận từ một lần thắng, đếm số lần mỗi chiến lược đạt **MAE nhỏ nhất trong ba chiến lược trên cùng một mô hình + features + split + nguồn**. Chỉ tính nhóm có đủ cả 3 chiến lược trong phạm vi mô hình còn lại. Đây là **thống kê mô tả**, không phải kiểm định độc lập.
 
 | Nguồn | Số bộ so sánh đủ 3 strategy | Expanding thắng | Rolling thắng | Recency thắng |
 | --- | --- | --- | --- | --- |
-| V20 | 108 | 61 | 19 | 28 |
+| V20 | 60 | 38 | 10 | 12 |
 | V21 | 16 | 7 | 1 | 8 |
 | V21 bổ sung 80/20 | 16 | 10 | 0 | 6 |
-| V22 Non-SA | 36 | 18 | 5 | 13 |
+| V22 Non-SA | 20 | 12 | 1 | 7 |
 | V22 SA | 4 | 2 | 1 | 1 |
 
 **Cập nhật V24:** 12 lượt bổ sung khép kín 6 cặp split–feature–model của nhóm SA-LSTM tại FS04/FS06. Bảng thắng chiến lược ở trên là thống kê theo những phiên bản gốc, không được cộng thêm V24 như 6 nhóm độc lập nếu chúng đã có Expanding ở V21/V22; xem thống kê đầy đủ theo nhóm tại §7.5.
 
 **Lưu ý:** Ba chiến lược thay đổi lượng/trọng số dữ liệu train; chiến lược có số lần thắng nhiều nhất chưa chắc tối ưu cho mọi giai đoạn thị trường. Các split holdout 80–95% có giai đoạn test lồng nhau, không độc lập.
 
-![Hình 11 — MAE theo strategy và feature group](copper-forecasting/docs/assets/v21_addon/plots/80_strategy_mae_all_features.png)
+![Hình 8 — MAE theo strategy và feature group](copper-forecasting/docs/assets/v21_addon/plots/80_strategy_mae_all_features.png)
 
-*Hình 11. MAE V21 tại split 80/20 theo model, strategy và bốn nhóm feature. Naive không đổi theo strategy vì không fitted; nguồn `holdout_80_results.csv`; `fig:v21_strategy_mae`.*
+*Hình 8. MAE V21 tại split 80/20 theo model, strategy và bốn nhóm feature sau khi chỉ giữ các mô hình được huấn luyện; nguồn `holdout_80_results.csv`; `fig:v21_strategy_mae`.*
 
-![Hình 12 — RMSE theo strategy và feature group](copper-forecasting/docs/assets/v21_addon/plots/80_strategy_rmse_all_features.png)
+![Hình 9 — RMSE theo strategy và feature group](copper-forecasting/docs/assets/v21_addon/plots/80_strategy_rmse_all_features.png)
 
-*Hình 12. RMSE trên cùng protocol với Hình 11; metric này nhấn mạnh lỗi lớn hơn MAE. Hai hình chỉ so sánh trong cùng panel/date range; `fig:v21_strategy_rmse`.*
+*Hình 9. RMSE trên cùng protocol với Hình 8; metric này nhấn mạnh lỗi lớn hơn MAE. Hai hình chỉ so sánh trong cùng panel/date range; `fig:v21_strategy_rmse`.*
 
 ## 6. So sánh theo từng kiến trúc: MAE tốt nhất giữa các bộ input
 
@@ -648,10 +549,6 @@ Có 31 cặp được ghép có số liệu tại split 95/5. Các cặp không 
 
 | Split | Mô hình | MAE tốt nhất (nguồn) | RMSE | Features | Chiến lược |
 | --- | --- | --- | --- | --- | --- |
-| 80/20 | CNN-GRU Direct | 0.214287 (V20) | 0.273292 | FS04_METALS_CU | Expanding |
-| 80/20 | CNN-GRU Residual | 0.068947 (V22-N) | 0.107682 | FS06_WTI_CU | Recency |
-| 80/20 | CNN-LSTM Direct | 0.384733 (V20) | 0.473176 | FS01_CU | Recency |
-| 80/20 | CNN-LSTM Residual | 0.068841 (V20) | 0.108019 | FS01_CU | Recency |
 | 80/20 | GRU Direct | 0.141899 (V20) | 0.191724 | FS01_CU | Recency |
 | 80/20 | GRU Residual | 0.068780 (V20) | 0.107853 | FS02_PAPER_CU | Expanding |
 | 80/20 | LSTM Direct | 0.110100 (V20) | 0.161307 | FS01_CU | Expanding |
@@ -660,10 +557,6 @@ Có 31 cặp được ghép có số liệu tại split 95/5. Các cặp không 
 | 80/20 | SA-LSTM Paper HP | 0.298955 (V22-S) | 0.358768 | FS06_WTI_CU | Expanding |
 | 80/20 | SA-LSTM Reoptimized | 0.223809 (V22-S) | 0.297888 | FS06_WTI_CU | Expanding |
 | 80/20 | SimpleRNN Direct | 0.795791 (V21-80) | 0.916974 | FS04_METALS_CU | Expanding |
-| 90/10 | CNN-GRU Direct | 0.296379 (V20) | 0.359605 | FS02_PAPER_CU | Expanding |
-| 90/10 | CNN-GRU Residual | 0.077229 (V22-N) | 0.101285 | FS06_WTI_CU | Expanding |
-| 90/10 | CNN-LSTM Direct | 0.393469 (V20) | 0.492822 | FS04_METALS_CU | Expanding |
-| 90/10 | CNN-LSTM Residual | 0.077000 (V20) | 0.100895 | FS01_CU | Rolling 756 |
 | 90/10 | GRU Direct | 0.205153 (V20) | 0.243488 | FS01_CU | Recency |
 | 90/10 | GRU Residual | 0.076951 (V20) | 0.100810 | FS04_METALS_CU | Expanding |
 | 90/10 | LSTM Direct | 0.247409 (V21) | 0.304619 | FS04_METALS_CU | Expanding |
@@ -672,10 +565,6 @@ Có 31 cặp được ghép có số liệu tại split 95/5. Các cặp không 
 | 90/10 | SA-LSTM Paper HP | 0.184634 (V22-S) | 0.225723 | FS06_WTI_CU | Expanding |
 | 90/10 | SA-LSTM Reoptimized | 0.326683 (V22-S) | 0.376388 | FS06_WTI_CU | Recency |
 | 90/10 | SimpleRNN Direct | 0.608387 (V21) | 0.710083 | FS05_METALS_EXO | Recency |
-| 92.5/7.5 | CNN-GRU Direct | 0.351300 (V20) | 0.400391 | FS04_METALS_CU | Recency |
-| 92.5/7.5 | CNN-GRU Residual | 0.075340 (V20) | 0.098272 | FS01_CU | Recency |
-| 92.5/7.5 | CNN-LSTM Direct | 0.522778 (V22-N) | 0.560252 | FS06_WTI_CU | Rolling 756 |
-| 92.5/7.5 | CNN-LSTM Residual | 0.075050 (V20) | 0.098426 | FS01_CU | Recency |
 | 92.5/7.5 | GRU Direct | 0.182461 (V22-N) | 0.215549 | FS06_WTI_CU | Recency |
 | 92.5/7.5 | GRU Residual | 0.075028 (V22-N) | 0.098307 | FS06_WTI_CU | Recency |
 | 92.5/7.5 | LSTM Direct | 0.247864 (V20) | 0.280534 | FS01_CU | Rolling 756 |
@@ -684,10 +573,6 @@ Có 31 cặp được ghép có số liệu tại split 95/5. Các cặp không 
 | 92.5/7.5 | SA-LSTM Paper HP | 0.194868 (V22-S) | 0.236334 | FS06_WTI_CU | Expanding |
 | 92.5/7.5 | SA-LSTM Reoptimized | 0.352332 (V21) | 0.409124 | FS04_METALS_CU | Expanding |
 | 92.5/7.5 | SimpleRNN Direct | 0.724220 (V21) | 0.772906 | FS04_METALS_CU | Expanding |
-| 95/5 | CNN-GRU Direct | 0.408640 (V22-N) | 0.438568 | FS06_WTI_CU | Recency |
-| 95/5 | CNN-GRU Residual | 0.072575 (V20) | 0.096666 | FS02_PAPER_CU | Expanding |
-| 95/5 | CNN-LSTM Direct | 0.659669 (V20) | 0.679916 | FS01_CU | Recency |
-| 95/5 | CNN-LSTM Residual | 0.072625 (V20) | 0.096669 | FS01_CU | Expanding |
 | 95/5 | GRU Direct | 0.167929 (V20) | 0.194203 | FS01_CU | Recency |
 | 95/5 | GRU Residual | 0.072357 (V20) | 0.096414 | FS02_PAPER_CU | Recency |
 | 95/5 | LSTM Direct | 0.404888 (V20) | 0.428586 | FS01_CU | Rolling 756 |
@@ -703,13 +588,13 @@ Có 31 cặp được ghép có số liệu tại split 95/5. Các cặp không 
 
 V22 dùng SA search mới cho bộ WTI (16 evaluations, seed SA 2026, search trên validation của reference split 80/20). Cấu hình được manifest xác nhận: **LSTM units 47/127, LR 0.000050478806754686805** (V22 SA). Trong V21, Reoptimized dùng cache trước đó; không nên gọi đó là SA search mới ở V21.
 
-![Hình 13 — Giao thức Fresh Simulated Annealing](copper-forecasting/docs/assets/generated/sa_search_protocol.svg)
+![Hình 10 — Giao thức Fresh Simulated Annealing](copper-forecasting/docs/assets/generated/sa_search_protocol.svg)
 
-*Hình 13. SA đề xuất hàng xóm trong không gian `units_1`, `units_2`, log-learning-rate; objective là validation MSE đã scale, cooling `max(0.05,0.88^k)`, budget 16. SA tối ưu hyperparameters, không tối ưu trực tiếp neural weights. Nguồn: V22 Fresh-SA cell 12 và `fresh_sa_best_hp.json`; `fig:sa_search_protocol`.*
+*Hình 10. SA đề xuất hàng xóm trong không gian `units_1`, `units_2`, log-learning-rate; objective là validation MSE đã scale, cooling `max(0.05,0.88^k)`, budget 16. SA tối ưu hyperparameters, không tối ưu trực tiếp neural weights. Nguồn: V22 Fresh-SA cell 12 và `fresh_sa_best_hp.json`; `fig:sa_search_protocol`.*
 
-![Hình 14 — Hội tụ best validation MSE của Fresh SA](<copper-forecasting/results/18-11- Copper_SA-LSTM-standalone-V22/copper_sa_lstm_wti_only_v22/sa_search_convergence.png>)
+![Hình 11 — Hội tụ best validation MSE của Fresh SA](<copper-forecasting/results/18-11- Copper_SA-LSTM-standalone-V22/copper_sa_lstm_wti_only_v22/sa_search_convergence.png>)
 
-*Hình 14. Best-so-far validation MSE qua 16 evaluations trên FS06. Đường giảm không phải test loss và không chứng minh global optimum; nguồn từng trial `sa_search_trials.csv`; `fig:sa_search_convergence`.*
+*Hình 11. Best-so-far validation MSE qua 16 evaluations trên FS06. Đường giảm không phải test loss và không chứng minh global optimum; nguồn từng trial `sa_search_trials.csv`; `fig:sa_search_convergence`.*
 
 ### 7.1. Đối chiếu cùng bộ WTI: LSTM thường, SimpleRNN, Paper HP và SA tối ưu mới
 
@@ -826,59 +711,33 @@ Thực nghiệm chỉ với 3 mô hình WTI: Residual-GRU, Residual-LSTM, Reopti
 
 ### 8.1. Từng seed và MAE/RMSE (V23)
 
-| Model | Seed | MAE | RMSE | Naive MAE | Skill vs Naive |
-| --- | --- | --- | --- | --- | --- |
-| Residual-GRU | 41 | 0.068950 | 0.108020 | 0.069001 | +0.074% |
-| Residual-GRU | 42 | 0.069089 | 0.108033 | 0.069001 | -0.127% |
-| Residual-GRU | 43 | 0.069346 | 0.108287 | 0.069001 | -0.499% |
-| Residual-GRU | 44 | 0.069117 | 0.108236 | 0.069001 | -0.168% |
-| Residual-GRU | 45 | 0.068995 | 0.108007 | 0.069001 | +0.010% |
-| Residual-LSTM | 41 | 0.069010 | 0.108008 | 0.069001 | -0.013% |
-| Residual-LSTM | 42 | 0.069053 | 0.108068 | 0.069001 | -0.075% |
-| Residual-LSTM | 43 | 0.069139 | 0.108061 | 0.069001 | -0.199% |
-| Residual-LSTM | 44 | 0.069280 | 0.108522 | 0.069001 | -0.403% |
-| Residual-LSTM | 45 | 0.069414 | 0.108386 | 0.069001 | -0.598% |
-| Reoptimized SA-LSTM | 41 | 0.230471 | 0.298832 | 0.069001 | -234.008% |
-| Reoptimized SA-LSTM | 42 | 0.202721 | 0.273849 | 0.069001 | -193.792% |
-| Reoptimized SA-LSTM | 43 | 0.209556 | 0.274835 | 0.069001 | -203.698% |
-| Reoptimized SA-LSTM | 44 | 0.178116 | 0.254883 | 0.069001 | -158.133% |
-| Reoptimized SA-LSTM | 45 | 0.218425 | 0.287161 | 0.069001 | -216.551% |
+| Model | Seed | MAE | RMSE |
+| --- | --- | --- | --- |
+| Residual-GRU | 41 | 0.068950 | 0.108020 |
+| Residual-GRU | 42 | 0.069089 | 0.108033 |
+| Residual-GRU | 43 | 0.069346 | 0.108287 |
+| Residual-GRU | 44 | 0.069117 | 0.108236 |
+| Residual-GRU | 45 | 0.068995 | 0.108007 |
+| Residual-LSTM | 41 | 0.069010 | 0.108008 |
+| Residual-LSTM | 42 | 0.069053 | 0.108068 |
+| Residual-LSTM | 43 | 0.069139 | 0.108061 |
+| Residual-LSTM | 44 | 0.069280 | 0.108522 |
+| Residual-LSTM | 45 | 0.069414 | 0.108386 |
+| Reoptimized SA-LSTM | 41 | 0.230471 | 0.298832 |
+| Reoptimized SA-LSTM | 42 | 0.202721 | 0.273849 |
+| Reoptimized SA-LSTM | 43 | 0.209556 | 0.274835 |
+| Reoptimized SA-LSTM | 44 | 0.178116 | 0.254883 |
+| Reoptimized SA-LSTM | 45 | 0.218425 | 0.287161 |
 
 ### 8.2. Kết quả trung bình nhiều seeds (không thay thế kiểm định)
 
-| Mô hình | MAE trung bình | SD MAE giữa seeds | RMSE trung bình | Seeds thắng Naive |
-| --- | --- | --- | --- | --- |
-| Residual-GRU | 0.069100 | 0.000154 | 0.108117 | 2/5 |
-| Residual-LSTM | 0.069179 | 0.000167 | 0.108209 | 0/5 |
-| Reoptimized SA-LSTM | 0.207858 | 0.019601 | 0.277912 | 0/5 |
-
-![Hình 15 — Walk-forward MAE theo seed](<copper-forecasting/results/20 -11 - copper_v23_gapfill_results/copper_v23_gapfill/wf_mae_by_seed.png>)
-
-*Hình 15. MAE V23 aligned 80/20 theo seeds 41–45 cho Residual-GRU, Residual-LSTM và Reoptimized SA-LSTM; đường đứt là Naive. Nguồn `wf_seed_summary.csv`; `fig:walkforward_mae_by_seed`.*
-
-### 8.3. Kiểm định DM-HAC vs Naive (absolute loss; Newey–West lag 5)
-
-`d_t=|y−ŷ_model|−|y−ŷ_naive|`, `d̄<0` nghiêng về mô hình, p-value hai phía. Nhiều seeds cùng chia sẻ test dates, không phải 5 tập test độc lập; kết quả chưa chỉnh multiple testing.
-
-| Model | Seed | Mean loss diff | p-value (2 phía) |
+| Mô hình | MAE trung bình | SD MAE giữa seeds | RMSE trung bình |
 | --- | --- | --- | --- |
-| Residual-GRU | 41 | -0.000051 | 0.493343 |
-| Residual-GRU | 42 | +0.000088 | 0.189622 |
-| Residual-GRU | 43 | +0.000344 | 0.0567291 |
-| Residual-GRU | 44 | +0.000116 | 0.397776 |
-| Residual-GRU | 45 | -0.000007 | 0.931544 |
-| Residual-LSTM | 41 | +0.000009 | 0.874817 |
-| Residual-LSTM | 42 | +0.000052 | 0.598004 |
-| Residual-LSTM | 43 | +0.000137 | 0.207789 |
-| Residual-LSTM | 44 | +0.000278 | 0.190898 |
-| Residual-LSTM | 45 | +0.000412 | 0.122574 |
-| Reoptimized SA-LSTM | 41 | +0.161469 | 1.16255e-22 |
-| Reoptimized SA-LSTM | 42 | +0.133719 | 8.06097e-18 |
-| Reoptimized SA-LSTM | 43 | +0.140555 | 4.22525e-20 |
-| Reoptimized SA-LSTM | 44 | +0.109114 | 1.7364e-12 |
-| Reoptimized SA-LSTM | 45 | +0.149423 | 2.37241e-20 |
+| Residual-GRU | 0.069100 | 0.000154 | 0.108117 |
+| Residual-LSTM | 0.069179 | 0.000167 | 0.108209 |
+| Reoptimized SA-LSTM | 0.207858 | 0.019601 | 0.277912 |
 
-### 8.4. Theo từng fold (trung bình 5 seeds; không gộp đều 9 fold để tính MAE tổng)
+### 8.3. Theo từng fold (trung bình 5 seeds; không gộp đều 9 fold để tính MAE tổng)
 
 | Fold | Bắt đầu | Kết thúc | n phiên | Residual-GRU MAE | Residual-LSTM MAE | SA-LSTM MAE |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -892,27 +751,23 @@ Thực nghiệm chỉ với 3 mô hình WTI: Residual-GRU, Residual-LSTM, Reopti
 | 8 | 2026-06-26 | 2026-09-22 | 63 | 0.062681 | 0.062522 | 0.238213 |
 | 9 | 2026-09-23 | 2026-11-13 | 38 | 0.069145 | 0.069826 | 0.202836 |
 
-### 8.5. Walk-forward V20, giữ riêng theo giai đoạn
+### 8.4. Walk-forward V20, giữ riêng theo giai đoạn
 
-V20 đánh giá Residual-GRU + FS02_PAPER_CU trên **2.214 phiên 2018–2026**, 5 seeds, retrain 63 phiên, sử dụng DM-HAC. Không dùng phép so sánh chênh MAE V20 và V23 để khẳng định WTI tốt hơn, vì khác đoạn thời gian và có thể khác giao thức học. Các kết luận V20 trước đây: seeds 43–44 Naive tốt hơn ở mức 5%; các seeds khác chưa thấy khác biệt ở mức 5%. Nguồn: `dm_hac_by_seed.csv` (V20).
-
-![Hình 16 — Walk-forward Actual vs Residual-GRU vs Naive](copper-forecasting/results/17-11-Copper-NonSA-Fair-Full-Protocol-V20/wf_actual_vs_pred.png)
-
-*Hình 16. Timeline V20 2018–2026 của một seed. Hình minh họa dự báo one-step bám sát level; kết luận theo giai đoạn phải đọc `wf_by_year.csv`, và không so trực tiếp với V23 2024–2026; `fig:walkforward_timeline_v20`.*
+V20 đánh giá Residual-GRU + FS02_PAPER_CU trên **2.214 phiên 2018–2026**, 5 seeds, retrain 63 phiên. Không dùng phép so sánh chênh MAE V20 và V23 để khẳng định WTI tốt hơn, vì khác đoạn thời gian và có thể khác giao thức học. Kết luận theo giai đoạn phải đọc `wf_by_year.csv` và không so trực tiếp với V23 2024–2026.
 
 ## 9. Thảo luận chung
 
 ### 9.1. Điều gì thay đổi khi dùng WTI?
 
-Sự thay đổi theo MAE không có dấu nhất quán giữa các mô hình: có mô hình Direct/SA giảm rõ rệt, trong khi một số CNN/Direct hoặc Residual kém hơn. Điều này phù hợp với việc tương quan mức giá đơn biến không định lượng được thông tin dự báo có điều kiện của mạng trên 22 phiên. **Không suy ra quan hệ nhân quả** chỉ bằng bảng trước/sau.
+Sự thay đổi theo MAE không có dấu nhất quán giữa các mô hình: có mô hình Direct/SA giảm rõ rệt, trong khi một số cấu hình Direct hoặc Residual kém hơn. Điều này phù hợp với việc tương quan mức giá đơn biến không định lượng được thông tin dự báo có điều kiện của mạng trên 22 phiên. **Không suy ra quan hệ nhân quả** chỉ bằng bảng trước/sau.
 
-### 9.2. Vì sao Residual thường nằm gần Naive?
+### 9.2. Vì sao dự báo Residual thường bám sát mức giá gần nhất?
 
-Residual học phần chênh lệch rồi cộng lại mức giá phiên trước, nên nếu `Δhat` nhỏ thì giá dự báo gần Naive. Các giá trị MAE gần nhau chỉ là hiện tượng đo được; để kết luận nguyên nhân cần audit phân phối delta dự báo, tương quan với delta thực và thử nghiệm trên nhiều giai đoạn.
+Residual học phần chênh lệch rồi cộng lại mức giá phiên trước, nên nếu `Δhat` nhỏ thì giá dự báo bám sát mức giá gần nhất. Để kết luận mô hình thực sự học được biến động, cần audit phân phối delta dự báo, tương quan với delta thực và thử nghiệm trên nhiều giai đoạn.
 
 ### 9.3. Ý nghĩa của xếp hạng
 
-“Tốt nhất” trong báo cáo luôn có nghĩa **MAE thấp nhất trong tập cấu hình đã chạy tại một split/điều kiện cụ thể, loại Naive khỏi cuộc xếp hạng fitted**. Không có tuyên bố “mô hình X thắng ổn định” nếu chưa có kiểm định phù hợp với chuỗi thời gian và một holdout chưa từng dùng để chọn cấu hình.
+“Tốt nhất” trong báo cáo luôn có nghĩa **MAE thấp nhất trong tập chín mô hình được huấn luyện tại một split/điều kiện cụ thể**. Không có tuyên bố “mô hình X thắng ổn định” nếu chưa có kiểm định phù hợp với chuỗi thời gian và một holdout chưa từng dùng để chọn cấu hình.
 
 ## 10. Giới hạn, kiểm tra hợp lệ và khả năng tái lập
 
@@ -928,13 +783,13 @@ Residual học phần chênh lệch rồi cộng lại mức giá phiên trướ
 
 6. Phải audit as-of market close/nguồn dữ liệu để tránh dùng giá ngoại sinh chưa thực sự khả dụng tại forecast origin; hiện chưa thể khẳng định loại bỏ rủi ro này chỉ từ ngày trong CSV.
 
-7. Số liệu MAE/RMSE gốc không tự chứng minh sự khác biệt có ý nghĩa thống kê; không gắn các DM p-values của V20 sang V22 hoặc SA-series.
+7. Số liệu MAE/RMSE gốc không tự chứng minh sự khác biệt có ý nghĩa thống kê; mọi kiểm định so sánh mô hình phải dùng đúng cặp dự báo trên cùng timestamp và đúng giao thức.
 
 ### 10.1. Kiểm toán dữ liệu và tái lập V24
 
 - SHA-256 dataset trong `experiment_manifest.json` V24: `9580ede12d474c8f990556842d551dac176b3c16b2d6a4bffb7dc41dd54bf600` (2.710 phiên, 13/01/2016–13/11/2026), trùng fingerprint đã công bố ở V20/V21.
 - 12 lượt fitted = 2 mô hình × (2 chiến lược FS06 ở 80/20 + 2 chiến lược FS04 ở 92.5% + 2 chiến lược FS04 ở 95%). Đúng 3.528 hàng dự báo; mỗi cấu hình có 542, 204 hoặc 136 mốc tương ứng.
-- Các cột `Date`, `actual`, `pred`, `naive` được giữ trong CSV để tái tính MAE, RMSE, MAPE, R² và để kiểm tra căn chỉnh dự báo. Mọi hàng dùng `HORIZON=1`; `Naive` không tính vào bảng xếp hạng fitted.
+- Các cột `Date`, `actual`, `pred` được dùng để tái tính MAE, RMSE, MAPE, R² và kiểm tra căn chỉnh dự báo. Mọi hàng dùng `HORIZON=1`; các cột và hàng liên quan mô hình đã loại không thuộc bộ kết quả chính thức mới.
 - `Paper SA-LSTM`: 39/111 units, LR 0.00005. `Reoptimized SA-LSTM` FS04: 22/83 units, LR 0.000655 (cache V21); FS06: 47/127 units, LR 0.000050478806754686805 (SA search V22, 16 trials). V24 **không chạy SA search mới**.
 - Các chỉ số test được giữ theo nguồn. Kết quả đứng đầu trong mỗi split được chọn sau khi xem test nên chỉ mang tính mô tả khám phá; để kiểm tra khẳng định mô hình tốt hơn một cách tổng quát, cần cố định mô hình bằng validation và dùng đoạn test độc lập.
 
@@ -943,11 +798,11 @@ Residual học phần chênh lệch rồi cộng lại mức giá phiên trướ
 | Yêu cầu | Tình trạng đến V24 | Giới hạn diễn giải |
 | --- | --- | --- |
 | FS04 vs FS06 ở 4 split × 3 strategies × 2 SA-LSTM | **Đủ 48/48 ô** | HP Reoptimized khác nhau theo FS; không phải ablation thuần feature |
-| Non-SA Direct/Residual theo 4 split và 3 strategies | Có các bộ FS01/02/04/06 | Không phải mọi phương pháp đều sử dụng cùng số lượng bộ features |
+| Non-SA Direct/Residual theo 4 split và 3 strategies | Notebook chính thức khai báo đủ FS01–FS06; bằng chứng lịch sử đã lọc chủ yếu có FS01/02/04/06 | Cần chạy đủ lưới mới trước khi tuyên bố kết quả cho FS03/FS05 |
 | EDA Spearman trên giá và biến động có lag | Có phân tích | Không xác minh đóng góp dự báo tương lai một cách nhân quả |
 | Walk-forward V23 cùng 542 timestamps và 5 seeds | Có cho Residual-GRU, Residual-LSTM và Reoptimized SA-LSTM | Không có walk-forward cùng giai đoạn cho mọi kiến trúc |
 | Walk-forward V20 (2018–2026) | Có cho Residual-GRU FS02 | Không so sánh trực tiếp MAE với walk-forward V23 2024–2026 |
-| DM-HAC và nhiều seeds | Có trong các thí nghiệm walk-forward được liệt kê | Không suy rộng sang mọi SA-LSTM/Direct |
+| Nhiều seeds | Có trong các thí nghiệm walk-forward được liệt kê | Không suy rộng sang mọi SA-LSTM/Direct |
 | So sánh cùng ngân sách tuning, cùng target, cùng seed | **Chưa hoàn toàn** | Không kết luận nguyên nhân riêng của thuật toán SA/kiến trúc |
 | Kiểm toán khả dụng theo giờ của ngoại sinh | **Chưa xác minh đầy đủ** | Không khẳng định loại trừ mọi dạng look-ahead từ thị trường |
 | Đánh giá trên test độc lập chưa dùng để chọn model | **Chưa có** | Không khẳng định kết quả xếp hạng hậu nghiệm là ưu thế tổng quát hóa |
@@ -961,11 +816,11 @@ Residual học phần chênh lệch rồi cộng lại mức giá phiên trướ
 
 ## 11. Kết luận Module 1 và định hướng các module tiếp theo
 
-Qua các kết quả thực nghiệm của **Module 1 — dự báo giá đồng một phiên trước**, nhóm nhận thấy các mô hình học **sai phân (Residual)**, đặc biệt Residual-GRU và Residual-LSTM, thường đạt MAE thấp hơn các cấu hình SA-LSTM dự báo mức giá trực tiếp trong các thí nghiệm đã thực hiện. Khi gộp các tập đặc trưng và chiến lược đã khảo sát (không tính Naive vào xếp hạng mô hình fitted), **Residual-GRU** đứng đầu tại split **80/20** với **MAE 0.068780** (FS02_PAPER_CU, Expanding; V20), **90/10** với **MAE 0.076951** (FS04_METALS_CU, Expanding; V20), **92.5/7.5** với **MAE 0.075028** (FS06_WTI_CU, Recency; V22-N) và **95/5** với **MAE 0.072357** (FS02_PAPER_CU, Recency; V20). Những kết quả này cho thấy Residual-GRU **dẫn đầu bảng xếp hạng holdout trong phạm vi Module 1**, **không có nghĩa** nó luôn vượt trội ở mọi điều kiện hay là mô hình tốt nhất của toàn bộ kế hoạch nghiên cứu.
+Qua các kết quả thực nghiệm của **Module 1 — dự báo giá đồng một phiên trước**, nhóm nhận thấy các mô hình học **sai phân (Residual)**, đặc biệt Residual-GRU và Residual-LSTM, thường đạt MAE thấp hơn các cấu hình SA-LSTM dự báo mức giá trực tiếp trong các thí nghiệm đã thực hiện. Khi gộp các tập đặc trưng và chiến lược đã khảo sát trong phạm vi chín mô hình còn lại, **Residual-GRU** đứng đầu tại split **80/20** với **MAE 0.068780** (FS02_PAPER_CU, Expanding; V20), **90/10** với **MAE 0.076951** (FS04_METALS_CU, Expanding; V20), **92.5/7.5** với **MAE 0.075028** (FS06_WTI_CU, Recency; V22-N) và **95/5** với **MAE 0.072357** (FS02_PAPER_CU, Recency; V20). Những kết quả này cho thấy Residual-GRU **dẫn đầu bảng xếp hạng holdout trong phạm vi Module 1**, **không có nghĩa** nó luôn vượt trội ở mọi điều kiện hay là mô hình tốt nhất của toàn bộ kế hoạch nghiên cứu.
 
 Sau khi hoàn thiện 48/48 tổ hợp SA-LSTM bằng V24, nhóm có thể đối chiếu cả ba chiến lược ở bốn tỷ lệ train trên hai bộ FS04 và FS06, nhưng không xem đó là chứng cứ mọi họ mô hình đã được chuẩn hóa hoàn toàn. Về tập đặc trưng, việc thay nhóm FS04_METALS_CU bằng FS06_WTI_CU giúp giảm MAE ở một số cấu hình, đặc biệt một số phiên bản SA-LSTM, nhưng không tạo cải thiện nhất quán cho tất cả mô hình Residual và chiến lược. Việc thay hai biến Gold, Silver bằng WTI đồng thời làm thay đổi số biến đầu vào; ở nhánh SA tối ưu lại còn thay đổi siêu tham số. Do đó, kết quả chỉ cho phép nhận xét về **cấu hình thực nghiệm hoàn chỉnh**, chưa chứng minh riêng tác động của WTI hoặc SA. Các tỷ lệ holdout có giai đoạn test lồng nhau, vì vậy không kết luận tỷ lệ train nào tối ưu tuyệt đối chỉ từ mức MAE khác nhau giữa các split.
 
-Kết quả walk-forward bổ sung trên **542 phiên (2024–2026)** và **5 seeds**, retrain mỗi **63 phiên**, cho thấy Residual-GRU có MAE trung bình khoảng **0.06910**, Residual-LSTM khoảng **0.06918**, trong khi Naive khoảng **0.06900** (V23). Như vậy, mặc dù Residual-GRU đứng đầu nhóm mô hình fitted trong walk-forward này, nhóm **chưa có bằng chứng thống kê ở ngưỡng 5%** để khẳng định cải thiện ổn định so với Naive. Đây là khác biệt giữa *xếp hạng mô hình được huấn luyện* và *chứng minh giá trị dự báo vượt baseline*. Các kết luận cũng chưa được mở rộng sang các mô hình mới mà nhóm dự kiến đánh giá trong những module tiếp theo.
+Kết quả walk-forward bổ sung trên **542 phiên (2024–2026)** và **5 seeds**, retrain mỗi **63 phiên**, cho thấy Residual-GRU có MAE trung bình khoảng **0.06910**, thấp hơn nhẹ Residual-LSTM khoảng **0.06918** và thấp hơn rõ Reoptimized SA-LSTM khoảng **0.20786** (V23). Đây là thứ hạng mô tả trong ba mô hình walk-forward đã chạy; chưa đủ để khẳng định ưu thế ổn định ngoài các giai đoạn và cấu hình được khảo sát.
 
 Trong thời gian tới, nhóm sẽ sử dụng Module 1 như một **mốc đối chứng có kiểm toán** để tiếp tục khảo sát những họ mô hình và chiến lược khác trên cùng bài toán, tập dữ liệu và quy trình đánh giá theo thời gian. Ưu tiên gồm lựa chọn biến bằng validation đúng thời gian, ablation từng biến, đánh giá qua nhiều giai đoạn thị trường, kiểm định chênh lệch sai số trên cùng timestamp và đối chiếu chi phí tính toán. Chỉ sau khi có kết quả từ các module còn lại, nhóm mới xác định mô hình/chiến lược đáng ưu tiên cho đề tài tổng thể và xem xét ứng dụng hỗ trợ quyết định; **không coi Module 1 là kết luận cuối cùng của toàn bộ nghiên cứu**.
 
@@ -973,21 +828,21 @@ Trong thời gian tới, nhóm sẽ sử dụng Module 1 như một **mốc đ�
 
 | Nhãn nguồn | Artifact gốc | CSV dùng cho số liệu | Số hàng |
 | --- | --- | --- | --- |
-| V20 | 17-11-Copper-NonSA-Fair-Full-Protocol-V20(2).zip | grid_results.csv | 360 |
-| V21 | copper_sa_lstm_h1_ablation_v21_results(1).zip | results_h1_ablation.csv | 100 |
-| V21 bổ sung 80/20 | copper_v21_addon_80_wf_plots(2).zip | holdout_80_results.csv | 60 |
-| V22 Non-SA | []18-11- Copper_NonSA_V22_WTI_Only_Kaggle.zip | grid_results.csv | 120 |
-| V22 SA | []18-11copper_sa_lstm_wti_only_v22_results.zip | results_h1_ablation.csv | 30 |
-| V23 | 20 -11 - copper_v23_gapfill_results.zip | holdout_missing_results.csv | 20 |
+| V20 | 17-11-Copper-NonSA-Fair-Full-Protocol-V20(2).zip | grid_results.csv | 180 sau lọc |
+| V21 | copper_sa_lstm_h1_ablation_v21_results(1).zip | results_h1_ablation.csv | 80 sau lọc |
+| V21 bổ sung 80/20 | copper_v21_addon_80_wf_plots(2).zip | holdout_80_results.csv | 48 sau lọc |
+| V22 Non-SA | []18-11- Copper_NonSA_V22_WTI_Only_Kaggle.zip | grid_results.csv | 60 sau lọc |
+| V22 SA | []18-11copper_sa_lstm_wti_only_v22_results.zip | results_h1_ablation.csv | 24 sau lọc |
+| V23 | 20 -11 - copper_v23_gapfill_results.zip | holdout_missing_results.csv | 16 sau lọc |
 | V24 | 20-11 -copper_v24_sa_missing_results.zip | holdout_missing_results.csv | 12 |
 
-**Tổng dữ liệu bảng holdout đã hợp nhất V20–V24:** 702 hàng = 670 (V20–V22) + 20 (V23) + 12 (V24). Một phần là những lần lặp lại Naive theo feature/strategy; không được gọi 702 lượt fit mạng. Trong 12 lượt V24 đều là fitted SA-LSTM.
+**Tổng dữ liệu bảng holdout đã hợp nhất V20–V24 sau lọc:** 420 hàng = 392 (V20–V22) + 16 (V23) + 12 (V24). Tất cả hàng CNN và Naive đã bị loại khỏi báo cáo; trong 12 lượt V24 đều là fitted SA-LSTM.
 
 **Tài liệu tham khảo:** Chen et al. (2023), *Copper price prediction using LSTM recurrent neural network integrated simulated annealing algorithm*, PLOS ONE; Diebold & Mariano (1995), *Comparing Predictive Accuracy*; Newey & West (1987), HAC covariance. Thông tin xuất bản của Chen cần đối chiếu metadata trước khi nộp.
 
 - `(V23)` `20 -11 - copper_v23_gapfill_results.zip`: bổ sung FS06 92.5/95 holdout và walk-forward 542 phiên / 5 seeds.
 - `(V24)` `20-11 -copper_v24_sa_missing_results.zip`: 12 fitted holdout còn thiếu cho hai SA-LSTM; 3.528 dòng dự báo, manifest có dataset SHA-256 và cấu hình HP.
-- `Mythos_Copper_Module1_AllModels_MAE_RMSE_MAPE_R2_V24.csv`: bảng truy xuất 702 tổ hợp, số liệu tính từ dự báo gốc.
+- Bảng truy xuất dùng cho báo cáo mới chỉ giữ 420 tổ hợp thuộc chín mô hình trong phạm vi, với số liệu tính từ dự báo gốc.
 
 ### Phụ lục B. Nguồn bảng kiểm định và hình EDA V26
 
