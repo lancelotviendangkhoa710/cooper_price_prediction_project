@@ -104,6 +104,35 @@
 | FEATURES_4 | expanding_window | residual | 0.07828 ± 0.00063 | 0.10221 | 48.85% | +1.56% | 1/5 |
 | FEATURES_4 | rolling_window | direct | 0.32542 ± 0.04117 | 0.38334 | 48.18% | +322.21% | 5/5 |
 | FEATURES_4 | rolling_window | residual | 0.07864 ± 0.00122 | 0.10223 | 49.74% | +2.02% | 1/5 |
+
+## 2C. Ma trận Walk-Forward 5 Seeds đầy đủ 6/6 Bộ biến (90/10 & 80/20, Phase 2D — 120 lượt)
+
+| Mốc | Bộ biến | Chiến lược | Naive MAE | Mean MAE ± Std | Ensemble 5-Seed MAE | Ensemble vs Naive | Ensemble DM p | Số seed thắng DM 5% |
+|---:|---|---|---:|---:|---:|---:|---:|---:|
+| 0.90 | FS01_CU | expanding_window | 0.07708 | 0.07732 ± 0.00018 | 0.07727 | +0.25% | 0.4691 | 0/5 |
+| 0.90 | FS01_CU | rolling_window | 0.07708 | 0.07730 ± 0.00013 | 0.07719 | +0.15% | 0.7340 | 0/5 |
+| 0.90 | FEATURES_4 | expanding_window | 0.07708 | 0.07828 ± 0.00064 | 0.07793 | +1.10% | 0.1638 | 0/5 |
+| 0.90 | FEATURES_4 | rolling_window | 0.07708 | 0.07864 ± 0.00122 | 0.07818 | +1.43% | 0.0958 | 0/5 |
+| 0.90 | FEATURES_3 | expanding_window | 0.07708 | 0.07790 ± 0.00116 | 0.07717 | +0.12% | 0.8866 | 0/5 |
+| 0.90 | FEATURES_3 | rolling_window | 0.07708 | 0.07763 ± 0.00055 | 0.07702 | -0.07% | 0.9276 | 0/5 |
+| 0.90 | FS04_METALS_CU | expanding_window | 0.07708 | 0.07816 ± 0.00092 | 0.07755 | +0.61% | 0.5279 | 0/5 |
+| 0.90 | FS04_METALS_CU | rolling_window | 0.07708 | 0.07833 ± 0.00078 | 0.07783 | +0.98% | 0.1802 | 0/5 |
+| 0.90 | FS05_METALS_EXO | expanding_window | 0.07708 | 0.07762 ± 0.00035 | 0.07735 | +0.35% | 0.6809 | 0/5 |
+| 0.90 | FS05_METALS_EXO | rolling_window | 0.07708 | 0.07798 ± 0.00046 | 0.07741 | +0.43% | 0.5474 | 0/5 |
+| 0.90 | FS06_WTI_CU | expanding_window | 0.07708 | 0.07778 ± 0.00038 | 0.07735 | +0.36% | 0.4499 | 0/5 |
+| 0.90 | FS06_WTI_CU | rolling_window | 0.07708 | 0.07802 ± 0.00091 | 0.07756 | +0.63% | 0.3744 | 0/5 |
+| 0.80 | FS01_CU | expanding_window | 0.06900 | 0.06930 ± 0.00007 | 0.06926 | +0.37% | 0.1175 | 0/5 |
+| 0.80 | FS01_CU | rolling_window | 0.06900 | 0.06952 ± 0.00006 | 0.06946 | +0.66% | 0.0255 | 0/5 |
+| 0.80 | FEATURES_4 | expanding_window | 0.06900 | 0.07004 ± 0.00084 | 0.06932 | +0.46% | 0.5218 | 0/5 |
+| 0.80 | FEATURES_4 | rolling_window | 0.06900 | 0.07177 ± 0.00104 | 0.07098 | +2.86% | 0.0195 | 0/5 |
+| 0.80 | FEATURES_3 | expanding_window | 0.06900 | 0.07001 ± 0.00069 | 0.06960 | +0.87% | 0.1514 | 0/5 |
+| 0.80 | FEATURES_3 | rolling_window | 0.06900 | 0.07077 ± 0.00099 | 0.06984 | +1.21% | 0.1281 | 0/5 |
+| 0.80 | FS04_METALS_CU | expanding_window | 0.06900 | 0.07054 ± 0.00097 | 0.06972 | +1.04% | 0.1951 | 0/5 |
+| 0.80 | FS04_METALS_CU | rolling_window | 0.06900 | 0.07110 ± 0.00034 | 0.07048 | +2.14% | 0.0363 | 0/5 |
+| 0.80 | FS05_METALS_EXO | expanding_window | 0.06900 | 0.06986 ± 0.00074 | 0.06949 | +0.71% | 0.1560 | 0/5 |
+| 0.80 | FS05_METALS_EXO | rolling_window | 0.06900 | 0.07084 ± 0.00062 | 0.07011 | +1.61% | 0.0201 | 0/5 |
+| 0.80 | FS06_WTI_CU | expanding_window | 0.06900 | 0.06975 ± 0.00038 | 0.06952 | +0.76% | 0.1025 | 0/5 |
+| 0.80 | FS06_WTI_CU | rolling_window | 0.06900 | 0.07041 ± 0.00041 | 0.06997 | +1.40% | 0.0212 | 0/5 |
 ## 3. Độ bền vững qua 4 mốc chia thời gian [0.8, 0.9, 0.925, 0.95] (FEATURES_4)
 
 | Mode | Ratio | n_test | Chiến lược | MAE ($/lb) | RMSE ($/lb) | R² | DA (%) |
