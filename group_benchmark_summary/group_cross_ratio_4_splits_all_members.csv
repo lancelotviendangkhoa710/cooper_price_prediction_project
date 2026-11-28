@@ -14,6 +14,8 @@ ratio,method_group,method,feature_set,objective,protocol,MAE,MAE_std,RMSE,DA_pct
 0.8,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU (FS01),FS01,Residual,Holdout TB 5-seed (41-45),0.07275,0.00073,0.11105,44.68635
 0.8,PP5 (Hybrid ARIMA-GRU),ARIMA (FS01),FS01,Residual,Deterministic (auto_arima),0.069,,0.108,
 0.8,PP5 (Hybrid ARIMA-GRU),GRU Direct (FS01),FS01,Direct,Holdout TB 5-seed (41-45),0.17332,0.0458,0.22788,50.0738
+0.8,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU WF-63 (FS01),FS01,Residual,WF-63 TB 5-seed (41-45),0.07108,0.0008,0.10965,47.23247
+0.8,PP5 (Hybrid ARIMA-GRU),ARIMA WF-63 (FS01),FS01,Residual,WF-63 (auto_arima),0.06894,,0.108,23.61624
 0.9,PP1 (Non-SA & SA-LSTM),GRU Residual (Expanding),FS02,Residual,Holdout 1-seed (42),0.07714,,0.10091,49.44649
 0.9,PP1 (Non-SA & SA-LSTM),LSTM Residual (Expanding),FS01,Residual,Holdout 1-seed (42),0.07701,,0.10081,52.76753
 0.9,PP2 (HPO SA vs TPE),SA-LSTM (FS01 Expanding),FS01,Residual,Holdout TB 5-seed (41-45),0.07745,0.00061,0.10116,48.85609
@@ -29,6 +31,8 @@ ratio,method_group,method,feature_set,objective,protocol,MAE,MAE_std,RMSE,DA_pct
 0.9,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU (FS01),FS01,Residual,Holdout TB 5-seed (41-45),0.07745,0.00063,0.10142,48.70849
 0.9,PP5 (Hybrid ARIMA-GRU),ARIMA (FS01),FS01,Residual,Deterministic (auto_arima),0.07708,,0.10103,
 0.9,PP5 (Hybrid ARIMA-GRU),GRU Direct (FS01),FS01,Direct,Holdout TB 5-seed (41-45),0.33809,0.10679,0.37233,46.49446
+0.9,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU WF-63 (FS01),FS01,Residual,WF-63 TB 5-seed (41-45),0.07789,0.00051,0.10195,48.26568
+0.9,PP5 (Hybrid ARIMA-GRU),ARIMA WF-63 (FS01),FS01,Residual,WF-63 (auto_arima),0.07694,,0.10103,45.38745
 0.925,PP1 (Non-SA & SA-LSTM),GRU Residual (Expanding),FS02,Residual,Holdout 1-seed (42),0.07521,,0.0986,52.45098
 0.925,PP1 (Non-SA & SA-LSTM),LSTM Residual (Expanding),FS01,Residual,Holdout 1-seed (42),0.07536,,0.09837,49.01961
 0.925,PP2 (HPO SA vs TPE),SA-LSTM (FS01 Expanding),FS01,Residual,Holdout TB 5-seed (41-45),0.0752,0.00022,0.09855,50.39216
@@ -41,9 +45,11 @@ ratio,method_group,method,feature_set,objective,protocol,MAE,MAE_std,RMSE,DA_pct
 0.925,PP4 (Walk-Forward LSTM),WF Expanding Residual (FS02),FS02,Residual,WF 1-seed (42),0.07714,,0.10136,45.54455
 0.925,PP4 (Walk-Forward LSTM),WF Rolling Residual (FS02),FS02,Residual,WF 1-seed (42),0.08032,,0.10357,45.0495
 0.925,PP4 (Walk-Forward LSTM),Static (T+V) Residual (FS02),FS02,Residual,Holdout 1-seed (42),0.07684,,0.10068,52.9703
-0.925,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU (FS01),FS01,Residual,Holdout TB 5-seed (41-45),0.07475,0.00015,0.09841,52.64706
+0.925,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU (FS01),FS01,Residual,Holdout TB 5-seed (41-45),0.07476,0.00015,0.09841,52.84314
 0.925,PP5 (Hybrid ARIMA-GRU),ARIMA (FS01),FS01,Residual,Deterministic (auto_arima),0.07456,,0.09813,52.45098
 0.925,PP5 (Hybrid ARIMA-GRU),GRU Direct (FS01),FS01,Direct,Holdout TB 5-seed (41-45),0.29358,0.05458,0.32175,46.66667
+0.925,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU WF-63 (FS01),FS01,Residual,WF-63 TB 5-seed (41-45),0.07621,0.00057,0.09968,48.13725
+0.925,PP5 (Hybrid ARIMA-GRU),ARIMA WF-63 (FS01),FS01,Residual,WF-63 (auto_arima),0.07505,,0.09856,52.94118
 0.95,PP1 (Non-SA & SA-LSTM),GRU Residual (Expanding),FS02,Residual,Holdout 1-seed (42),0.07277,,0.09645,47.79412
 0.95,PP1 (Non-SA & SA-LSTM),LSTM Residual (Expanding),FS01,Residual,Holdout 1-seed (42),0.07273,,0.09657,54.41176
 0.95,PP2 (HPO SA vs TPE),SA-LSTM (FS01 Expanding),FS01,Residual,Holdout TB 5-seed (41-45),0.07291,0.00035,0.09668,49.26471
@@ -56,6 +62,8 @@ ratio,method_group,method,feature_set,objective,protocol,MAE,MAE_std,RMSE,DA_pct
 0.95,PP4 (Walk-Forward LSTM),WF Expanding Residual (FS02),FS02,Residual,WF 1-seed (42),0.07573,,0.09904,51.85185
 0.95,PP4 (Walk-Forward LSTM),WF Rolling Residual (FS02),FS02,Residual,WF 1-seed (42),0.07865,,0.10021,47.40741
 0.95,PP4 (Walk-Forward LSTM),Static (T+V) Residual (FS02),FS02,Residual,Holdout 1-seed (42),0.07213,,0.09645,54.81481
-0.95,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU (FS01),FS01,Residual,Holdout TB 5-seed (41-45),0.07284,0.00079,0.09752,53.97059
+0.95,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU (FS01),FS01,Residual,Holdout TB 5-seed (41-45),0.07284,0.00079,0.0975,53.97059
 0.95,PP5 (Hybrid ARIMA-GRU),ARIMA (FS01),FS01,Residual,Deterministic (auto_arima),0.07258,,0.09706,50.73529
 0.95,PP5 (Hybrid ARIMA-GRU),GRU Direct (FS01),FS01,Direct,Holdout TB 5-seed (41-45),0.2202,0.02605,0.24819,45.44118
+0.95,PP5 (Hybrid ARIMA-GRU),Hybrid ARIMA-GRU WF-63 (FS01),FS01,Residual,WF-63 TB 5-seed (41-45),0.07421,0.00079,0.0984,47.64706
+0.95,PP5 (Hybrid ARIMA-GRU),ARIMA WF-63 (FS01),FS01,Residual,WF-63 (auto_arima),0.07279,,0.09721,50.0
